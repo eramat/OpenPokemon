@@ -4,7 +4,7 @@ module.exports = ( function (self) {
   "use strict";
 
   self.EnergyType = {
-    GRASS: 0, // plante
+    PLANT: 0, // plante
     FIRE: 1, // feu
     WATER: 2, // eau
     LIGHTNING: 3, // électrique

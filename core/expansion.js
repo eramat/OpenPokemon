@@ -7,6 +7,14 @@ module.exports = ( function (self) {
     var name;
     var number;
 
+    this.name = function () {
+      return name;
+    };
+
+    this.number = function () {
+      return number;
+    };
+
     var init = function (_name, _number) {
       name=  _name;
       number = _number;

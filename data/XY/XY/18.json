@@ -1,0 +1,16 @@
+{
+  "name": "Cabriolaine",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [ ],
+  "weakness": null,
+  "resistance": null,
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 18
+}

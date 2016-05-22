@@ -1,0 +1,35 @@
+{
+  "name": "Stari",
+  "type": "WATER",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "WATER", "COLORLESS"
+      ],
+      "title": "Attaque Imprudente",
+      "text": "Ce Pokémon s'inflige 10 dégâts",
+      "action": "board.attacker().applyDamage(10);",
+      "value": {
+        "operator": "-",
+        "value": 30
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PLANT",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": null,
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 33
+}

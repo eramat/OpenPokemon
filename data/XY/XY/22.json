@@ -1,0 +1,16 @@
+{
+  "name": "Flamajou",
+  "type": "FIRE",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [ ],
+  "weakness": null,
+  "resistance": null,
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 22
+}

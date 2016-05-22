@@ -1,0 +1,16 @@
+{
+  "name": "M-Florizarre-EX",
+  "type": "PLANT",
+  "stage": "MEGA",
+  "life_point": 230,
+  "abilities": [],
+  "attacks": [ ],
+  "weakness": null,
+  "resistance": null,
+  "retreat_cost": 4,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 2
+}

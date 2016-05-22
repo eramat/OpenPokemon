@@ -1,0 +1,16 @@
+{
+  "name": "Feunnec",
+  "type": "FIRE",
+  "stage": "BASE",
+  "life_point": 50,
+  "abilities": [],
+  "attacks": [ ],
+  "weakness": null,
+  "resistance": null,
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 24
+}

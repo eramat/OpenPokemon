@@ -11,16 +11,24 @@ module.exports = ( function (self) {
     var discard_pile; // pile de défausse
     var hand; // main
 
-    this.mixDeck = function () {
+    this.hand = function () {
+      return hand;
+    };
 
+    this.mixDeck = function () {
+      deck.mix();
     };
 
     this.selectInitialHand = function () {
-
+      hand = [];
+      for (var i = 0; i < 7; ++i) {
+        hand.push(deck.takeFirstCard());
+      }
     };
 
     var init = function (_deck) {
       deck = _deck;
+      deck.mix();
     };
 
     init(_deck);

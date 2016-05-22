@@ -5,8 +5,8 @@ var path = require('path');
 
 var core = require('./../core');
 
-describe('Pokemon card loading', function() {
-  it('Pikachu', function() {
+describe('Pokemon card loading', function () {
+  it('Pikachu', function () {
     var card_pikachu = new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/42.json', 'utf8'));
 
     expect(card_pikachu.name()).to.equal("Pikachu");
@@ -17,7 +17,7 @@ describe('Pokemon card loading', function() {
     expect(card_pikachu.card_number()).to.equal(42);
   });
 
-  it('Stari & Pikachu', function() {
+  it('Stari & Pikachu', function () {
     var card_stari = new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/33.json', 'utf8'));
     var card_pikachu = new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/42.json', 'utf8'));
     var stari = new core.Pokemon(card_stari);
@@ -31,25 +31,96 @@ describe('Pokemon card loading', function() {
     expect(stari.life_point()).to.equal(50);
   });
 
-  it('All XY cards', function() {
+  it('All XY cards', function () {
     var cards = [];
+    var files = fs.readdirSync('./data/XY/XY/');
 
-    fs.readdir('./data/XY/XY/', function (err, files) {
-      files.forEach(function (file) {
-        if (path.extname(file) === '.json') {
-          cards.push(new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/' + file, 'utf8')));
-        }
-      });
-      expect(cards.length).to.equal(48);
+    files.forEach(function (file) {
+      if (path.extname(file) === '.json') {
+        cards.push(new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/' + file, 'utf8')));
+      }
     });
+    expect(cards.length).to.equal(48);
   });
 
 });
 
-describe('Deck', function() {
+describe('Deck', function () {
   it('Init', function () {
-    var deck = new core.Deck([],[],[]);
+    var deck = new core.Deck([], [], []);
 
     expect(deck).to.not.equal(null);
   });
+
+  it('InitWithPokemonCards', function () {
+    var pokemon_cards = [];
+    var energy_cards = [];
+    var files = fs.readdirSync('./data/XY/XY/');
+
+    files.forEach(function (file) {
+      if (path.extname(file) === '.json') {
+        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/' + file, 'utf8')));
+      }
+    });
+    for (i = 0; i < 6; ++i) {
+      energy_cards.push(new core.EnergyCard(core.EnergyType.PLANT));
+    }
+    for (i = 0; i < 6; ++i) {
+      energy_cards.push(new core.EnergyCard(core.EnergyType.WATER));
+    }
+
+    var deck = new core.Deck(pokemon_cards, energy_cards, []);
+
+    expect(deck.pokemon_cards().length).to.equal(48);
+    expect(deck.valid()).to.be.true;
+  });
+});
+
+describe('Board', function () {
+  it('Hand', function () {
+    var pokemon_cards = [];
+    var energy_cards = [];
+    var files = fs.readdirSync('./data/XY/XY/');
+
+    files.forEach(function (file) {
+      if (path.extname(file) === '.json') {
+        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/' + file, 'utf8')));
+      }
+    });
+    for (i = 0; i < 6; ++i) {
+      energy_cards.push(new core.EnergyCard(core.EnergyType.PLANT));
+    }
+    for (i = 0; i < 6; ++i) {
+      energy_cards.push(new core.EnergyCard(core.EnergyType.WATER));
+    }
+
+    var deck1 = new core.Deck(pokemon_cards, energy_cards, []);
+    var deck2 = new core.Deck(pokemon_cards, energy_cards, []);
+    var player1 = new core.Player(deck1);
+    var player2 = new core.Player(deck2);
+    var board = new core.Board([player1, player2]);
+
+    board.selectInitialHands();
+
+    expect(board.attacker().hand().length).to.equal(7);
+    expect(board.defender().hand().length).to.equal(7);
+
+    board.attacker().hand().forEach(function (card) {
+      if (card.card_type() === core.CardType.POKEMON) {
+        console.log(card.name() + ' ' + card.stage());
+      } else {
+        console.log('ENERGY ' + card.type());
+      }
+    });
+    console.log('=====');
+    board.defender().hand().forEach(function (card) {
+      if (card.card_type() === core.CardType.POKEMON) {
+        console.log(card.name() + ' ' + card.stage());
+      } else {
+        console.log('ENERGY ' + card.type());
+      }
+    });
+
+  });
+
 });

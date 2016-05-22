@@ -1,5 +1,7 @@
 var OpenPokemon = OpenPokemon || {};
 
+var core = require('./card_type');
+
 module.exports = ( function (self) {
   "use strict";
 
@@ -16,6 +18,10 @@ module.exports = ( function (self) {
     var retreat_cost;
     var expansion;
     var card_number;
+
+    this.card_type = function () {
+      return core.CardType.POKEMON;
+    };
 
     this.name = function () {
       return name;

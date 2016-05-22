@@ -25,6 +25,12 @@ module.exports = ( function (self) {
       return (Math.random() <= 0.5) ? self.Coin.HEADS : self.Coin.TAILS;
     };
 
+    this.selectInitialHands = function () {
+      players.forEach(function (player) {
+        player.selectInitialHand();
+      });
+    };
+
     this.turn = function () {
       players[attacker_index].attacks()[0].action().run(this);
       changeAttackerDefenser();

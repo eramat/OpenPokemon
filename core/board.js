@@ -21,6 +21,12 @@ module.exports = ( function (self) {
       return players[defender_index];
     };
 
+    this.cancelInitialHands = function () {
+      players.forEach(function (player) {
+        player.cancelInitialHand();
+      });
+    };
+
     this.flipCoin = function () {
       return (Math.random() <= 0.5) ? self.Coin.HEADS : self.Coin.TAILS;
     };

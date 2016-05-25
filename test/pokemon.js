@@ -87,10 +87,8 @@ describe('Board', function () {
         pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/' + file, 'utf8')));
       }
     });
-    for (i = 0; i < 6; ++i) {
+    for (var i = 0; i < 6; ++i) {
       energy_cards.push(new core.EnergyCard(core.EnergyType.PLANT));
-    }
-    for (i = 0; i < 6; ++i) {
       energy_cards.push(new core.EnergyCard(core.EnergyType.WATER));
     }
 
@@ -105,6 +103,7 @@ describe('Board', function () {
     expect(board.attacker().hand().length).to.equal(7);
     expect(board.defender().hand().length).to.equal(7);
 
+/*    console.log('===== ATTACKER =====');
     board.attacker().hand().forEach(function (card) {
       if (card.card_type() === core.CardType.POKEMON) {
         console.log(card.name() + ' ' + card.stage());
@@ -112,7 +111,8 @@ describe('Board', function () {
         console.log('ENERGY ' + card.type());
       }
     });
-    console.log('=====');
+    console.log(' => ' + board.attacker().isValidInitialHand());
+    console.log('===== DEFENDER =====');
     board.defender().hand().forEach(function (card) {
       if (card.card_type() === core.CardType.POKEMON) {
         console.log(card.name() + ' ' + card.stage());
@@ -120,6 +120,45 @@ describe('Board', function () {
         console.log('ENERGY ' + card.type());
       }
     });
+    console.log(' => ' + board.defender().isValidInitialHand()); */
+
+  });
+
+  it('First active pokemon', function () {
+    var pokemon_cards = [];
+    var energy_cards = [];
+    var files = fs.readdirSync('./data/XY/XY/');
+
+    files.forEach(function (file) {
+      if (path.extname(file) === '.json') {
+        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/' + file, 'utf8')));
+      }
+    });
+    for (var i = 0; i < 6; ++i) {
+      energy_cards.push(new core.EnergyCard(core.EnergyType.PLANT));
+      energy_cards.push(new core.EnergyCard(core.EnergyType.WATER));
+    }
+
+    var board = new core.Board([
+      new core.Player(new core.Deck(pokemon_cards, energy_cards, [])),
+      new core.Player(new core.Deck(pokemon_cards, energy_cards, []))
+    ]);
+
+    var valid = false;
+
+    do {
+      board.selectInitialHands();
+      valid = board.attacker().isValidInitialHand() && board.defender().isValidInitialHand();
+      if (!valid) {
+        board.cancelInitialHands();
+      }
+    } while (!valid);
+
+    var index = board.attacker().getFirstBasePokemonCardIndex();
+    var card = board.attacker().takeCardInHand(index);
+
+    expect(card.card_type()).to.equal(core.CardType.POKEMON);
+    expect(card.stage()).to.equal(core.Stage.BASE);
 
   });
 

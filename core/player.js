@@ -1,5 +1,8 @@
 var OpenPokemon = OpenPokemon || {};
 
+var merge = require('merge');
+var core = merge(require('./card_type'), require('./stage'));
+
 module.exports = ( function (self) {
   "use strict";
 
@@ -15,6 +18,33 @@ module.exports = ( function (self) {
       return hand;
     };
 
+    this.cancelInitialHand = function () {
+      hand = [];
+      deck.mix();
+    };
+
+    this.getFirstBasePokemonCardIndex = function () {
+      var ok = false;
+      var index = 0;
+
+      while (index < hand.length && !ok) {
+        if (hand[index].card_type() === core.CardType.POKEMON && hand[index].stage() === core.Stage.BASE) {
+          ok = true;
+        } else {
+          ++index;
+        }
+      }
+      if (!ok) {
+        return -1;
+      } else {
+        return index;
+      }
+    };
+
+    this.isValidInitialHand = function () {
+      return this.getFirstBasePokemonCardIndex() !== -1;
+    };
+
     this.mixDeck = function () {
       deck.mix();
     };
@@ -23,6 +53,17 @@ module.exports = ( function (self) {
       hand = [];
       for (var i = 0; i < 7; ++i) {
         hand.push(deck.takeFirstCard());
+      }
+    };
+
+    this.takeCardInHand = function (index) {
+      if (index < hand.length) {
+        var card = hand[index];
+
+        hand.splice(index, 1);
+        return card;
+      } else {
+        return null;
       }
     };
 

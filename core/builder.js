@@ -26,7 +26,7 @@ module.exports = ( function (self) {
         attacks.push(new core.Attack(energies, attack.title, attack.text, new core.Action(attack.action), value));
       });
       return new core.PokemonCard(data.name, core.EnergyType[data.type], core.Stage[data.stage], data.evolution, data.life_point,
-        data.abilities, attacks, weakness, resistance, data.retreat_cost, expansion, data.card_number);
+        data.abilities, attacks, weakness, resistance, data.retreat_cost, expansion, data.card_number, data.rarity);
     };
   };
 

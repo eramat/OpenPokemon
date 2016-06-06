@@ -1,5 +1,55 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= card.name
+
+  div#cardContent
+    img(src="images/cards/pokemon/XY/XY/42.png")
+
+  div#cardDetail
+    h1 #{card.name}
+    div#pokemonType
+      span Pokémon de #{card.stage}
+      span#lifePointType
+        span#lifePoint pv #{card.life_point}
+        if card.type == 'LIGHTNING'
+          div.icoLightning
+        if card.type == 'COLORLESS'
+          div.icoColorless
+    each attack in card.attacks
+      div.attack
+        h2
+          each energy in attack.energies
+            if energy == 'COLORLESS'
+              div.icoColorless
+          | #{attack.title}
+          if attack.value
+            span#attackPoint #{attack.value.value}#{attack.value.supplement}
+        p #{attack.text}
+    div#properties
+      div.property
+        h3 Faiblesse
+        div
+          if card.weakness.energy == 'FIGHTING'
+            div.icoMain
+          if card.weakness.energy == 'METAL'
+            div.icoMetal
+          span #{card.weakness.value.operator}#{card.weakness.value.value}
+      div.property
+        h3 Résistance
+        div
+          if card.resistance.energy == 'FIGHTING'
+            div.icoMain
+          if card.resistance.energy == 'METAL'
+            div.icoMetal
+          span #{card.resistance.value.operator}#{card.resistance.value.value}
+      div.property
+        h3 Coût de Retraite
+        - for (var x = 0; x < card.retreat_cost; x++)
+          div.icoColorless
+      div#cardInfo
+        div#xy
+        |  #{card.expansion.name}
+        div#cardNumber
+        | #{card.card_number}/#{card.expansion.number} #{card.rarity}
+        img#xyLogo(src="/images/icons/xy1-expansion-symbol.png")

@@ -20,6 +20,14 @@ module.exports = ( function (self) {
       return supplement;
     };
 
+    this.to_object = function () {
+      return {
+        operator: operator,
+        value: value,
+        supplement: supplement ? supplement : null
+      };
+    };
+
     var init = function (_operator, _value, _supplement) {
       operator =  _operator;
       value = _value;

@@ -24,6 +24,10 @@ module.exports = ( function (self) {
       return card.name();
     };
 
+    this.to_object = function () {
+      return card.to_object();
+    };
+
     var init = function (_card) {
       card = _card;
       life_point = card.life_point();

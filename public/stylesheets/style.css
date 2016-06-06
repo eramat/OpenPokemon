@@ -1,8 +1,179 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+#cardContent {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5%;
+}
+
+#cardContent img {
+    width: 245px;
+    height: 342px;
+}
+
+#cardDetail {
+    display: inline-block;
+    width: 450px;
+}
+
+#cardDetail h1 {
+    background: #a4a4a4;
+    color: #f2f2f2;
+    border-radius: 5px 5px 0px 0px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0px;
+}
+
+#cardDetail > * {
+    width: 100%;
+    padding-left: 15px;
+}
+
+#pokemonType {
+    height: 70px;
+    line-height: 70px;
+    background-color: #f2f2f2;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#lifePoint {
+    margin-right: 5px;
+    font-variant: small-caps;
+    font-size: 28px;
+}
+
+#lifePointType {
+    float: right;
+}
+
+.attack h2 {
+    color: #575757;
+}
+
+.attack p {
+    color: #8c8c8c;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.property {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.property h3 {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.property div {
+    font-size: 30px;
+}
+
+#properties {
+    background-color: #f2f2f2;
+    border-radius: 7px;
+    color: #575757;
+}
+
+#properties > div {
+    display: inline-block;
+}
+
+.icoLightning {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -25px -25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.icoColorless {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -25px -0px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.icoMain {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -50px -25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icoMetal {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -75px -0px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#xyLogo {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#cardInfo {
+    width: 80%;
+    margin-top: 40px;
+}
+
+#xy {
+    color: #266ad2;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#cardNumber {
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+#attackPoint {
+    float: right;
+    font-weight: normal;
+    font-size: 21px;
+    color: #8c8c8c;
+}
+
+#illustratorBlock {
+    font-size: 21px;
+    margin-top: 30px;
+}
+
+#illustrator {
+    color: #9a9a9a;
+}
+
+#illustratorName {
+    color: #266ad2;
 }

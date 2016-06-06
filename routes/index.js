@@ -5,10 +5,12 @@ var fs = require('fs');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var card_stari = new core.Builder().createFromJSON(fs.readFileSync('./data/XY/XY/33.json', 'utf8'));
-  var stari = new core.Pokemon(card_stari);
+  var pikachu_card = new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY/42.json', 'utf8'));
+  var pikachu = new core.Pokemon(pikachu_card);
 
-  res.render('index', { title: stari.name() });
+  console.log(pikachu.to_object());
+
+  res.render('index', { card: pikachu.to_object() });
 });
 
 module.exports = router;

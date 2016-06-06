@@ -7,7 +7,13 @@ module.exports = ( function (self) {
     POKE_POWER: 0, // poké-power
     POKE_BODY: 1, // poké-body
     SPECIAL_ABILITY: 2, // capacité spéciale
-    TALENT: 3 // talent
+    TALENT: 3, // talent
+
+    key: function (value) {
+      return Object.keys(this)[Object.keys(this).map(function (key) {
+        return self.EnergyType[key];
+      }).indexOf(value)];
+    }
   };
 
   self.Ability = function (_type) {

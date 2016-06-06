@@ -15,6 +15,13 @@ module.exports = ( function (self) {
       return number;
     };
 
+    this.to_object = function () {
+      return {
+        name: name,
+        number: number
+      };
+    };
+
     var init = function (_name, _number) {
       name=  _name;
       number = _number;

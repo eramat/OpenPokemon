@@ -1,5 +1,7 @@
 var OpenPokemon = OpenPokemon || {};
 
+var core = require('./energy');
+
 module.exports = ( function (self) {
   "use strict";
 
@@ -18,6 +20,13 @@ module.exports = ( function (self) {
     var init = function (_energy, _value) {
       energy =  _energy;
       value = _value;
+    };
+
+    this.to_object = function () {
+      return {
+        energy: core.EnergyType.key(energy),
+        value: value ? value.to_object() : null
+      };
     };
 
     init(_energy, _value);

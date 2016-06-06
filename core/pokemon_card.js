@@ -1,11 +1,12 @@
 var OpenPokemon = OpenPokemon || {};
 
-var core = require('./card_type');
+var merge = require('merge');
+var core = merge(require('./card_type'), require('./energy'), require('./stage'));
 
 module.exports = ( function (self) {
   "use strict";
 
-  self.PokemonCard = function (_name, _type, _stage, _evolution, _life_point, _abilities, _attacks, _weakness, _resistance, _retreat_cost, _expansion, _card_number) {
+  self.PokemonCard = function (_name, _type, _stage, _evolution, _life_point, _abilities, _attacks, _weakness, _resistance, _retreat_cost, _expansion, _card_number, _rarity) {
     var name;
     var type;
     var stage;
@@ -18,6 +19,7 @@ module.exports = ( function (self) {
     var retreat_cost;
     var expansion;
     var card_number;
+    var rarity;
 
     this.card_type = function () {
       return core.CardType.POKEMON;
@@ -71,7 +73,27 @@ module.exports = ( function (self) {
       return card_number;
     };
 
-    var init = function (_name, _type, _stage, _evolution, _life_point, _abilities, _attacks, _weakness, _resistance, _retreat_cost, _expansion, _card_number) {
+    this.rarity = function () {
+      return rarity
+    };
+
+    this.to_object = function () {
+      return {
+        name: name,
+        type: core.EnergyType.key(type),
+        stage: core.Stage.key(stage),
+        life_point: life_point,
+        attacks: attacks.map(function (attack) { return attack.to_object(); }),
+        weakness: weakness.to_object(),
+        resistance: resistance.to_object(),
+        retreat_cost: retreat_cost,
+        expansion: expansion.to_object(),
+        card_number: card_number,
+        rarity: rarity
+      }
+    };
+
+    var init = function (_name, _type, _stage, _evolution, _life_point, _abilities, _attacks, _weakness, _resistance, _retreat_cost, _expansion, _card_number, _rarity) {
       name = _name;
       type = _type;
       stage = _stage;
@@ -84,9 +106,10 @@ module.exports = ( function (self) {
       retreat_cost = _retreat_cost;
       expansion = _expansion;
       card_number = _card_number;
+      rarity = _rarity;
     };
 
-    init(_name, _type, _stage, _evolution, _life_point, _abilities, _attacks, _weakness, _resistance, _retreat_cost, _expansion, _card_number);
+    init(_name, _type, _stage, _evolution, _life_point, _abilities, _attacks, _weakness, _resistance, _retreat_cost, _expansion, _card_number, _rarity);
   };
 
   return self;

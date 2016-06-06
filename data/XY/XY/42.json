@@ -48,5 +48,6 @@
     "name": "XY",
     "card_number": 146
   },
-  "card_number": 42
+  "card_number": 42,
+  "rarity": "Commune"
 }

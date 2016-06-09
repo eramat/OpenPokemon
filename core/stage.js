@@ -10,7 +10,6 @@ module.exports = ( function (self) {
     EX: 3,
     MEGA: 4,
     TURBO: 5,
-    OBJECT: 6,
 
     key: function (value) {
       return Object.keys(this)[Object.keys(this).map(function (key) {

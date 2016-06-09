@@ -1,16 +1,43 @@
 {
-  "name": "Feunnec",
-  "type": "FIRE",
-  "stage": "BASE",
-  "life_point": 50,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 1,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 24
+    "name": "Feunnec",
+    "type": "FIRE",
+    "stage": "BASE",
+    "life_point": 50,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"FIRE"
+	    ],
+	    "title": "Feu Follet",
+	    "text": "",
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 20,
+		"supplement": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "WATER",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 24,
+    "rarity": "Commune"
 }

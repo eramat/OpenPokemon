@@ -1,10 +1,12 @@
 body {
-    padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color : #EFEFEF
 }
+
 
 a {
     color: #00B7FF;
+    font-size: 20px;
 }
 
 #cardContent {
@@ -16,6 +18,47 @@ a {
 #cardContent img {
     width: 245px;
     height: 342px;
+}
+
+#banniere img {
+
+    width: 100%;
+    height: auto;
+    border:double;
+}
+
+#sitelogo {
+    text-align: center;
+    width: 100%;
+    margin-top: -125px;
+
+}
+
+#form {
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 50px;
+    width : 80%;
+    height: 80%;
+    border: double;
+    font-size: 20px;
+    text-align: center;
+
+
+
+}
+
+.form h1{
+    font-size: 50px;
+    text-area:center;
+}
+#form h2{
+    font-size : 20px;
+    font-weight : lighter;
+    text-align:justify;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 
 #cardDetail {
@@ -126,6 +169,75 @@ a {
 .icoMetal {
     background-image: url("/images/icons/energy-types.png");
     background-position: -75px -0px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icoFire {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -0px -0px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icoFairy {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -50px -0px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icoDragon {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -0px -25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icoPsychic {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -75px -25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icoDarkness {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -0px -50px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.icoPlant {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -25px -50px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icoWater {
+    background-image: url("/images/icons/energy-types.png");
+    background-position: -75px -50px;
     width: 25px;
     height: 25px;
     display: inline-block;

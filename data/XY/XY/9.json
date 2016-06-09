@@ -1,16 +1,56 @@
 {
-  "name": "Lumivole",
-  "type": "PLANT",
-  "stage": "BASE",
-  "life_point": 70,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 1,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 9
+    "name": "Lumivole",
+    "type": "PLANT",
+    "stage": "BASE",
+    "life_point": 70,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"PLANT",
+	    ],
+	    "title": "Phéromotion",
+	    "text": "Cherchez un Pokémon plante dans votre deck, montrez-le, puis ajoutez-le à votre main. Mélangez ensuite votre deck.",
+	    "action": "",
+	    "value": {
+		"operator": "-",
+		"value": null,
+		"supplement": null
+	    },
+	    {
+		"energies": [
+		    "PLANT",
+		    "COLORLESS"
+		],
+		"title": "Vive-Attaque",
+		"text": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires.",
+		"action": "if (board.flipCoin() === core.Coin.HEADS) { board.defenser().applayDamage(20); }",
+		"value": {
+		    "operator": "-",
+		    "value": 20,
+		    "supplement": "+"
+		}
+	    }
+	],
+    "weakness": {
+	"type": "FIRE",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 9,
+    "rarity": "Peu Commune"
 }

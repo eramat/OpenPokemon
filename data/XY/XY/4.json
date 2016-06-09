@@ -1,16 +1,36 @@
 {
-  "name": "Coconfort",
-  "type": "PLANT",
-  "stage": "STAGE_1",
-  "life_point": 70,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 2,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 4
+"name": "Coconfort",
+"type": "PLANT",
+"stage": "",
+"life_point": 70,
+"abilities": [],
+"attacks": [
+	    {
+	    "energies": [
+			 "PLANT"
+			 ],
+	    "title": "Armure",
+	    "text": "Pendant le prochain tour de votre adversaire, si ce Pokémon doit subir les dégâts d'une attaque, évitez les dégâts infligés à ce Pokémon si ces dégâts sont de 60 ou moins.",
+	    "action": "if (board.defenser().type == 'PLANT') { board.defenser().applyDamage(20); }",
+	    "value": {
+	    "operator": "-",
+	    "value": 10,
+	    "supplement": "+"
+	    }
+	    }
+	    ],
+"weakness": {
+"type": "FIRE",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"retreat_cost": 2,
+"expansion": {
+"name": "XY",
+"card_number": 146
+},
+"card_number": 4,
+"rarity": "Commune"
 }

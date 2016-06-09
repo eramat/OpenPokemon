@@ -1,16 +1,49 @@
 {
-  "name": "Dardargnan",
-  "type": "PLANT",
-  "stage": "STAGE_2",
-  "life_point": 120,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 1,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 5
+"name": "Dardargnan",
+"type": "PLANT",
+"stage": "STAGE_2",
+"life_point": 120,
+"abilities": [],
+"attacks": [
+	    {
+	    "energies": [
+			 "PLANT"
+			 ],
+	    "title": "Direct Toxik",
+	    "text": "Le Pokémon Actif de votre adversaire est maintenant Empoisonné.",
+	    "action": "board.defenser().addState(core.State.POISONED);",
+	    "value": {
+	    "operator": "-",
+	    "value": 20,
+		"supplement": "+"
+	    },
+		{
+		    "energies": [
+			"PLANT",
+			"PLANT"
+		    ],
+		    "title": "Luminodard",
+		    "text": "Lancez 3 pièces. Cette attaque inflige 40 dégâts multipliés par le nombre de côtés face. Si vous obtenez seulement des côtés faces, évitez tous les effets d'attaques, y compris les dégâts, infligés à ce Pokémon pendant le prochain tour de votre adversaire.",
+		    "action": "",
+		    "value": {
+			"operator": "-",
+			"value": 0,
+			"supplement": "x"
+		    }
+		}
+	    ],
+"weakness": {
+"type": "FIRE",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"retreat_cost": 1,
+"expansion": {
+"name": "XY",
+"card_number": 146
+},
+"card_number": 5,
+"rarity": "Commune"
 }

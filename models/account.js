@@ -7,12 +7,13 @@ var passportLocalMongoose = require('passport-local-mongoose');
 
 var Account = new Schema({
     username: String,
+    password: String,
+    Nom: String,
     Prenom: String,
-    email: String,
-    Pseudo : String,
-    password: String
+    Email: String,
+    Pseudo : String
 });
 
 Account.plugin(passportLocalMongoose);
-console.log(Account);
+
 module.exports = mongoose.model('Account', Account);

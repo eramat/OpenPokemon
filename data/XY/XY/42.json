@@ -11,7 +11,7 @@
       ],
       "title": "Frotte-Frimousse",
       "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
-      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().addState(core.State.PARALYSED); }",
+      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defenser().addState(core.State.PARALYSED); }",
       "value": {}
     },
     {
@@ -21,7 +21,7 @@
       ],
       "title": "Vive-Attaque",
       "text": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires.",
-      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().applyDamage(10); }",
+      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defenser().applyDamage(10); }",
       "value": {
         "operator": "-",
         "value": 20,

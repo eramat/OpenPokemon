@@ -136,6 +136,8 @@ a {
     display: inline-block;
 }
 
+
+
 .icoLightning {
     background-image: url("/images/icons/energy-types.png");
     background-position: -25px -25px;
@@ -169,75 +171,6 @@ a {
 .icoMetal {
     background-image: url("/images/icons/energy-types.png");
     background-position: -75px -0px;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.icoFire {
-    background-image: url("/images/icons/energy-types.png");
-    background-position: -0px -0px;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.icoFairy {
-    background-image: url("/images/icons/energy-types.png");
-    background-position: -50px -0px;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.icoDragon {
-    background-image: url("/images/icons/energy-types.png");
-    background-position: -0px -25px;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.icoPsychic {
-    background-image: url("/images/icons/energy-types.png");
-    background-position: -75px -25px;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.icoDarkness {
-    background-image: url("/images/icons/energy-types.png");
-    background-position: -0px -50px;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-.icoPlant {
-    background-image: url("/images/icons/energy-types.png");
-    background-position: -25px -50px;
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-}
-
-.icoWater {
-    background-image: url("/images/icons/energy-types.png");
-    background-position: -75px -50px;
     width: 25px;
     height: 25px;
     display: inline-block;

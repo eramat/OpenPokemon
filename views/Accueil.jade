@@ -13,9 +13,12 @@ block content
                 .form-group
                     input.form-control(type='password', name="Mot de passe", placeholder='Mot de passe')
                 button.btn.btn-default(type='submit') Accéder au jeu
-                &nbsp;
+
                 br
-                a(href='/Inscription') Inscrivez vous
+                a(href='/register') Inscrivez vous
+                if(user)
+                    h2 tu es deja connecté en tant que #{user.Nom}
+                    a(href="/logout") se déconnecter
 
     div#form
         h1 Explications du jeu de cartes pokémon

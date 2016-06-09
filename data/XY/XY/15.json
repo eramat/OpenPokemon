@@ -1,43 +1,16 @@
 {
-    "name": "Lépidonille",
-    "type": "PLANT",
-    "stage": "BASE",
-    "life_point": 40,
-    "abilities": [],
-    "attacks": [
-	{
-	    "energies": [
-		"COLORLESS",
-	    ],
-	    "title": "Piqûre",
-	    "text": "",
-	    "action": null,
-	    "value": {
-		"operator": "-",
-		"value": 10,
-		"supplement": null
-	    }
-	}
-    ],
-    "weakness": {
-	"type": "FIRE",
-	"value": {
-	    "operator": "x",
-	    "value": 2
-	}
-    },
-    "resistance": {
-	"type": null,
-	"value": {
-	    "operator": "-",
-	    "value": null
-	}
-    },
-    "retreat_cost": 1,
-    "expansion": {
-	"name": "XY",
-	"card_number": 146
-    },
-    "card_number": 15,
-    "rarity": "Commune"
+  "name": "Lépidonille",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 40,
+  "abilities": [],
+  "attacks": [ ],
+  "weakness": null,
+  "resistance": null,
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 15
 }

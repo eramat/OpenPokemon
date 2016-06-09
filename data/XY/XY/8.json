@@ -1,56 +1,16 @@
 {
-    "name": "Muciole",
-    "type": "PLANT",
-    "stage": "BASE",
-    "life_point": 70,
-    "abilities": [],
-    "attacks": [
-	{
-	    "energies": [
-		"PLANT",
-	    ],
-	    "title": "Lueur Attrayante",
-	    "text": "Echangez l'un des Pokémon de Banc de votre adversaire avec le pokémon actif de votre adversaire.",
-	    "action": "board.defenser()",
-	    "value": {
-		"operator": "-",
-		"value": null,
-		"supplement": null
-	    },
-	    {
-		"energies": [
-		    "PLANT",
-		    "COLORLESS"
-		],
-		"title": "Rayon Signal",
-		"text": "Le Pokémon Actif de votre adversaire est maintenant Confus.",
-		"action": "board.defenser().addState(core.State.CONFUSED);",
-		"value": {
-		    "operator": "-",
-		    "value": 30,
-		    "supplement": null
-		}
-	    }
-	],
-    "weakness": {
-	"type": "FIRE",
-	"value": {
-	    "operator": "x",
-	    "value": 2
-	}
-    },
-    "resistance": {
-	"type": null,
-	"value": {
-	    "operator": "-",
-	    "value": null
-	}
-    },
-    "retreat_cost": 1,
-    "expansion": {
-	"name": "XY",
-	"card_number": 146
-    },
-    "card_number": 8,
-    "rarity": "Peu Commune"
+  "name": "Muciole",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [ ],
+  "weakness": null,
+  "resistance": null,
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 8
 }

@@ -1,36 +1,16 @@
 {
-    "name": "Aspicot",
-    "type": "PLANT",
-    "stage": "BASE",
-    "life_point": 50,
-    "abilities": [],
-    "attacks": [
-	{
-	    "energies": [
-		"PLANT"
-	    ],
-	    "title": "Mange-Feuille",
-	    "text": "Si le Pokémon Actif de votre adversaire est un Pokémon Plante, cette attaque inflige 20 dégâts supplémentaires.",
-	    "action": "if (board.defenser().type == 'PLANT') { board.defenser().applyDamage(20); }",
-	    "value": {
-		"operator": "-",
-		"value": 10,
-		"supplement": "+"
-	    }
-	}
-    ],
-    "weakness": {
-	"type": "FIRE",
-	"value": {
-	    "operator": "x",
-	    "value": 2
-	}
-    },
-    "retreat_cost": 1,
-    "expansion": {
-	"name": "XY",
-	"card_number": 146
-    },
-    "card_number": 3,
-    "rarity": "Commune"
+  "name": "Aspicot",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 50,
+  "abilities": [],
+  "attacks": [ ],
+  "weakness": null,
+  "resistance": null,
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 3
 }

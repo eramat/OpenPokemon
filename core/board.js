@@ -39,10 +39,10 @@ module.exports = ( function (self) {
 
     this.turn = function () {
       players[attacker_index].attacks()[0].action().run(this);
-      changeAttackerDefenser();
+      changeAttackerDefender();
     };
 
-    var changeAttackerDefenser = function () {
+    var changeAttackerDefender = function () {
       var index = attacker_index;
 
       attacker_index = defender_index;

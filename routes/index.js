@@ -42,12 +42,20 @@ router.post('/register', function (req, res) {
   });
 });
 
-router.get('/login', function (req, res) {
-  res.render('login', {user: req.user});
+router.get('/Accueil', function (req, res) {
+  res.render('Accueil', {});
 });
 
-router.post('/login', passport.authenticate('local'), function (req, res) {
-  res.redirect('/');
+router.post('/Accueil', passport.authenticate('local'), function (req, res) {
+  console.log("coucou");
+  res.redirect('/Gestion');
+
+});
+
+router.get('/Gestion', function (req, res, next) {
+  res.render('Gestion', {
+    Account : req.Account
+  });
 
 });
 

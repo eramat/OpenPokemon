@@ -17,7 +17,7 @@ var Account = require('../models/account');
  res.render('index', { card: pikachu.to_object() });
  });*/
 router.get('/', function (req, res, next) {
-  res.render('Accueil', {});
+  res.render('Accueil', {user : req.user});
 });
 
 router.get('/register', function (req, res) {
@@ -47,14 +47,13 @@ router.get('/Accueil', function (req, res) {
 });
 
 router.post('/Accueil', passport.authenticate('local'), function (req, res) {
-  console.log("coucou");
   res.redirect('/Gestion');
 
 });
 
 router.get('/Gestion', function (req, res, next) {
   res.render('Gestion', {
-    Account : req.Account
+    user : req.user
   });
 
 });

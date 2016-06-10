@@ -4,6 +4,7 @@
 extends banniere
 
 block content
-    h1 vous etes connecté
-        h2 tu es deja connecté en tant que #{Account.username}
-        a(href="/logout") se déconnecter
+        div#connect
+            if (user)
+                h1 Bienvenue #{user.username}
+                a(href="/logout") Se déconnecter

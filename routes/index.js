@@ -64,4 +64,8 @@ router.get('/logout', function (req, res) {
 });
 
 
+router.get('/Combat', function (req, res) {
+  res.render('Combat', {});
+});
+
 module.exports = router;

@@ -56,6 +56,10 @@ module.exports = ( function (self) {
       }
     };
 
+    this.takeOneCard = function () {
+      hand.push(deck.takeFirstCard());
+    };
+
     this.takeCardInHand = function (index) {
       if (index < hand.length) {
         var card = hand[index];
@@ -66,6 +70,66 @@ module.exports = ( function (self) {
         return null;
       }
     };
+
+
+    //Prend une carte de la main
+
+    this.takeCardInHand = function (index) {
+      if (index < hand.length) {
+        var card = hand[index];
+
+        hand.splice(index, 1);
+        return card;
+      } else {
+        return null;
+      }
+    };
+
+    //Check la taille du banc
+
+    this.checkLengthBench = function () {
+      return bench.length;
+    };
+
+    //Mettre une carte pokemon de la main sur le banc
+
+    this.putPokemonCardHandToBench = function (){
+      var card=takeCardInHand(index);
+      if(card.card_type() === core.CardType.POKEMON){
+        var taille = checkLengthBench();
+        if(taille<5){
+          bench.push(card);
+        }
+      }
+    };
+
+    //Prend une carte du banc
+
+    this.takeCardInBench = function (index){
+      if (index < bench.length) {
+        var card = bench[index];
+        bench.splice(index, 1);
+        return card;
+      } else {
+        return null;
+      }
+    };
+
+    //Check la carte active
+
+    this.checkActiveCard = function (){
+      return active_pokemon;
+    };
+
+    //Mettre la carte du banc à l'actif
+
+    this.putCardBenchToActive = function () {
+      var taille = checkActiveCard();
+      if(taille==0){
+        active_pokemon.push(takeCardInBench(index));
+      }
+    };
+
 
     var init = function (_deck) {
       deck = _deck;

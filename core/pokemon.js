@@ -1,5 +1,7 @@
 var OpenPokemon = OpenPokemon || {};
 
+var core = require('./player');
+
 module.exports = ( function (self) {
   "use strict";
 
@@ -7,6 +9,7 @@ module.exports = ( function (self) {
     var card;
     var life_point;
     var states;
+    var energy;
 
     this.attacks = function () {
       return card.attacks();
@@ -18,6 +21,20 @@ module.exports = ( function (self) {
 
     this.life_point = function () {
       return life_point;
+    };
+
+    this.addEnergyActive= function (index) {
+      if (core.Player.hand[index].card_type() === core.CardType.ENERGY) {
+        if (core.Player.checkActiveCard()) {
+        energy.push(takeCardInHand(index));
+        }
+      }
+    };
+
+    this.addEnergyBench= function (indexEnergy,indexBench) {
+      if (core.Player.hand[indexEnergy].card_type() === core.CardType.ENERGY) {
+        energy.push(core.Player.takeCardInHand(indexBench));
+      }
     };
 
     this.name = function () {
@@ -32,6 +49,7 @@ module.exports = ( function (self) {
       card = _card;
       life_point = card.life_point();
       states = [];
+      energy = [];
     };
 
     init(_card);

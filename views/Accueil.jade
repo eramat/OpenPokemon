@@ -20,7 +20,17 @@ block content
     div#form
         h1 Explications du jeu de cartes pokémon
         h2 Les cartes Pokémon offrent pour les grands et les petits un univers fascinant mais complexe. La plupart du temps, les enfants collectionnent les cartes mais ne connaissent pas les règles du jeu. Pour découvir les cartes Pokémon, devenir un "dresseur" et attraper de nombreux Pokémon, voici ce qu'il faut savoir.
-        a(href='images/site/Regle_Simplifiee.pdf') Cliquez ici
+        a(href='images/site/Regle_Simplifiee.pdf' onclick="window.open(this.href);return false;") Cliquez ici
+
+    div#form
+        h1 Page Administration
+            br
+            form(role='form', action="/admin",method="post", style='max-width:100%;')
+                .form-group
+                    input.form-control(type='text', name="username", placeholder='Entrer un Pseudo')
+                .form-group
+                    input.form-control(type='password', name="password", placeholder='Mot de passe')
+                button.btn.btn-default(type='submit') Connexion admin
 
 
 

@@ -8,22 +8,13 @@ block content
             br
             form(role='get', action="/register",method="post", style='max-width:100%;')
                 .form-group
-                    input.form-control(type='text', name="Nom", placeholder='Entrer un Nom')
-                .form-group
-                    input.form-control(type='text', name="Prenom", placeholder='Entrer un Prénom')
-                .form-group
-                    input.form-control(type='mail', name="mail", placeholder='Entrer une adresse mail')
-                .form-group
                     input.form-control(type='text', name="username", placeholder='Entrer un Pseudo')
                 .form-group
                     input.form-control(type='password', name="password", placeholder='Entrer un mot de passe')
                 .form-group
-                    input.form-control(type='password', name="verification", placeholder='Tapez le mot de passe')
-                .form-group
                 button.btn.btn-default(type='submit') Inscription
-                br
-                a(href='/')
-                    button.btn.btn-primary(type="button") Cancel
+            a(href='/')
+                button.btn.btn-primary(type="button") Cancel
 
 
 

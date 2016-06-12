@@ -4,6 +4,7 @@ var core = require('../core');
 var fs = require('fs');
 var passport = require('passport');
 var Account = require('../models/account');
+
 /*
  /* GET home page. */
 /*
@@ -25,11 +26,8 @@ router.get('/register', function (req, res) {
 });
 
 router.post('/register', function (req, res) {
-  /*
-   var isValidPassword = function (user,password) {
-   return bCrypt.compareSync(password,user.password);
+    console.log("coucou");
 
-   }*/
 
   Account.register(new Account({username: req.body.username}), req.body.password, function (err, account) {
 
@@ -37,10 +35,11 @@ router.post('/register', function (req, res) {
       return res.render("register", {info: "Désolé le pseudo est deja utilisé"});
     }
     passport.authenticate('local')(req, res, function () {
-      res.redirect('/');
+        res.redirect('/');
     });
   });
 });
+
 
 router.get('/Accueil', function (req, res) {
   res.render('Accueil', {});
@@ -48,6 +47,7 @@ router.get('/Accueil', function (req, res) {
 
 router.post('/Accueil', passport.authenticate('local'), function (req, res) {
   res.redirect('/Gestion');
+  
 
 });
 
@@ -68,4 +68,14 @@ router.get('/Combat', function (req, res) {
   res.render('Combat', {});
 });
 
+router.post('/admin', function (req, res) {
+
+  res.render('admin', {});
+});
+
+
+router.post('/Accueil', passport.authenticate('local'), function (req, res) {
+  res.redirect('/admin');
+
+});
 module.exports = router;

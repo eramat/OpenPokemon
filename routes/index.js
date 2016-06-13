@@ -81,8 +81,11 @@ router.post('/Accueil', passport.authenticate('local'), function (req, res) {
 
 });
 
-router.get('/CreationDeck',function (req,res){
 
+router.get('/CreationDeck',function (req,res){
+  res.render('/CreationDeck',{});
+});
+/*
   var tabPokemon = [];
   var tabEnergie = [];
   
@@ -93,7 +96,7 @@ router.get('/CreationDeck',function (req,res){
   }
   
   res.render('CreationDeck', { card: tabPokemon});
-});
 
+*/
 
 module.exports = router;

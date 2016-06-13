@@ -118,7 +118,7 @@ module.exports = ( function (self) {
     //Check la carte active
 
     this.checkActiveCard = function (){
-      return active_pokemon;
+      return active_pokemon !== null;
     };
 
     //Mettre la carte du banc à l'actif

@@ -23,17 +23,17 @@ module.exports = ( function (self) {
       return life_point;
     };
 
-    this.addEnergyActive= function (index) {
-      if (core.Player.hand[index].card_type() === core.CardType.ENERGY) {
-        if (core.Player.checkActiveCard()) {
-        energy.push(takeCardInHand(index));
+    this.addEnergyActive= function (index,player) {
+      if (player.hand()[index].card_type() === core.CardType.ENERGY) {
+        if (player.checkActiveCard()) {
+        energy.push(player.takeCardInHand(index));
         }
       }
     };
 
-    this.addEnergyBench= function (indexEnergy,indexBench) {
-      if (core.Player.hand[indexEnergy].card_type() === core.CardType.ENERGY) {
-        energy.push(core.Player.takeCardInHand(indexBench));
+    this.addEnergyBench= function (indexEnergy,indexBench,player) {
+      if (player.hand()[indexEnergy].card_type() === core.CardType.ENERGY) {
+        energy.push(player.takeCardInHand(indexBench));
       }
     };
 

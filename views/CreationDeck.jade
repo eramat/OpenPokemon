@@ -1,0 +1,49 @@
+//
+   Created by Lucas on 12/06/2016.
+
+extends banniere
+
+block content
+    div#TitreCreation
+        div#TitreCreationGauche
+            a(href="/Gestion" class="myButton") Retour
+        div#TitreCreationDroite
+            a(href="/logout" class="myButton") Se déconnecter
+        h1 Creation de deck
+
+    div#ListeCarte
+        div#ListeCarteGauche
+            h3 Listes des types :
+            h4 Tous (nb)
+            h4 Energies (nb)
+            h4 Dresseurs (nb)
+            h4 Pokémons (nb)
+        div#ListeCarteDroite
+            div#ListeCarteCenter
+                h3 Listes des cartes
+
+
+            div#ListeCarteApercu
+                h3 Aperçu des cartes
+                img(src="images/cards/pokemon/XY/XY/24.png")
+
+    div#titreDeck
+        div#titreDeck1
+            h1 Ton deck :
+        div#titreDeck2
+            h3 Tout sélectionner
+        div#titreDeck3
+            button.btn.btn-default(type='' class="myButton") Supprimer la sélection
+        div#titreDeck4
+            button.btn.btn-default(type='' class="myButton") Enregistrer le deck
+        div#titreDeck5
+            h3 Nb cartes :
+
+    div#tonDeck
+        div#tonDeck1
+            h3 Listes des types :
+            h4 Tous (nb)
+            h4 Energies (nb)
+            h4 Dresseurs (nb)
+            h4 Pokémons (nb)
+        div#tonDeck2

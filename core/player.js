@@ -130,6 +130,19 @@ module.exports = ( function (self) {
       }
     };
 
+    this.putPokemonCardHandToActive = function (){
+      var card=takeCardInHand(index);
+      if(card.card_type() === core.CardType.POKEMON){
+        var taille = checkActiveCard();
+        if(taille === 0){
+          active_pokemon.push(card);
+        }
+      }
+    };
+
+    this.cardToDiscardPile = function(){
+      discard_pile.push(card);
+    };
 
     var init = function (_deck) {
       deck = _deck;

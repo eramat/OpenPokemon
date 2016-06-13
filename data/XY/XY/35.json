@@ -1,16 +1,56 @@
 {
-  "name": "Lokhlass",
-  "type": "WATER",
-  "stage": "BASE",
-  "life_point": 110,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 2,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 35
+"name": "Evoli",
+"type": "COLORLESS",
+"stage": "BASE",
+"life_point": 60,
+"abilities": [],
+"attacks": [
+{
+"energies": [
+    "COLORLESS"
+],
+"title": "Charge",
+"text": null,
+"action": null,
+"value": {
+"operator" : "-",
+"value" : 10,
+"supplement" : null
+}
+{
+"energies": [
+    "COLORLESS",
+    "COLORLESS"
+],
+"title": "Coup Rapide",
+"text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+"action": "action": "if (board.flipCoin() === core.Coin.TAILS) { board.defender().applyDamage(0); }",
+"value": {
+"operator" : "-",
+"value" : 30,
+"supplement" : null
+}
+}
+],
+"weakness": {
+"type": "FIGHTING",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"resistance": {
+"type": null,
+"value": {
+"operator": "-",
+"value": 20
+}
+},
+"retreat_cost": 1,
+"expansion": {
+"name": "XY - Origines Antiques",
+"card_number": 98
+},
+"card_number": 63,
+"rarity": "Commune"
 }

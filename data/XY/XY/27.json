@@ -1,16 +1,44 @@
 {
-  "name": "Braisillon",
-  "type": "FIRE",
-  "stage": "STAGE_1",
-  "life_point": 70,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 1,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 27
+    "name": "Abo",
+    "type": "PSYCHIC",
+    "stage": "BASE",
+    "life_point": 70,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"COLORLESS",
+		"COLORLESS"
+	    ],
+	    "title": "Morsure",
+	    "text": null,
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 20,
+		"supplement": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "PSYCHIC",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 2,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 47,
+    "rarity": "Commune"
 }

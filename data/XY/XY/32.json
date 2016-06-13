@@ -1,16 +1,43 @@
 {
-  "name": "Cristabri",
-  "type": "WATER",
-  "stage": "STAGE_1",
-  "life_point": 100,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 3,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 32
+"name": "Doudouvet",
+"type": "FAIRY",
+"stage": "BASE",
+"life_point": 40,
+"abilities": [],
+"attacks": [
+{
+"energies": [
+    "FAIRY"
+],
+"title": "Lit de Plumes",
+"text": "Le Pokémon Actif de votre adversaire est maintenant Endormi.",
+"action": "board.defender().addState(core.State.ASLEEP); }",
+"value": {
+"operator" : "-",
+"value" : 10,
+"supplement" : null
+}
+}
+],
+"weakness": {
+"type": "METAL",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"resistance": {
+"type": "DARKNESS",
+"value": {
+"operator": "-",
+"value": 20
+}
+},
+"retreat_cost": 1,
+"expansion": {
+"name": "XY - Origines Antiques",
+"card_number": 98
+},
+"card_number": 55,
+"rarity": "Commune"
 }

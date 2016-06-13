@@ -1,16 +1,43 @@
 {
-  "name": "Coxyclaque",
-  "type": "PLANT",
-  "stage": "STAGE_1",
-  "life_point": 80,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 1,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 7
+"name": "Apitrini",
+"type": "PLANT",
+"stage": "BASE",
+"life_point": 40,
+"abilities": [],
+"attacks": [
+{
+"energies": [
+"PLANT"
+],
+"title": "Piqûre",
+"text": null,
+"action": null,
+"value": {
+"operator" : "-",
+"value" : 10,
+"supplement" : null
+}
+}
+],
+"weakness": {
+"type": "FIRE",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"resistance": {
+"type": null,
+"value": {
+"operator": "-",
+"value": null
+}
+},
+"retreat_cost": 1,
+"expansion": {
+"name": "XY - Origines Antiques",
+"card_number": 98
+},
+"card_number": 9,
+"rarity": "Commune"
 }

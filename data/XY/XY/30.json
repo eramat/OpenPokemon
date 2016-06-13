@@ -1,16 +1,44 @@
 {
-  "name": "M-Tortank-EX",
-  "type": "WATER",
-  "stage": "MEGA",
-  "life_point": 220,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 3,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 30
+    "name": "Venipatte",
+    "type": "PSYCHIC",
+    "stage": "BASE",
+    "life_point": 70,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"PSYCHIC",
+		"COLORLESS"
+	    ],
+	    "title": "Dard-Venin",
+	    "text": "Le Pokémon Actif de votre adversaire est maintenant Empoisonné.",
+	    "action": "board.defender().addState(core.State.POISONED);",
+	    "value": {
+		"operator": "-",
+		"value": 20,
+		"supplement": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "PSYCHIC",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 3,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 51,
+    "rarity": "Commune"
 }

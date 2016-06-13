@@ -1,16 +1,58 @@
 {
-  "name": "Staross",
-  "type": "WATER",
-  "stage": "STAGE_1",
-  "life_point": 90,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 1,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 34
+    "name": "Vostourno",
+    "type": "DARKNESS",
+    "stage": "BASE",
+    "life_point": 60,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"COLORLESS"
+	    ],
+	    "title": "Groz'Yeux",
+	    "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+	    "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().addState(core.State.PARALYZED);}",
+	    "value": {
+		"operator": "-",
+		"value": 0,
+		"supplement": null
+	    }
+	},
+	{
+	    "energies": [
+		"DARKNESS",
+		"COLORLESS",
+		"COLORLESS"
+	    ],
+	    "title": "Vent Glacial",
+	    "text": null,
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 40,
+		"supplment": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "PSYCHIC",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY - Impact des Destins",
+	"card_number": 124
+    },
+    "card_number": 46,
+    "rarity": "Commune"
 }

@@ -1,16 +1,57 @@
 {
-  "name": "Flambusard",
-  "type": "FIRE",
-  "stage": "STAGE_2",
-  "life_point": 130,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 0,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 28
+"name": "Terhal",
+"type": "METAL",
+"stage": "BASE",
+"life_point": 60,
+"abilities": [],
+"attacks": [
+{
+"energies": [
+    "METAL"
+],
+"title": "Collision",
+"text": null,
+"action": null,
+"value": {
+"operator" : "-",
+"value" : 10,
+"supplement" : null
+}
+    {
+"energies": [
+    "METAL",
+    "COLORLESS",
+    "COLORLESS"
+],
+"title": "Attaque Tournante",
+"text": null,
+"action": null,
+"value": {
+"operator" : "-",
+"value" : 30,
+"supplement" : null
+}
+}
+],
+"weakness": {
+"type": "FIRE",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"resistance": {
+"type": "PSYCHIC",
+"value": {
+"operator": "-",
+"value": null
+}
+},
+"retreat_cost": 2,
+"expansion": {
+"name": "XY - Origines Antiques",
+"card_number": 98
+},
+"card_number": 47,
+"rarity": "Commune"
 }

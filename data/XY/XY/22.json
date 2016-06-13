@@ -1,16 +1,56 @@
 {
-  "name": "Flamajou",
-  "type": "FIRE",
-  "stage": "BASE",
-  "life_point": 60,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 1,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 22
+    "name": "Flotajou",
+    "type": "WATER",
+    "stage": "BASE",
+    "life_point": 60,
+    "abilities": [],
+    "attacks": [
+	{
+	
+		"energies": [
+		"WATER"
+	    ],
+	    "title": "Grosse Vague",
+	    "text": null,
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 10,
+		"supplement": null
+	    }
+	    "energies": [
+		"WATER",
+		"COLORLESS"
+	    ],
+	    "title": "Eclaboussure",
+	    "text": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires.",
+        "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defenser().applyDamage(20); }",
+        "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": "+"
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "PLANT",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 37,
+    "rarity": "Commune"
 }

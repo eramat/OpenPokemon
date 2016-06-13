@@ -1,28 +1,27 @@
 {
-    "name": "Cabriolaine",
-    "type": "PLANT",
+    "name": "Scrutella",
+    "type": "PSYCHIC",
     "stage": "BASE",
-    "life_point": 70,
+    "life_point": 60,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"PLANT",
 		"COLORLESS",
 		"COLORLESS"
 	    ],
-	    "title": "Charge",
-	    "text": "",
-	    "action": null,
+	    "title": "Rafale Psy",
+	    "text": "Le Pokémon Actif de votre adversaire est maintenant Confus.",
+	    "action": "board.Defender().addState(core.State.COUNFUSED);",
 	    "value": {
 		"operator": "-",
-		"value": 40,
+		"value": 20,
 		"supplement": null
 	    }
 	}
     ],
     "weakness": {
-	"type": "FIRE",
+	"type": "PSYCHIC",
 	"value": {
 	    "operator": "x",
 	    "value": 2
@@ -33,13 +32,12 @@
 	"value": {
 	    "operator": "-",
 	    "value": null
-	}
-    },
-    "retreat_cost": 2,
+	},
+    "retreat_cost": 1,
     "expansion": {
-	"name": "XY",
-	"card_number": 146
+	"name": "XY - Impact des Destins",
+	"card_number": 124
     },
-    "card_number": 18,
+    "card_number": 32,
     "rarity": "Commune"
 }

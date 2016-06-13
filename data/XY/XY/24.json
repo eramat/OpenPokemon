@@ -1,17 +1,17 @@
 {
-    "name": "Feunnec",
-    "type": "FIRE",
+    "name": "Embrylex",
+    "type": "FIGHTING",
     "stage": "BASE",
-    "life_point": 50,
+    "life_point": 60,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"FIRE"
+		"COLORLESS"
 	    ],
-	    "title": "Feu Follet",
-	    "text": "",
-	    "action": null,
+	    "title": "Attaque Imprudente",
+	    "text": "Ce Pokémon s'inflige 10 dégâts.",
+	    "action": "board.attacker().life_point -= 10;",
 	    "value": {
 		"operator": "-",
 		"value": 20,
@@ -20,7 +20,7 @@
 	}
     ],
     "weakness": {
-	"type": "WATER",
+	"type": "PLANT",
 	"value": {
 	    "operator": "x",
 	    "value": 2
@@ -31,13 +31,12 @@
 	"value": {
 	    "operator": "-",
 	    "value": null
-	}
-    },
+	},
     "retreat_cost": 1,
     "expansion": {
-	"name": "XY",
-	"card_number": 146
+	"name": "XY - Impact des Destins",
+	"card_number": 124
     },
-    "card_number": 24,
+    "card_number": 40,
     "rarity": "Commune"
 }

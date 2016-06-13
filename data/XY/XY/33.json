@@ -1,44 +1,39 @@
 {
-    "name": "Stari",
-    "type": "WATER",
+    "name": "Pitrouille",
+    "type": "PSYCHIC",
     "stage": "BASE",
     "life_point": 60,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"WATER",
-		"COLORLESS"
+		"PSYCHIC"
 	    ],
-	    "title": "Attaque Imprudente",
-	    "text": "Ce Pokémon s'inflige 10 dégâts.",
-	    "action": "border.attacker().life_points -= 10;",
-	    "value": {
-		"operator": "-",
-		"value": 30,
-		"supplement": null
-	    }
-	}
+	    "title": "Onde Folie",
+	    "text": "Le Pokémon Actif de votre adversaire est maintenant Confus.",
+      "action": "board.defenser().addState(core.State.CONFUSED);",
+      "value": {}
+    }
     ],
     "weakness": {
-	"type": "PLANT",
+	"type": "DARKNESS",
 	"value": {
 	    "operator": "x",
 	    "value": 2
 	}
     },
     "resistance": {
-	"type": null,
+	"type": "FIGHTING",
 	"value": {
 	    "operator": "-",
-	    "value": null
+	    "value": 20
 	}
     },
-    "retreat_cost": 1,
+    "retreat_cost": 2,
     "expansion": {
 	"name": "XY",
 	"card_number": 146
     },
-    "card_number": 33,
+    "card_number": 56,
     "rarity": "Commune"
 }

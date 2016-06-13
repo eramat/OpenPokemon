@@ -43,16 +43,24 @@ a {
     border: double;
     font-size: 20px;
     text-align: center;
-
-
-
 }
+
+#blocGestion {
+    margin-top: 50px;
+    margin-left: 20px;
+    width : 80%;
+    height: 80%;
+    border: double;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
 #DescriptionPage{
     margin-top: 30px;
-    margin-left: 200px;
-    margin-right: 50px;
     margin-bottom:100px;
-    width : 80%;
+    width : 100%;
     height: 80%;
     border: double;
     font-size: 20px;
@@ -116,6 +124,155 @@ ListesConnectes{
 
 #connect {
     text-align: right;
+}
+
+#TitreCreation {
+    height:100%;
+    width:100%;
+}
+
+#TitreCreationGauche{
+    width:25%;
+    float:left;
+    height:100%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#TitreCreationDroite{
+    width:25%;
+    margin-right: 20px;
+    float:right;
+    text-align: right;
+    height:100%;
+}
+
+#TitreCreation h1{
+    text-align: center;
+}
+
+#ListeCarteGauche{
+    width:15%;
+    float:left;
+    height:100%;
+    text-align: center;
+    border-right: groove;
+}
+
+#ListeCarteDroite{
+    width:83%;
+    float: right;
+    height:100%;
+    text-align: right;
+}
+
+#ListeCarteApercu{
+    width:38%;
+    float: right;
+    height:100%;
+    border-left:groove;
+    text-align: center;
+}
+
+#ListeCarteCenter{
+    width:60%;
+    float: left;
+    height:100%;
+    text-align: left;
+}
+
+#ListeCarte{
+    height:500px;
+    width:auto;
+    border:groove;
+}
+
+#ListeCarte h3{
+    text-align: center;
+}
+
+#ListeCarteGauche h3{
+    margin-bottom:85%;
+}
+
+#ListeCarteDroite img {
+    width: auto;
+    height: 80%;
+    border:double;
+    margin:auto;
+}
+
+#ListeCarteCenter img {
+    width: auto;
+    height: 40%;
+    margin:1px;
+    border: groove;
+}
+
+#titreDeck{
+    height:50px;
+    margin-bottom:3%;
+}
+
+#titreDeck1{
+    height:100%;
+    width:29%;
+    float:left;
+    margin-left:4%;
+}
+
+#titreDeck2{
+    height:100%;
+    width:17%;
+    float:left;
+    margin-top:0.8%;
+}
+
+#titreDeck3{
+    height:100%;
+    width:17%;
+    float:left;
+    margin-top:1.5%;
+    margin-right:10px;
+}
+
+#titreDeck4{
+    height:100%;
+    width:17%;
+    float:left;
+    margin-top:1.5%;
+}
+
+#titreDeck5{
+    height:100%;
+    width:15%;
+    float:left;
+    margin-top:0.8%;
+}
+
+#tonDeck {
+    height: 500px;
+    width: auto;
+    border: groove;
+}
+
+#tonDeck1{
+    width:15%;
+    float:left;
+    height:100%;
+    text-align: center;
+    border-right: groove;
+}
+
+#tonDeck2{
+    height:100%;
+    width:68%;
+    float:left;
+    margin-top:0.8%;
+}
+
+#tonDeck1 h3{
+    margin-bottom:85%;
 }
 
 #cardDetail {
@@ -279,3 +436,28 @@ ListesConnectes{
 #illustratorName {
     color: #266ad2;
 }
+
+.myButton {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+    background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+    background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+    background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+    background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+    background-color:#7892c2;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #4e6096;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+}
+
+

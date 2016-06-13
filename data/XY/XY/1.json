@@ -1,16 +1,43 @@
 {
-  "name": "Florizarre-EX",
-  "type": "PLANT",
-  "stage": "EX",
-  "life_point": 180,
-  "abilities": [],
-  "attacks": [ ],
-  "weakness": null,
-  "resistance": null,
-  "retreat_cost": 4,
-  "expansion": {
-    "name": "XY",
-    "card_number": 146
-  },
-  "card_number": 1
+"name": "Mystherbe",
+"type": "PLANT",
+"stage": "BASE",
+"life_point": 50,
+"abilities": [],
+"attacks": [
+{
+"energies": [
+"PLANT"
+],
+"title": "Croche-Pied",
+"text": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires.",
+"action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().applyDamage(10); }",
+"value": {
+"operator" : "-",
+"value" : "10",
+"supplement" : "+"
+}
+}
+],
+"weakness": {
+"type": "FIRE",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"resistance": {
+"type": null,
+"value": {
+"operator": "-",
+"value": null
+}
+},
+"retreat_cost": 1,
+"expansion": {
+"name": "XY - Origines Antiques",
+"card_number": 98
+},
+"card_number": 1,
+"rarity": "Commune"
 }

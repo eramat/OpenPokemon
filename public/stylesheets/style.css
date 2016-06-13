@@ -87,7 +87,7 @@ a {
     height: 100%;
 }
 
-ListesConnectes{
+#ListesConnectes{
     border: double;
     font-size: 15px;
     font-family: "Calibri Light";
@@ -237,7 +237,6 @@ ListesConnectes{
     text-align: right;
 }
 
-<<<<<<< HEAD
 #TitreCreation {
     height:100%;
     width:100%;
@@ -387,7 +386,6 @@ ListesConnectes{
     margin-bottom:85%;
 }
 
-=======
 #haut img {
     width: 100%;
     height: 950px;
@@ -510,7 +508,6 @@ ListesConnectes{
 }
 
 
->>>>>>> 84216bf5bd7ed7c8222661ad2bc40cc516d15129
 #cardDetail {
     display: inline-block;
     width: 450px;

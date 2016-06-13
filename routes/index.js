@@ -83,16 +83,7 @@ router.post('/Accueil', passport.authenticate('local'), function (req, res) {
 
 router.get('/CreationDeck',function (req,res){
 
-  var tabPokemon = [];
-  var tabEnergie = [];
-  
-  for (var i=1 ; i < 10 ; i++){
-    var cartePokemon = new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY/' + i + '.json' , 'utf8'));
-    var pokemon = new core.Pokemon(cartePokemon);
-    tabPokemon.push(pokemon.to_object());
-  }
-  
-  res.render('CreationDeck', { card: tabPokemon});
+  res.render('CreationDeck', {});
 });
 
 

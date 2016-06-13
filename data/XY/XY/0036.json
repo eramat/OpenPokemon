@@ -1,0 +1,42 @@
+{
+    "name": "Taupiqueur",
+    "type": "FIGHTING",
+    "stage": "BASE",
+    "life_point": 40,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"FIGHTING"
+	    ],
+	    "title": "Collision",
+	    "text": null,
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 10,
+		"supplement": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "PLANT",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	},
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY - Impact des Destins",
+	"card_number": 124
+    },
+    "card_number": 36,
+    "rarity": "Commune"
+}

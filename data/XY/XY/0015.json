@@ -1,0 +1,42 @@
+{
+    "name": "Otaria",
+    "type": "WATER",
+    "stage": "BASE",
+    "life_point": 80,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"WATER"
+	    ],
+	    "title": "Verglas",
+	    "text": null,
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 10,
+		"supplement": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "METAL",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	},
+    "retreat_cost": 2,
+    "expansion": {
+	"name": "XY - Impact des Destins",
+	"card_number": 124
+    },
+    "card_number": 15,
+    "rarity": "Commune"
+}

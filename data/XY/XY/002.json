@@ -1,0 +1,42 @@
+{
+    "name": "Cheniti",
+    "type": "PLANT",
+    "stage": "BASE",
+    "life_point": 60,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"COLORLESS"
+	    ],
+	    "title": "Suspension",
+	    "text": "",
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 10,
+		"supplement": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "FIRE",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	},
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY - Impact des Destins",
+	"card_number": 124
+    },
+    "card_number": 2,
+    "rarity": "Commune"
+}

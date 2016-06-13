@@ -1,0 +1,42 @@
+{
+    "name": "Vipélierre",
+    "type": "PLANT",
+    "stage": "BASE",
+    "life_point": 60,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"PLANT"
+	    ],
+	    "title": "Pâté",
+	    "text": "Soignez 10 dégâts à ce Pokémon.",
+	    "action": "if (board.attacker().life_point < 60) { board.attacker().applyHeal(10); }",
+	    "value": {
+		"operator": "-",
+		"value": 10,
+		"supplement": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "FIRE",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	},
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY - Impact des Destins",
+	"card_number": 124
+    },
+    "card_number": 5,
+    "rarity": "Commune"
+}

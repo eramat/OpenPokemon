@@ -1,0 +1,43 @@
+{
+    "name": "Spoink",
+    "type": "PSYCHIC",
+    "stage": "BASE",
+    "life_point": 60,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"PSYCHIC",
+	    ],
+	    "title": "Trempette",
+	    "text": null,
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 10,
+		"supplement": null
+	    }
+	}
+    ],
+    "weakness": {
+	"type": "PSYCHIC",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 49,
+    "rarity": "Commune"
+}

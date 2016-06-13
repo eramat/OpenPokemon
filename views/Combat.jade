@@ -1,39 +1,52 @@
 extends layout
 
 block content
-        div#adversaire(z-index=1)
-            div#cartebanc
-                div#cartebanc(style='max-width:20%;margin-left:0px;')
-                div#cartebanc(style='max-width:20%;margin-left:20%;')
-                div#cartebanc(style='max-width:20%;margin-left:40%;')
-                div#cartebanc(style='max-width:20%;margin-left:60%;')
-                div#cartebanc(style='max-width:20%;margin-left:80%;')
-            div#carteactif
+    div#adversaire(z-index=1)
+        div#cartebanc
+            div#cartebanc(style='max-width:20%;margin-left:0px;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/26.png")
+            div#cartebanc(style='max-width:20%;margin-left:20%;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/37.png")
+            div#cartebanc(style='max-width:20%;margin-left:40%;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/12.png")
+            div#cartebanc(style='max-width:20%;margin-left:60%;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/16.png")
+            div#cartebanc(style='max-width:20%;margin-left:80%;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/9.png")
+        div#carteactif
+            img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/22.png")
 
 
 
 
-        div#joueur
-            div#cartebanc(style='margin-top:270px;')
-                div#cartebanc(style='max-width:20%;margin-left:0px;')
-                div#cartebanc(style='max-width:20%;margin-left:20%;')
-                div#cartebanc(style='max-width:20%;margin-left:40%;')
-                div#cartebanc(style='max-width:20%;margin-left:60%;')
-                div#cartebanc(style='max-width:20%;margin-left:80%;')
-            div#carteactif(style='top:20px;')
-            div#main
-                img(style='width:100%;height:100%;',src="images/site/dos.jpg")
+    div#joueur
+        div#cartebanc(style='margin-top:270px;')
+            div#cartebanc(style='max-width:20%;margin-left:0px;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/42.png")
+            div#cartebanc(style='max-width:20%;margin-left:20%;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/11.png")
+            div#cartebanc(style='max-width:20%;margin-left:40%;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/38.png")
+            div#cartebanc(style='max-width:20%;margin-left:60%;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/33.png")
+            div#cartebanc(style='max-width:20%;margin-left:80%;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/44.png")
+        div#carteactif(style='top:20px;')
+            img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/31.png")
+        div#main
+            img(style='width:100%;height:100%;',src="images/site/dos.jpg")
 
-            div#recompense
-                img(style='width:100%;height:105%;transform: rotate(90deg);',src="images/site/dos.jpg")
-            div#deck
-                img(style='width:100%;height:100%;',src="images/site/dos.jpg")
-            div#defausse
-                img(style='width:100%;height:100%;',src="images/site/dos.jpg")
+        div#recompense
+            img(style='width:100%;height:105%;transform: rotate(90deg);',src="images/site/dos.jpg")
+        div#deck
+            img(style='width:100%;height:100%;',src="images/site/dos.jpg")
+        div#defausse
+            img(style='width:100%;height:100%;',src="images/site/dos.jpg")
 
 
 
-        div#cote
+    div#cote
+        div.btn
 
 
 

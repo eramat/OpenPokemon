@@ -1,26 +1,27 @@
 {
-    "name": "Lépidonille",
-    "type": "PLANT",
+    "name": "Venipatte",
+    "type": "PSYCHIC",
     "stage": "BASE",
-    "life_point": 40,
+    "life_point": 70,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"COLORLESS",
+		"PSYCHIC",
+		"COLORLESS"
 	    ],
-	    "title": "Piqûre",
-	    "text": "",
-	    "action": null,
+	    "title": "Dard-Venin",
+	    "text": "Le Pokémon Actif de votre adversaire est maintenant Empoisonné.",
+	    "action": "board.defender().addState(core.State.POISONED);",
 	    "value": {
 		"operator": "-",
-		"value": 10,
+		"value": 20,
 		"supplement": null
 	    }
 	}
     ],
     "weakness": {
-	"type": "FIRE",
+	"type": "PSYCHIC",
 	"value": {
 	    "operator": "x",
 	    "value": 2
@@ -33,11 +34,11 @@
 	    "value": null
 	}
     },
-    "retreat_cost": 1,
+    "retreat_cost": 3,
     "expansion": {
 	"name": "XY",
 	"card_number": 146
     },
-    "card_number": 15,
+    "card_number": 51,
     "rarity": "Commune"
 }

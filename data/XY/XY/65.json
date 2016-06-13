@@ -1,39 +1,27 @@
 {
-    "name": "Flotajou",
-    "type": "WATER",
+    "name": "Charpenti",
+    "type": "FIGHTING",
     "stage": "BASE",
-    "life_point": 60,
+    "life_point": 70,
     "abilities": [],
     "attacks": [
 	{
-	
-		"energies": [
-		"WATER"
-	    ],
-	    "title": "Grosse Vague",
-	    "text": null,
-	    "action": null,
-	    "value": {
-		"operator": "-",
-		"value": 10,
-		"supplement": null
-	    }
 	    "energies": [
-		"WATER",
+		"FIGHTING",
 		"COLORLESS"
 	    ],
-	    "title": "Eclaboussure",
+	    "title": "Matelage",
 	    "text": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires.",
-        "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defenser().applyDamage(20); }",
-        "value": {
+      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().applyDamage(20); }",
+      "value": {
         "operator": "-",
-        "value": 10,
+        "value": 20,
         "supplement": "+"
-	    }
-	}
+      }
+    }
     ],
     "weakness": {
-	"type": "PLANT",
+	"type": "PSYCHIC",
 	"value": {
 	    "operator": "x",
 	    "value": 2
@@ -46,11 +34,11 @@
 	    "value": null
 	}
     },
-    "retreat_cost": 1,
+    "retreat_cost": 2,
     "expansion": {
 	"name": "XY",
 	"card_number": 146
     },
-    "card_number": 37,
+    "card_number": 65,
     "rarity": "Commune"
 }

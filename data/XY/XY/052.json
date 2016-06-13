@@ -1,0 +1,56 @@
+{
+"name": "Tarsal",
+"type": "FAIRY",
+"stage": "BASE",
+"life_point": 60,
+"abilities": [],
+"attacks": [
+{
+"energies": [
+    "COLORLESS"
+],
+"title": "Murmure",
+"text": null,
+"action": null,
+"value": {
+"operator" : "-",
+"value" : 10,
+"supplement" : null
+}
+    {
+"energies": [
+    "FAIRY",
+    "COLORLESS"
+],
+"title": "Attaque Tournante",
+"text": null,
+"action": null,
+"value": {
+"operator" : "-",
+"value" : 20,
+"supplement" : null
+}
+}
+],
+"weakness": {
+"type": "METAL",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"resistance": {
+"type": "DARKNESS",
+"value": {
+"operator": "-",
+"value": 20
+}
+},
+"retreat_cost": 1,
+"expansion": {
+"name": "XY - Origines Antiques",
+"card_number": 98
+},
+"card_number": 52,
+"rarity": "Commune"
+}

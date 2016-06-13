@@ -1,0 +1,55 @@
+{
+    "name": "Ponchiot",
+    "type": "COLORLESS",
+    "stage": "BASE",
+    "life_point": 50,
+    "abilities": [],
+    "attacks": [
+	{
+		"energies": [
+		"COLORLESS"
+	    ],
+	    "title": "Charge",
+	    "text": null,
+      "action": null,
+	    "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": null
+      }
+		"energies": [
+		"COLORLESS",
+		"COLORLESS"
+	    ],
+	    "title": "Morsure",
+	    "text": null,
+      "action": null,
+	    "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": null
+      }
+    }
+    ],
+    "weakness": {
+	"type": "FIGHTING",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 1,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 108,
+    "rarity": "Commune"
+}

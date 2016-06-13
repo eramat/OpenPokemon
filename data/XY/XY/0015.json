@@ -1,16 +1,16 @@
 {
-    "name": "Lépidonille",
-    "type": "PLANT",
+    "name": "Otaria",
+    "type": "WATER",
     "stage": "BASE",
-    "life_point": 40,
+    "life_point": 80,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"COLORLESS",
+		"WATER"
 	    ],
-	    "title": "Piqûre",
-	    "text": "",
+	    "title": "Verglas",
+	    "text": null,
 	    "action": null,
 	    "value": {
 		"operator": "-",
@@ -20,7 +20,7 @@
 	}
     ],
     "weakness": {
-	"type": "FIRE",
+	"type": "METAL",
 	"value": {
 	    "operator": "x",
 	    "value": 2
@@ -31,12 +31,11 @@
 	"value": {
 	    "operator": "-",
 	    "value": null
-	}
-    },
-    "retreat_cost": 1,
+	},
+    "retreat_cost": 2,
     "expansion": {
-	"name": "XY",
-	"card_number": 146
+	"name": "XY - Impact des Destins",
+	"card_number": 124
     },
     "card_number": 15,
     "rarity": "Commune"

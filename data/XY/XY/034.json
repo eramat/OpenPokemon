@@ -1,0 +1,44 @@
+{
+"name": "Gringolem",
+"type": "PSYCHIC",
+"stage": "BASE",
+"life_point": 90,
+"abilities": [],
+"attacks": [
+{
+"energies": [
+    "COLORLESS",
+    "COLORLESS"
+],
+"title": "Poing Ecrasant",
+"text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+"action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().applyDamage(30); }",
+"value": {
+"operator" : "-",
+"value" : null,
+"supplement" : null
+}
+}
+],
+"weakness": {
+"type": "DARKNESS",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"resistance": {
+"type": "FIGHTING",
+"value": {
+"operator": "-",
+"value": null
+}
+},
+"retreat_cost": 3,
+"expansion": {
+"name": "XY - Origines Antiques",
+"card_number": 98
+},
+"card_number": 34,
+"rarity": "Commune"
+}

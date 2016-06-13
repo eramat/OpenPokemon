@@ -1,0 +1,43 @@
+{
+"name": "Mimigal",
+"type": "PLANT",
+"stage": "BASE",
+"life_point": 50,
+"abilities": [],
+"attacks": [
+{
+"energies": [
+"COLORLESS"
+],
+"title": "Sécrétion",
+"text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+"action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().addState(core.State.PARALYSED); }",
+"value": {
+"operator" : "-",
+"value" : null,
+"supplement" : null
+}
+}
+],
+"weakness": {
+"type": "FIRE",
+"value": {
+"operator": "x",
+"value": 2
+}
+},
+"resistance": {
+"type": null,
+"value": {
+"operator": "-",
+"value": null
+}
+},
+"retreat_cost": 1,
+"expansion": {
+"name": "XY - Origines Antiques",
+"card_number": 98
+},
+"card_number": 5,
+"rarity": "Commune"
+}

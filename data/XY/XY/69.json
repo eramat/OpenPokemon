@@ -1,0 +1,57 @@
+{
+    "name": "Mascaïman",
+    "type": "DARKNESS",
+    "stage": "BASE",
+    "life_point": 70,
+    "abilities": [],
+    "attacks": [
+	{
+	    "energies": [
+		"COLORLESS",
+		"COLORLESS"
+	    ],
+	    "title": "Collision",
+	    "text": null,
+      "action": null,
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": null
+      }
+      "energies": [
+		"DARKNESS",
+		"DARKNESS",
+		"COLORLESS"
+	    ],
+	    "title": "Croc Obscur",
+	    "text": null,
+      "action": null,
+      "value": {
+        "operator": "-",
+        "value": 50,
+        "supplement": null
+      }
+    }
+    ],
+    "weakness": {
+	"type": "FIGHTING",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": "PSYCHIC",
+	"value": {
+	    "operator": "-",
+	    "value": 20
+	}
+    },
+    "retreat_cost": 3,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 69,
+    "rarity": "Commune"
+}

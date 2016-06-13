@@ -1,16 +1,16 @@
 {
-    "name": "Lépidonille",
-    "type": "PLANT",
+    "name": "Taupiqueur",
+    "type": "FIGHTING",
     "stage": "BASE",
     "life_point": 40,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"COLORLESS",
+		"FIGHTING"
 	    ],
-	    "title": "Piqûre",
-	    "text": "",
+	    "title": "Collision",
+	    "text": null,
 	    "action": null,
 	    "value": {
 		"operator": "-",
@@ -20,7 +20,7 @@
 	}
     ],
     "weakness": {
-	"type": "FIRE",
+	"type": "PLANT",
 	"value": {
 	    "operator": "x",
 	    "value": 2
@@ -31,13 +31,12 @@
 	"value": {
 	    "operator": "-",
 	    "value": null
-	}
-    },
+	},
     "retreat_cost": 1,
     "expansion": {
-	"name": "XY",
-	"card_number": 146
+	"name": "XY - Impact des Destins",
+	"card_number": 124
     },
-    "card_number": 15,
+    "card_number": 36,
     "rarity": "Commune"
 }

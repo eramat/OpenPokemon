@@ -1,37 +1,32 @@
 {
-    "name": "Abo",
+    "name": "Pitrouille",
     "type": "PSYCHIC",
     "stage": "BASE",
-    "life_point": 70,
+    "life_point": 60,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"COLORLESS",
-		"COLORLESS"
+		"PSYCHIC"
 	    ],
-	    "title": "Morsure",
-	    "text": null,
-	    "action": null,
-	    "value": {
-		"operator": "-",
-		"value": 20,
-		"supplement": null
-	    }
-	}
+	    "title": "Onde Folie",
+	    "text": "Le Pokémon Actif de votre adversaire est maintenant Confus.",
+      "action": "board.defenser().addState(core.State.CONFUSED);",
+      "value": {}
+    }
     ],
     "weakness": {
-	"type": "PSYCHIC",
+	"type": "DARKNESS",
 	"value": {
 	    "operator": "x",
 	    "value": 2
 	}
     },
     "resistance": {
-	"type": null,
+	"type": "FIGHTING",
 	"value": {
 	    "operator": "-",
-	    "value": null
+	    "value": 20
 	}
     },
     "retreat_cost": 2,
@@ -39,6 +34,6 @@
 	"name": "XY",
 	"card_number": 146
     },
-    "card_number": 47,
+    "card_number": 56,
     "rarity": "Commune"
 }

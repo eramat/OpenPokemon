@@ -1,23 +1,23 @@
 {
-    "name": "Lépidonille",
-    "type": "PLANT",
+    "name": "Monorpale",
+    "type": "METAL",
     "stage": "BASE",
-    "life_point": 40,
+    "life_point": 60,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"COLORLESS",
+		"METAL"
 	    ],
-	    "title": "Piqûre",
-	    "text": "",
-	    "action": null,
-	    "value": {
-		"operator": "-",
-		"value": 10,
-		"supplement": null
-	    }
-	}
+	    "title": "Transpercement",
+	    "text": null,
+      "action": null,
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": null
+      }
+    }
     ],
     "weakness": {
 	"type": "FIRE",
@@ -27,17 +27,17 @@
 	}
     },
     "resistance": {
-	"type": null,
+	"type": "PSYCHIC",
 	"value": {
 	    "operator": "-",
-	    "value": null
+	    "value": 20
 	}
     },
-    "retreat_cost": 1,
+    "retreat_cost": 2,
     "expansion": {
 	"name": "XY",
 	"card_number": 146
     },
-    "card_number": 15,
+    "card_number": 83,
     "rarity": "Commune"
 }

@@ -47,6 +47,44 @@ a {
 
 
 }
+#DescriptionPage{
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 50px;
+    margin-bottom:100px;
+    width : 80%;
+    height: 80%;
+    border: double;
+    font-size: 20px;
+    font-family: "Calibri Light";
+    text-align: center;
+    font-style: italic;
+}
+
+#Gestion{
+    height:100%;
+    width:100%;
+}
+
+#GestionGauche{
+    width:65%;
+    float:left;
+    height:100%;
+}
+
+#GestionDroite {
+    width: 35%;
+    float: right;
+    height: 100%;
+}
+
+ListesConnectes{
+    border: double;
+    font-size: 15px;
+    font-family: "Calibri Light";
+    text-align: center;
+    margin-bot:15px;
+}
 
 .form h1{
     font-size: 50px;
@@ -59,6 +97,13 @@ a {
     margin-left: 10px;
     margin-right: 10px;
 
+}
+#form.Paragraphe{
+    margin-right:20px;
+    font-size:20px;
+    font-size : 20px;
+    font-weight : lighter;
+    text-align:justify;
 }
 
 #connect h1 {

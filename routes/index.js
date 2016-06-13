@@ -69,6 +69,8 @@ router.get('/Combat', function (req, res) {
 });
 
 router.post('/admin', function (req, res) {
+    mongoose.connect('mongodb://localhost/OpenPokemon');
+    db.Account.find();
 
   res.render('admin', {});
 });
@@ -77,5 +79,8 @@ router.post('/admin', function (req, res) {
 router.post('/Accueil', passport.authenticate('local'), function (req, res) {
   res.redirect('/admin');
 
+});
+router.get('/CreationDeck',function (req,res){
+  res.render('CreationDeck', {} );
 });
 module.exports = router;

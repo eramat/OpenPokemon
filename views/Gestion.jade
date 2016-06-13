@@ -9,6 +9,22 @@ block content
                 h1 Bienvenue #{user.username}
                 a(href="/logout") Se déconnecter
 
-        div#form
-            h1 acceder au jeu :
-                a(href="/Combat") Lancer le combat
+        #DescriptionPage Bienvenue sur la page de gestion du jeu. Ici, vous pourrez créer ou modifier votre deck, lancer un combat , ou encore accéder aux règles.
+            <br />Une liste des joueurs connectés est également accessible à droite de votre écran.
+        div#Gestion
+
+            div#GestionGauche
+                div#form
+                    Paragraphe Modifiez votre Deck :
+                        a(href="/CreationDeck") Cliquez ici
+
+                div#form
+                    Paragraphe Lancer un combat aléatoire :
+                    a(href="/Combat") Go !
+
+                div#form
+                    Paragraphe Accedez au règles du jeu :
+                    a(href="images/site/Regle_Simplifiee.pdf") Cliquez ici
+
+            div#GestionDroite
+                h1 Liste des joueurs en ligne :

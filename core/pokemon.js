@@ -1,7 +1,5 @@
 var OpenPokemon = OpenPokemon || {};
 
-var core = require('./player');
-
 module.exports = ( function (self) {
   "use strict";
 
@@ -26,7 +24,7 @@ module.exports = ( function (self) {
     this.addEnergyActive= function (index,player) {
       if (player.hand()[index].card_type() === core.CardType.ENERGY) {
         if (player.checkActiveCard()) {
-        energy.push(player.takeCardInHand(index));
+          energy.push(player.takeCardInHand(index));
         }
       }
     };

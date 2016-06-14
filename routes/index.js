@@ -4,7 +4,6 @@ var core = require('../core');
 var fs = require('fs');
 var passport = require('passport');
 var Account = require('../models/account');
-
 /*
  /* GET home page. */
 /*
@@ -26,7 +25,6 @@ router.get('/register', function (req, res) {
 });
 
 router.post('/register', function (req, res) {
-    console.log("coucou");
 
 
   Account.register(new Account({username: req.body.username}), req.body.password, function (err, account) {

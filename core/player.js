@@ -100,16 +100,23 @@ module.exports = ( function (self) {
     };
 
 
+    //NEW
+    //Piocher une carte
+
+    this.pickACard = function(){
+      hand.push(deck.takeFirstCard());
+    }
+
 
 
 
     //Prend une carte de la main
 
-    this.takeCardInHand = function (index) {
-      if (index < hand.length) {
-        var card = hand[index];
+    this.takeCardInHand = function (indexHand) {
+      if (indexHand < hand.length) {
+        var card = hand[indexHand];
 
-        hand.splice(index, 1);
+        hand.splice(indexHand, 1);
         return card;
       } else {
         return null;
@@ -117,8 +124,8 @@ module.exports = ( function (self) {
     };
 
     //Mettre la carte de la main à l'actif
-    this.putPokemonCardHandToActive = function (){
-      var card=takeCardInHand(index);
+    this.putPokemonCardHandToActive = function (indexHand){
+      var card=takeCardInHand(indexHand);
       if(card.card_type() === core.CardType.POKEMON){
         var taille = active_pokemon.length;
         if(taille === 0){
@@ -129,8 +136,8 @@ module.exports = ( function (self) {
 
     //Mettre une carte pokemon de la main sur le banc
 
-    this.putPokemonCardHandToBench = function (){
-      var card=takeCardInHand(index);
+    this.putPokemonCardHandToBench = function (indexHand){
+      var card=takeCardInHand(indexHand);
       if(card.card_type() === core.CardType.POKEMON){
         var taille = bench.length;
         if(taille<5){
@@ -145,9 +152,9 @@ module.exports = ( function (self) {
 
     //Prend une carte du banc
 
-    this.takeCardInBench = function (index){
-      if (index < bench.length) {
-        var card = bench[index];
+    this.takeCardInBench = function (indexBench){
+      if (indexBench < bench.length) {
+        var card = bench[indexBench];
         bench.splice(index, 1);
         return card;
       } else {
@@ -157,21 +164,39 @@ module.exports = ( function (self) {
 
     //Mettre la carte du banc à l'actif
 
-    this.putCardBenchToActive = function () {
+    this.putCardBenchToActive = function (indexBench) {
       var taille = active_pokemon.length;
       if(taille===0){
-        active_pokemon.push(takeCardInBench(index));
+        active_pokemon.push(takeCardInBench(indexBench));
       }
     };
 
-    this.Retreat = function(){
-      if(bench.length > 0){
-        var card = active_pokemon;
-        active_pokemon.splice(0,1);
-        putCardBenchToActive(index);
-        bench.push(card);
-        discard_pile.push();
+
+    //NEW
+    this.Retreat = function(pokemon){
+      //Check si energie demandée = valide
+      if(pokemon.energy()>=pokemon.retreat_cost()){
+        //Check taille du banc
+        if(bench.length > 0){
+          //on stock la carte active, on la remplace par celle du banc et on ajoute l'ancienne active au banc
+          var card = active_pokemon;
+          active_pokemon.splice(0,1);
+          //on prend une carte du banc ( supprime la carte du banc dans la fonction )
+          putCardBenchToActive(index);
+          bench.push(card);
+          //on défausse les energies de l'ancienne carte active, on cree un compteur
+          var i=0;
+          var energyCard;
+          while(i<pokemon.retreat_cost()){
+            //On stocke la carte energy et on la défausse
+            energyCard=pokemon.energy[0];
+            pokemon.energy.splice(0,1);
+            discard_pile.push(energyCard);
+          }
+        }
       }
+        //Check s'il reste une place sur le banc
+
     };
 
 

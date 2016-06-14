@@ -14,7 +14,9 @@ block content
             div#cartebanc(style='max-width:20%;margin-left:80%;')
                 img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/9.png")
         div#carteactif
-            img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/22.png")
+            img(style='width:100%;height:100%;transform: rotate(180deg)',src="images/cards/pokemon/XY/XY/25.png")
+
+
 
 
 
@@ -30,12 +32,28 @@ block content
             div#cartebanc(style='max-width:20%;margin-left:60%;')
                 img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/33.png")
             div#cartebanc(style='max-width:20%;margin-left:80%;')
-                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/44.png")
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/41.png")
         div#carteactif(style='top:20px;')
             img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/31.png")
         div#main
-            img(style='width:100%;height:100%;',src="images/site/dos.jpg")
+            img(style='width:100%;height:105%;position:relative;',src="images/site/dos.jpg")
+            button.btn.btn-default(style='position:absolute;left:50px; right:0px;top:160px;',type=button value="Main" onClick="main()" class="myButton") Main
+        script.
+            function main() {
+                popupS.confirm({
+                    content: 'Voici votre main ',
+                    labelOk: 'oui',
+                    labelCancel: 'Non',
+                    onSubmit: function () {
+                        window.location.href = "/Gestion"
+                    },
+                    onClose: function () {
+                        console.log(':(');
+                    }
 
+                });
+            }
+            td
         div#recompense
             img(style='width:100%;height:105%;transform: rotate(90deg);',src="images/site/dos.jpg")
         div#deck
@@ -46,7 +64,42 @@ block content
 
 
     div#cote
-        div.btn
+        button.btn.btn-default(style='margin-top:900px;margin-left:25px;',type=button value="Abandonner" onClick="popup()" class="myButton") Abandonner
+    script.
+        function popup() {
+            popupS.confirm({
+                content: 'Voulez-vous vraiment abandonner ?',
+                labelOk: 'Oui',
+                labelCancel: 'Non',
+                onSubmit: function () {
+                    window.location.href = "/Gestion"
+                },
+                onClose: function () {
+                    console.log(':(');
+                }
+
+            });
+        }
+    td
+        button.btn.btn-default(style='position:absolute;left:20px; right:0px;top:160px;',type=button value="Terminer" onClick="main()" class="myButton") Terminer tour
+            script.
+                function main() {
+                    popupS.confirm({
+                        content: 'Voici votre main ',
+                        labelOk: 'oui',
+                        labelCancel: '',
+                        onSubmit: function () {
+                            window.location.href = "/Gestion"
+                        },
+                        onClose: function () {
+                            console.log(':(');
+                        }
+
+                    });
+                }
+                td
+
+
 
 
 

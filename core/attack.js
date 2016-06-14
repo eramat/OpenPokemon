@@ -32,6 +32,11 @@ module.exports = ( function (self) {
       return value;
     };
 
+    this.doAttack = function(){
+
+
+    }
+
     this.to_object = function () {
       return {
         energies: energies.map(function (energy) { return core.EnergyType.key(energy); }),

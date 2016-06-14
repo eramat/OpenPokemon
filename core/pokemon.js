@@ -21,6 +21,20 @@ module.exports = ( function (self) {
       return life_point;
     };
 
+    this.energy = function(){
+      return energy;
+    }
+
+    this.name = function () {
+      return card.name();
+    };
+
+    //NEW
+    this.retreat_cost=function(){
+      return card.retreat_cost();
+    }
+
+
     this.addEnergyActive= function (index,player) {
       if (player.hand()[index].card_type() === core.CardType.ENERGY) {
         if (player.checkActiveCard()) {
@@ -35,9 +49,7 @@ module.exports = ( function (self) {
       }
     };
 
-    this.name = function () {
-      return card.name();
-    };
+
 
     this.to_object = function () {
       return card.to_object();

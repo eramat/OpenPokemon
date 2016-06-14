@@ -3,6 +3,8 @@
 
 extends banniere
 
+
+
 block content
     div#TitreCreation
         div#TitreCreationGauche
@@ -14,17 +16,56 @@ block content
     div#ListeCarte
         div#ListeCarteGauche
             h3 Listes des types :
-            h4 Tous (nb)
-            h4 Energies (nb)
-            h4 Dresseurs (nb)
-            h4 Pokémons (nb)
+            div#systeme_onglets
+                div#onglets
+                    h4(class="onglet_0 onglet" id="onglet_Tous" onclick="javascript:change_onglet('Tous');") Tous (53)
+                    br
+                    h4(class="onglet_0 onglet" id="onglet_Pokémons" onclick="javascript:change_onglet('Pokémons');") Pokémons (43)
+                    br
+                    h4(class="onglet_0 onglet" id="onglet_Energies" onclick="javascript:change_onglet('Energies');") Energies (10)
+                    br
+                    h4(class="onglet_0 onglet" id="onglet_Dresseurs" onclick="javascript:change_onglet('Dresseurs');") Dresseurs
         div#ListeCarteDroite
             div#ListeCarteCenter
                 h3 Listes des cartes
+                div.contenu_onglets
+                    div.contenu_onglet #contenu_onglet_Tous
+                        - for (var i=1 ; i<44 ; i++){
+                        div.uneCarte
+                            img(src="images/cards/pokemon/XY/XY/" + i + ".png")
+                            br
+                            input(type ="checkbox" name="choix" + i value=i)
+                        - }
+                        - for (var i=50 ; i<59 ; i++){
+                        div.uneCarte
+                            img(src="images/cards/energy/" + i + ".png")
+                            br
+                            input(type ="checkbox" name="choix" + i value=i)
+                        - }
+                        - for (var i=0 ; i<0 ; i++){
+                        div.uneCarte
+                            img(src="images/cards/trainer/" + i + ".png")
+                            br
+                            input(type ="checkbox" name="choix" + i value=i)
+                        - }
+                    div.contenu_onglet #contenu_onglet_Pokémons
+                        - for (var i=1 ; i<44 ; i++){
+                            div.uneCarte
+                                img(src="images/cards/pokemon/XY/XY/" + i + ".png")
+                                br
+                                input(type ="checkbox" name="choix" + i value=i)
+                        - }
 
+                    div.contenu_onglet #contenu_onglet_Energies
+                        - for (var i=50 ; i<59 ; i++){
+                             div.uneCarte
+                                img(src="images/cards/energy/" + i + ".png")
+                                br
+                                input(type ="checkbox" name="choix" + i value=i)
+                        - }
 
             div#ListeCarteApercu
-                h3 Aperçu des cartes
+                h3 Aperçu de la carte
                 img(src="images/cards/pokemon/XY/XY/24.png")
 
     div#titreDeck

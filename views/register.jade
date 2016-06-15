@@ -8,15 +8,13 @@ block content
             br
             form(role='get', action="/register",method="post", style='max-width:100%;')
                 .form-group
-                    input.form-control(type='text', name="username", placeholder='Entrer un Pseudo')
-                .form-group
-                    input.form-control(type='text', name="mail", placeholder='Entrer une adresse mail')
+                    input.form-control(id='pseudo' type='text', name="username", placeholder='Entrer un Pseudo')
                 .form-group
                     input.form-control(type='password', name="password", placeholder='Entrer un mot de passe')
                 .form-group
-                button.btn.btn-default(type='submit') Inscription
+                button.btn.btn-default(type='submit' onclick="javascript:errorPseudoExistant()") Inscription
             a(href='/')
-                button.btn.btn-primary(type="button") Cancel
+                button.btn.btn-primary(type="button") Retour
 
 
 

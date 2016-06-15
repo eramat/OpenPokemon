@@ -11,12 +11,12 @@
           "COLORLESS"
         ],
         "title": "Collision",
-        "text": null,
-        "action": null,
+        "text": "",
+        "action": "",
         "value": {
           "operator": "-",
           "value": 20,
-          "supplement": null
+          "supplement": ""
         }
       },
       {
@@ -26,12 +26,12 @@
 		"COLORLESS"
 	    ],
 	    "title": "Croc Obscur",
-	    "text": null,
-      "action": null,
+	    "text": "",
+      "action": "",
       "value": {
         "operator": "-",
         "value": 50,
-        "supplement": null
+        "supplement": ""
       }
     }
     ],

@@ -5,30 +5,31 @@
 "life_point": 60,
 "abilities": [],
 "attacks": [
-{
-"energies": [
-    "COLORLESS"
-],
-"title": "Murmure",
-"text": null,
-"action": null,
-"value": {
-"operator" : "-",
-"value" : 10,
-"supplement" : null
-}
+    {
+        "energies": [
+            "COLORLESS"
+        ],
+        "title": "Murmure",
+        "text": "",
+        "action": "",
+        "value": {
+            "operator": "-",
+            "value": 10,
+            "supplement": ""
+        }
+    },
     {
 "energies": [
     "FAIRY",
     "COLORLESS"
 ],
 "title": "Attaque Tournante",
-"text": null,
-"action": null,
+"text": "",
+"action": "",
 "value": {
 "operator" : "-",
 "value" : 20,
-"supplement" : null
+"supplement" : ""
 }
 }
 ],

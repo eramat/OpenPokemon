@@ -27,17 +27,17 @@
     }
   },
   "resistance": {
-    "type": null,
+    "type": "",
     "value": {
       "operator": "-",
-      "value": null
-    },
-    "retreat_cost": 1,
-    "expansion": {
-      "name": "XY",
-      "card_number": 146
-    },
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
     "card_number": 3,
     "rarity": "Commune"
-  }
 }

@@ -10,12 +10,12 @@
         "WATER"
       ],
       "title": "Verglas",
-      "text": null,
-      "action": null,
+      "text": "",
+      "action": "",
       "value": {
         "operator": "-",
         "value": 10,
-        "supplement": null
+        "supplement": ""
       }
     }
   ],
@@ -27,11 +27,12 @@
     }
   },
   "resistance": {
-    "type": null,
+    "type": "",
     "value": {
       "operator": "-",
-      "value": null
-    },
+      "value": ""
+    }
+  },
     "retreat_cost": 2,
     "expansion": {
       "name": "XY - Impact des Destins",
@@ -39,5 +40,4 @@
     },
     "card_number": 15,
     "rarity": "Commune"
-  }
 }

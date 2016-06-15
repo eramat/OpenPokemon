@@ -14,8 +14,8 @@
 "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().addState(core.State.PARALYSED); }",
 "value": {
 "operator" : "-",
-"value" : null,
-"supplement" : null
+"value" : "",
+"supplement" : ""
 }
 }
 ],
@@ -27,10 +27,10 @@
 }
 },
 "resistance": {
-"type": null,
+"type": "",
 "value": {
 "operator": "-",
-"value": null
+"value": ""
 }
 },
 "retreat_cost": 1,

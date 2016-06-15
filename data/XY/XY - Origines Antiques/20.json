@@ -15,8 +15,8 @@
 "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().applyDamage(30); }",
 "value": {
 "operator" : "-",
-"value" : null,
-"supplement" : null
+"value" : "",
+"supplement" : ""
 }
 }
 ],
@@ -31,7 +31,7 @@
 "type": "FIGHTING",
 "value": {
 "operator": "-",
-"value": null
+"value": ""
 }
 },
 "retreat_cost": 3,

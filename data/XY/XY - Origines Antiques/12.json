@@ -11,12 +11,12 @@
     "COLORLESS"
 ],
 "title": "Fournaise",
-"text": null,
-"action": null,
+"text": "",
+"action": "",
 "value": {
 "operator" : "-",
 "value" : 30,
-"supplement" : null
+"supplement" : ""
 }
 }
 ],
@@ -28,10 +28,10 @@
 }
 },
 "resistance": {
-"type": null,
+"type": "",
 "value": {
 "operator": "-",
-"value": null
+"value": ""
 }
 },
 "retreat_cost": 2,

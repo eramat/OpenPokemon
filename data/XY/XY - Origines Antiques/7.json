@@ -10,12 +10,12 @@
 "PLANT"
 ],
 "title": "Piqûre",
-"text": null,
-"action": null,
+"text": "",
+"action": "",
 "value": {
 "operator" : "-",
 "value" : 10,
-"supplement" : null
+"supplement" : ""
 }
 }
 ],
@@ -27,10 +27,10 @@
 }
 },
 "resistance": {
-"type": null,
+"type": "",
 "value": {
 "operator": "-",
-"value": null
+"value": ""
 }
 },
 "retreat_cost": 1,

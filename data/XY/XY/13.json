@@ -13,11 +13,11 @@
 	    ],
 	    "title": "Charge",
 	    "text": "",
-	    "action": null,
+	    "action": "",
 	    "value": {
 		"operator": "-",
 		"value": 40,
-		"supplement": null
+		"supplement": ""
 	    }
 	}
     ],
@@ -29,10 +29,10 @@
 	}
     },
     "resistance": {
-	"type": null,
+	"type": "",
 	"value": {
 	    "operator": "-",
-	    "value": null
+	    "value": ""
 	}
     },
     "retreat_cost": 2,

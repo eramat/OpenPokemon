@@ -10,12 +10,12 @@
       "COLORLESS"
     ],
     "title": "Charge",
-    "text": null,
-    "action": null,
+    "text": "",
+    "action": "",
     "value": {
       "operator": "-",
       "value": 10,
-      "supplement": null
+      "supplement": ""
     }
   },
 {
@@ -29,7 +29,7 @@
 "value": {
 "operator" : "-",
 "value" : 30,
-"supplement" : null
+"supplement" : ""
 }
 }
 ],
@@ -41,7 +41,7 @@
 }
 },
 "resistance": {
-"type": null,
+"type": "",
 "value": {
 "operator": "-",
 "value": 20

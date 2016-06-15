@@ -21,21 +21,6 @@ var filesXYOriginesAntique= fs.readdirSync('../data/XY/XY - Origines Antiques');
 var filesXYImpactdesDestins= fs.readdirSync('../data/XY/XY - Impact des Destins');
 var filesXYGenerations= fs.readdirSync('../data/XY/Generations');
 var filesXYPoingFurieux= fs.readdirSync('../data/XY/Poings Furieux');
-filesXY.forEach(function(file) {
-  if(path.extname(file) ==='.json') {
-    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY/'+ file,'utf8')));
-  }
-});
-filesXYOriginesAntique.forEach(function(file) {
-  if(path.extname(file) ==='.json') {
-    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY - Origines Antiques/'+ file,'utf8')));
-  }
-});
-filesXYImpactdesDestins.forEach(function(file) {
-  if(path.extname(file) ==='.json') {
-    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY - Impact des Destins/'+ file,'utf8')));
-  }
-});
 filesXYGenerations.forEach(function(file) {
   if(path.extname(file) ==='.json') {
     pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/Generations/'+ file,'utf8')));
@@ -46,6 +31,25 @@ filesXYPoingFurieux.forEach(function(file) {
     pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/Poings Furieux/'+ file,'utf8')));
   }
 });
+
+filesXY.forEach(function(file) {
+    if(path.extname(file) ==='.json') {
+        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY/'+ file,'utf8')));
+    }
+});
+
+filesXYImpactdesDestins.forEach(function(file) {
+    if(path.extname(file) ==='.json') {
+        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY - Impact des Destins/'+ file,'utf8')));
+    }
+});
+
+filesXYOriginesAntique.forEach(function(file) {
+    if(path.extname(file) ==='.json') {
+        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY - Origines Antiques/'+ file,'utf8')));
+    }
+});
+
 
 var deck1 = new core.Deck(pokemon_cards, energy_cards, []);
 var deck2 = new core.Deck(pokemon_cards, energy_cards, []);

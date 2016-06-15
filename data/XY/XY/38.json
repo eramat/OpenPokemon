@@ -10,12 +10,12 @@
 		"METAL"
 	    ],
 	    "title": "Transpercement",
-	    "text": null,
-      "action": null,
+	    "text": "",
+      "action": "",
       "value": {
         "operator": "-",
         "value": 10,
-        "supplement": null
+        "supplement": ""
       }
     }
     ],

@@ -16,7 +16,7 @@
 	    "value": {
 		"operator": "-",
 		"value": 20,
-		"supplement": null
+		"supplement": ""
 	    }
 	}
     ],
@@ -28,10 +28,10 @@
 	}
     },
     "resistance": {
-	"type": null,
+	"type": "",
 	"value": {
 	    "operator": "-",
-	    "value": null
+	    "value": ""
 	}
     },
     "retreat_cost": 3,

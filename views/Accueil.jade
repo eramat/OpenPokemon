@@ -2,6 +2,9 @@
    Created by boulanger on 07/06/2016.
 
 extends banniere
+block scripts
+    script(src="https://cdn.socket.io/socket.io-1.4.5.js")
+    script(type="text/javascript" src="/js/connecte.js")
 
 block content
     div#form
@@ -9,10 +12,10 @@ block content
             br
             form(role='form', action="/Accueil",method="post", style='max-width:100%;')
                 .form-group
-                    input.form-control(type='text', name="username", placeholder='Entrer un Pseudo')
+                    input.form-control#pseudo(type='text', name="username", placeholder='Entrer un Pseudo')
                 .form-group
                     input.form-control(type='password', name="password", placeholder='Mot de passe')
-                button.btn.btn-default(type='submit' class="myButton") Accéder au jeu
+                button.btn.btn-default#co(type='submit' class="myButton") Accéder au jeu
 
                 br
                 a(href='/register') Inscrivez vous
@@ -34,6 +37,7 @@ block content
 
 
 
+script(src="//code.jquery.com/jquery-1.11.0.min.js")
 
 
 

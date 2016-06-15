@@ -7,9 +7,11 @@ html
         link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel='stylesheet', href='/stylesheets/CreationDeck.css')
         script(src='/js/CreationDeck.js')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
         div#banniere
             img(src="images/site/banniere.png")
         div#sitelogo
             img(src="images/site/logo.png")
     body
         block content
+        block scripts

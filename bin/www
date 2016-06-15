@@ -11,101 +11,147 @@ var core = require('../core');
 var fs = require('fs');
 var path = require('path');
 
-/**
- * Get port from environment and store in Express.
- */
-
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
-/**
- * Create HTTP server.
- */
-
-var server = http.createServer(app);
-var io = require('socket.io').listen(server);
-/**
- * Listen on provided port, on all network interfaces.
- */
 
 
-io.on('connection', function(socket){
+var pokemon_cards=[];
+var energy_cards = [];
 
-  console.log('je suis ');
-
-  socket.on('message', function(message){
-    console.log(message);
-    socket.message = message;
-    socket.broadcast.emit('message', message);
-  });
-
+var filesXY= fs.readdirSync('../data/XY/XY');
+var filesXYOriginesAntique= fs.readdirSync('../data/XY/XY - Origines Antiques');
+var filesXYImpactdesDestins= fs.readdirSync('../data/XY/XY - Impact des Destins');
+var filesXYGenerations= fs.readdirSync('../data/XY/Generations');
+var filesXYPoingFurieux= fs.readdirSync('../data/XY/Poings Furieux');
+filesXY.forEach(function(file) {
+  if(path.extname(file) ==='.json') {
+    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY/'+ file,'utf8')));
+  }
+});
+filesXYOriginesAntique.forEach(function(file) {
+  if(path.extname(file) ==='.json') {
+    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY - Origines Antiques/'+ file,'utf8')));
+  }
+});
+filesXYImpactdesDestins.forEach(function(file) {
+  if(path.extname(file) ==='.json') {
+    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY - Impact des Destins/'+ file,'utf8')));
+  }
+});
+filesXYGenerations.forEach(function(file) {
+  if(path.extname(file) ==='.json') {
+    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/Generations/'+ file,'utf8')));
+  }
+});
+filesXYPoingFurieux.forEach(function(file) {
+  if(path.extname(file) ==='.json') {
+    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/Poings Furieux/'+ file,'utf8')));
+  }
 });
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
-
-
-
-
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort(val) {
-  var port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
+var deck1 = new core.Deck(pokemon_cards, energy_cards, []);
+var deck2 = new core.Deck(pokemon_cards, energy_cards, []);
+var player1 = new core.Player(deck1);
+player1.selectInitialHand();
+var i=0;
+for(i ; i < player1.hand().length;i++) {
+  console.log(player1.hand()[i]);
 }
+var player2 = new core.Player(deck2);
+player2.selectInitialHand();
+var board = new core.Board([player1, player2]);
 
-/**
- * Event listener for HTTP server "error" event.
- */
+          /**
+           * Get port from environment and store in Express.
+           */
 
-function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error;
-  }
+          var port = normalizePort(process.env.PORT || '3000');
+          app.set('port', port);
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
+          /**
+           * Create HTTP server.
+           */
 
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
-    default:
-      throw error;
-  }
-}
+          var server = http.createServer(app);
+          var io = require('socket.io').listen(server);
 
-/**
- * Event listener for HTTP server "listening" event.
- */
 
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
+          /**
+           * Listen on provided port, on all network interfaces.
+           */
+
+
+          io.on('connection', function (socket) {
+
+            console.log('je suis ');
+
+            socket.on('message', function (message) {
+              console.log(message);
+              socket.message = message;
+              socket.broadcast.emit('message', message);
+            });
+
+          });
+
+          server.listen(port);
+          server.on('error', onError);
+          server.on('listening', onListening);
+
+
+          /**
+           * Normalize a port into a number, string, or false.
+           */
+
+          function normalizePort(val) {
+            var port = parseInt(val, 10);
+
+            if (isNaN(port)) {
+              // named pipe
+              return val;
+            }
+
+            if (port >= 0) {
+              // port number
+              return port;
+            }
+
+            return false;
+          }
+
+          /**
+           * Event listener for HTTP server "error" event.
+           */
+
+          function onError(error) {
+            if (error.syscall !== 'listen') {
+              throw error;
+            }
+
+            var bind = typeof port === 'string'
+                ? 'Pipe ' + port
+                : 'Port ' + port;
+
+            // handle specific listen errors with friendly messages
+            switch (error.code) {
+              case 'EACCES':
+                console.error(bind + ' requires elevated privileges');
+                process.exit(1);
+                break;
+              case 'EADDRINUSE':
+                console.error(bind + ' is already in use');
+                process.exit(1);
+                break;
+              default:
+                throw error;
+            }
+          }
+
+          /**
+           * Event listener for HTTP server "listening" event.
+           */
+
+          function onListening() {
+            var addr = server.address();
+            var bind = typeof addr === 'string'
+                ? 'pipe ' + addr
+                : 'port ' + addr.port;
+            debug('Listening on ' + bind);
+          }

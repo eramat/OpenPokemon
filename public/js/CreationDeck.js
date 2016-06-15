@@ -13,7 +13,8 @@ function change_onglet(name) {
     anc_onglet = name;
 }
 
-function change_apercu(num) {
-    var a = 25;
-    return a;
+function change_apercu(num,name,onglet) {
+    var apercu = document.getElementById('myapercu');
+    var image = document.getElementById('carte_'+onglet+name);
+    apercu.src="images/cards/"+name+num+".png";
 }

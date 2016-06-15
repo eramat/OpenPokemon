@@ -7,7 +7,7 @@
 "attacks": [
 {
 "energies": [
-    "COLORLESS",
+    "COLORLESS"
 ],
 "title": "Tit'Sieste",
 "text": "Soignez 20 dégâts à ce Pokemon.",
@@ -17,6 +17,7 @@
 "value" : null,
 "supplement" : null
 }
+},
 {
     "energies": [
 	"WATER",

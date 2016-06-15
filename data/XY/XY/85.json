@@ -1,0 +1,53 @@
+{
+  "name": "Taupiqueur",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 50,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIGHTING"
+      ],
+      "title": "Mine",
+      "text": "Regardez la carte du dessus de votre deck de votre adversaire. Ensuite, vous pouvez demander à votre adversaire de mélangez son deck",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "FIGHTING",
+        "COLORLESS"
+      ],
+      "title": "Coud'Boue",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PLANT",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 38,
+  "rarity": "Commune"
+}

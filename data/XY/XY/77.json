@@ -1,0 +1,58 @@
+{
+  "name": "Krabby",
+  "type": "WATER",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "WATER"
+      ],
+      "title": "Force Poigne",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "WATER",
+        "WATER",
+        "WATER"
+      ],
+      "title": "Pince-Masse",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 50,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PLANT",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 21,
+  "rarity": "Commune"
+}

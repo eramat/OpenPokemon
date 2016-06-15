@@ -1,0 +1,54 @@
+{
+  "name": "Tauros",
+  "type": "COLORLESS",
+  "stage": "BASE",
+  "life_point": 110,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Bélier",
+      "text": "Ce Pokémon s'inflige 10 dégâts",
+      "action": "board.attacker().applyDamage(10);",
+      "value": {}
+    },
+    {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Furax",
+      "text": "Lancez une pièce pour chaque marqueur de dégâts placé sur ce Pokémon. Cette attaque inflige 30 dégâts multipliés par le nombre côtés face",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": "*"
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 57,
+  "rarity": "Rare"
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Soporifik",
+  "type": "PSYCHIC",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PSYCHIC"
+      ],
+      "title": "Suggestion Sinistre",
+      "text": "Chaque fois que votre adversaire lance une pièce pendant son prochain tour, considérez que c'est pile.",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "PSYCHIC",
+        "PSYCHIC"
+      ],
+      "title": "Piqûre Psy",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 35,
+  "rarity": "Commune"
+}

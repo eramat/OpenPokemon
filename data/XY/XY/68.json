@@ -1,0 +1,53 @@
+{
+  "name": "Mélofée",
+  "type": "FAIRY",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Rayon Lune",
+      "text": "Soignez 30 dégâts à ce Pokémon.",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "FAIRY",
+        "COLORLESS"
+      ],
+      "title": "Ecras'Face",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "METAL",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "DARKNESS",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 69,
+  "rarity": "Commune"
+}

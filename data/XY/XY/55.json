@@ -1,0 +1,59 @@
+{
+  "name": "Fulguris",
+  "type": "LIGHTNING",
+  "stage": "BASE",
+  "life_point": 120,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "LIGHTNING",
+        "COLORLESS"
+      ],
+      "title": "Poing-Eclair Déchaîné",
+      "text": "Si une carte Outil Pokémon est attachée au Pokémon Actif de votre adversaire, cette attaque inflige 30 dégâts supplémentaires",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": "+"
+      }
+    },
+    {
+      "energies": [
+        "LIGHTNING",
+        "LIGHTNING",
+        "COLORLESS"
+      ],
+      "title": "Tacle Foudroyant",
+      "text": "Ce Pokémon ne peut pas utiliser Tacle Foudroyant pendant votre prochain tour.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 100,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "METAL",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 33,
+  "rarity": "Rare"
+}

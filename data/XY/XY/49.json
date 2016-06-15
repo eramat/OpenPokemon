@@ -1,0 +1,58 @@
+{
+  "name": "Ptitard",
+  "type": "WATER",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "WATER"
+      ],
+      "title": "Pluie Eclaboussante",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Courant Tourbillonnant",
+      "text": "Le Pokémon Actif de votre adversaire est maintenant Confus. Ce dernier ne peut pas battre en retraite pendant le prochain tour de votre adversaire.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PLANT",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 15,
+  "rarity": "Commune"
+}

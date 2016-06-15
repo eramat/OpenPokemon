@@ -1,0 +1,49 @@
+{
+  "name": "Ramoloss",
+  "type": "PSYCHIC",
+  "stage": "BASE",
+  "life_point": 50,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Trou d'Mémoire",
+      "text": "Lancez une pièce. Si c'est face, soignez 10 dégâts à ce Pokémon",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "PSYCHIC",
+        "PSYCHIC"
+      ],
+      "title": "Farfouille",
+      "text": "Défaussez une Energie psy attachée à ce Pokémon. Dans ce cas, prenez une carte Objet dans votre pile de défausse et ajoutez-la à votre main.",
+      "action": "",
+      "value": {}
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 32,
+  "rarity": "Commune"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Négapi",
+  "type": "LIGHTNING",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Défausse Négative",
+      "text": "Prenez 2 cartes Energie de base dans votre pile de défausse et ajoutez-les à votre main.",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "LIGHTNING"
+      ],
+      "title": "Choc Statique",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "METAL",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 32,
+  "rarity": "Commune"
+}

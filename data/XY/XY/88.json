@@ -1,0 +1,53 @@
+{
+  "name": "Kicklee",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 90,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIGHTING"
+      ],
+      "title": "Allonge",
+      "text": "Cette attaque inflige 30 dégâts à l'un des Pokémon de Banc de votre adversaire.('N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc)",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "FIGHTING",
+        "FIGHTING"
+      ],
+      "title": "Coup'd Pied en Spirale",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 47,
+  "rarity": "Rare"
+}

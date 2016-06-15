@@ -18,9 +18,9 @@ block content
             h3 Listes des types :
             div#systeme_onglets
                 div#onglets
-                    h4(class="onglet_1 onglet" id="onglet_Tous" onclick="javascript:change_onglet('Tous');") Tous (53)
+                    h4(class="onglet_1 onglet" id="onglet_Tous" onclick="javascript:change_onglet('Tous');") Tous (105)
                     br
-                    h4(class="onglet_0 onglet" id="onglet_Pokemons" onclick="javascript:change_onglet('Pokemons');") Pokémons (43)
+                    h4(class="onglet_0 onglet" id="onglet_Pokemons" onclick="javascript:change_onglet('Pokemons');") Pokémons (95)
                     br
                     h4(class="onglet_0 onglet" id="onglet_Energies" onclick="javascript:change_onglet('Energies');") Energies (10)
                     br
@@ -30,7 +30,7 @@ block content
                 h3 Listes des cartes
                 div.contenu_onglets
                     div.contenu_onglet#contenu_onglet_Tous
-                        - for (var i=1 ; i<44 ; i++){
+                        - for (var i=1 ; i<96 ; i++){
                             div.uneCarte
                                 img(id='carte_Tous_pokemon/XY/XY/' onclick="javascript:change_apercu("+i+",'pokemon/XY/XY/','Tous')" src="images/cards/pokemon/XY/XY/" + i + ".png")
                         - }
@@ -43,7 +43,7 @@ block content
                                 img(id='carte_Tous_trainer/' onclick="javascript:change_apercu("+i+",'trainer/','Tous')" src="images/cards/trainer/" + i + ".png")
                         - }
                     div.contenu_onglet#contenu_onglet_Pokemons
-                        - for (var i=1 ; i<44 ; i++){
+                        - for (var i=1 ; i<96 ; i++){
                             div.uneCarte
                                 img(id='carte_pokemon_pokemon/XY/XY/' onclick="javascript:change_apercu("+i+",'pokemon/XY/XY/','pokemon')" src="images/cards/pokemon/XY/XY/" + i + ".png")
                         - }

@@ -5,18 +5,19 @@
 "life_point": 60,
 "abilities": [],
 "attacks": [
-{
-"energies": [
-    "COLORLESS"
-],
-"title": "Charge",
-"text": null,
-"action": null,
-"value": {
-"operator" : "-",
-"value" : 10,
-"supplement" : null
-}
+  {
+    "energies": [
+      "COLORLESS"
+    ],
+    "title": "Charge",
+    "text": null,
+    "action": null,
+    "value": {
+      "operator": "-",
+      "value": 10,
+      "supplement": null
+    }
+  },
 {
 "energies": [
     "COLORLESS",
@@ -24,7 +25,7 @@
 ],
 "title": "Coup Rapide",
 "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
-"action": "action": "if (board.flipCoin() === core.Coin.TAILS) { board.defender().applyDamage(0); }",
+"action":"if (board.flipCoin() === core.Coin.TAILS) { board.defender().applyDamage(0); }",
 "value": {
 "operator" : "-",
 "value" : 30,

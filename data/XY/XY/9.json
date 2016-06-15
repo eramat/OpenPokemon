@@ -7,12 +7,11 @@
     "attacks": [
 	{
 	    "energies": [
-		"PLANT",
+		"PLANT"
 	    ],
 	    "title": "Dard-Nuée",
 	    "text": "Lancez 4 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face.",
-	    "action": "for(var i=0;i<4;i++){
-if (board.flipCoin() === core.Coin.HEADS) { board.defender()applyDamage(10);}}",
+	    "action": "for(var i=0;i<4;i++){if (board.flipCoin() === core.Coin.HEADS) { board.defender()applyDamage(10);}}",
 	    "value": {
 		"operator": "-",
 		"value": 10,

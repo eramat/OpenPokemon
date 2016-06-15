@@ -5,18 +5,20 @@
     "life_point": 60,
     "abilities": [],
     "attacks": [
-	{
-		"energies": [
-		"COLORLESS",
-	    ],
-	    "title": "Charge",
-	    "text": null,
-	    "action": null,
-	    "value": {
-		"operator": "-",
-		"value": 10,
-		"supplement": null
-	    }
+      {
+        "energies": [
+          "COLORLESS",
+        ],
+        "title": "Charge",
+        "text": null,
+        "action": null,
+        "value": {
+          "operator": "-",
+          "value": 10,
+          "supplement": null
+        }
+      },
+      {
 	    "energies": [
 		"FAIRY",
 		"COLORLESS"

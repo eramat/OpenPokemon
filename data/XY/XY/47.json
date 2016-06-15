@@ -1,0 +1,57 @@
+{
+  "name": "Magmar",
+  "type": "FIRE",
+  "stage": "BASE",
+  "life_point": 80,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIRE"
+      ],
+      "title": "Collision",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "FIRE",
+        "COLORLESS"
+      ],
+      "title": "Flammèche",
+      "text": "Défaussez une Energie Feu attaché à ce Pokémon",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "WATTER",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 10,
+  "rarity": "Commune"
+}

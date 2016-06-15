@@ -1,0 +1,44 @@
+{
+  "name": "Rhinocorne",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 80,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIGHTING",
+        "FIGHTING"
+      ],
+      "title": "Bélier",
+      "text": "Ce Pokémon s'inflige 10 dégâts",
+      "action": "board.attacker().applyDamage(10);",
+      "value": {
+        "operator": "-",
+        "value": 40,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PLANT",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 3,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 49,
+  "rarity": "Commune"
+}

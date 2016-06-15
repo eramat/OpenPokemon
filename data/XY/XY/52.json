@@ -1,0 +1,57 @@
+{
+  "name": "Elektek",
+  "type": "LIGHTNING",
+  "stage": "BASE",
+  "life_point": 80,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "LIGHTNING"
+      ],
+      "title": "Poing Léger",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "LIGHTNING",
+        "COLORLESS"
+      ],
+      "title": "Embuscade",
+      "text": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": "+"
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "METAL",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 29,
+  "rarity": "Commune"
+}

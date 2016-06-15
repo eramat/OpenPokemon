@@ -1,0 +1,55 @@
+{
+  "name": "Artikodin",
+  "type": "WATER",
+  "stage": "BASE",
+  "life_point": 120,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "WATER"
+      ],
+      "title": "Chercheur de Glace",
+      "text": "Cherchez jusqu'à 3 cartes Energie Water dans votre deck, montrez-les, puis ajoutez-les à votre main. Mélangez ensuite votre deck.",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "WATER",
+        "WATER",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Vent Glaçant",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 100,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "METAL",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 25,
+  "rarity": "Rare"
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Elechor",
+  "type": "LIGHTNING",
+  "stage": "BASE",
+  "life_point": 120,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "LIGHTNING"
+      ],
+      "title": "Bec Vrille",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "LIGHTNING",
+        "LIGHTNING",
+        "COLORLESS"
+      ],
+      "title": "Tonnerre Déchaîné",
+      "text": "Cette attaque inflige 40 dégâts à l'un de vos Pokémon de Banc (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc)",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 120,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "LIGHTNING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 29,
+  "rarity": "Ultra rare"
+}

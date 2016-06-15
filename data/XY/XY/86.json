@@ -1,0 +1,43 @@
+{
+  "name": "Machoc",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIGHTING"
+      ],
+      "title": "Coud'Phalange",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 40,
+  "rarity": "Commune"
+}

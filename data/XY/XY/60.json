@@ -1,0 +1,59 @@
+{
+  "name": "Gringolem",
+  "type": "PSYCHIC",
+  "stage": "BASE",
+  "life_point": 90,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PSYCHIC",
+        "COLORLESS"
+      ],
+      "title": "Ecras'Face",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": "+"
+      }
+    },
+    {
+      "energies": [
+        "PSYCHIC",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Eclate-Roc",
+      "text": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts supplémentaires.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": "+"
+      }
+    }
+  ],
+  "weakness": {
+    "type": "DARKNESS",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 3,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 42,
+  "rarity": "Commune"
+}

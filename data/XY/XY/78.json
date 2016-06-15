@@ -1,0 +1,43 @@
+{
+  "name": "Magicarpe",
+  "type": "WATER",
+  "stage": "BASE",
+  "life_point": 30,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "WATER"
+      ],
+      "title": "Trempette Epique",
+      "text": "Lancez 2 pièces. Si vous obtenez au moins un côté pile, cette attaque ne fait rien",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "LIGHTNING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 22,
+  "rarity": "Commune"
+}

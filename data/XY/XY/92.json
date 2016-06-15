@@ -1,0 +1,39 @@
+{
+  "name": "Miaouss",
+  "type": "COLORLESS",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Tacle Epuisé",
+      "text": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts au Pokémon Actif de votre adversaire. Si c'est pile, ce Pokémon s'infige 30 dégâts.",
+      "action": "",
+      "value": {}
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 53,
+  "rarity": "Commune"
+}

@@ -5,19 +5,21 @@
     "life_point": 70,
     "abilities": [],
     "attacks": [
-	{
-	    "energies": [
-		"COLORLESS",
-		"COLORLESS"
-	    ],
-	    "title": "Collision",
-	    "text": null,
-      "action": null,
-      "value": {
-        "operator": "-",
-        "value": 20,
-        "supplement": null
-      }
+      {
+        "energies": [
+          "COLORLESS",
+          "COLORLESS"
+        ],
+        "title": "Collision",
+        "text": null,
+        "action": null,
+        "value": {
+          "operator": "-",
+          "value": 20,
+          "supplement": null
+        }
+      },
+      {
       "energies": [
 		"DARKNESS",
 		"DARKNESS",

@@ -1,42 +1,43 @@
 {
-    "name": "Riolu",
-    "type": "FIGHTING",
-    "stage": "BASE",
-    "life_point": 60,
-    "abilities": [],
-    "attacks": [
-	{
-	    "energies": [
-		"FIGHTING"
-	    ],
-	    "title": "Poing Ecrasant",
-	    "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
-	    "action": "a remplir",
-	    "value": {
-		"operator": "-",
-		"value": 30,
-		"supplement": null
-	    }
-	}
-    ],
-    "weakness": {
-	"type": "PSYCHIC",
-	"value": {
-	    "operator": "x",
-	    "value": 2
-	}
+  "name": "Riolu",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIGHTING"
+      ],
+      "title": "Poing Ecrasant",
+      "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+      "action": "a remplir",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": null
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": null,
+    "value": {
+      "operator": "-",
+      "value": null
     },
-    "resistance": {
-	"type": null,
-	"value": {
-	    "operator": "-",
-	    "value": null
-	},
     "retreat_cost": 1,
     "expansion": {
-	"name": "XY - Impact des Destins",
-	"card_number": 124
+      "name": "XY - Impact des Destins",
+      "card_number": 124
     },
     "card_number": 46,
     "rarity": "Commune"
+  }
 }

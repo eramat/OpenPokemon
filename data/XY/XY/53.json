@@ -1,0 +1,57 @@
+{
+  "name": "Posipi",
+  "type": "LIGHTNING",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Main Positive",
+      "text": "Défaussez une carte Energie de base de votre main. Dans ce cas, piochez 2 cartes",
+      "action": "",
+      "value": {
+        "operator": "",
+        "value": "",
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "LIGHTNING",
+        "COLORLESS"
+      ],
+      "title": "Electro-Queue",
+      "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "METAL",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 31,
+  "rarity": "Commune"
+}

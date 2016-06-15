@@ -1,0 +1,58 @@
+{
+  "name": "Makuhita",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 80,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIGHTING"
+      ],
+      "title": "Koud'Poing",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "FIGHTING",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Force",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 40,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 3,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 51,
+  "rarity": "Commune"
+}

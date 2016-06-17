@@ -8,7 +8,7 @@ var passport = require('passport');
 
 // la racine renvoie à l'accueil
 router.get('/', function (req, res, next) {
-  res.render('Accueil', {user : req.user});
+  res.render('Accueil', {});
 });
 
 // Page Enregistrement
@@ -24,7 +24,6 @@ router.post('/register', function (req, res) {
     username: req.param('username'),
     password: req.param('password')
   };
-
 
   // On regarde si l'utilisateur est déjà dans la BDD, donc On compte
   req.app.db.models.Account.count({'username': req.param('username')}, function (err, username){
@@ -112,8 +111,19 @@ router.get('/Admin', function (req,res) {
 
 
 router.post('/Admin', function (req, res) {
-  res.render('Admin', {});
+  // Si il y a un compte, on regarde si le mot de passe correspond au paramètrepassé
+  req.app.db.models.Account.findOne({'username':'admin'}, function (err, account) {
+    if (account.password != req.param('password')) {
+      // si mot de passe incorrect on renvoie l'erreur 404
+      res.render('Accueil', {err: 405});
+    } else {
+      req.session.username = account.username;
+      res.redirect('/Admin');
+    }
+  });
 });
+
+
 
 
 //Page de création de deck

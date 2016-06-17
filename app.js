@@ -42,6 +42,24 @@ mongoose.connect('mongodb://localhost/OpenPokemon');
 var ConfigBDD = require('./BDD/BDD.js');
 app.db = mongoose.createConnection(ConfigBDD.url);
 require('./bdd')(app, mongoose);
+var collection = app.db.collection('accounts');
+
+app.db.models.Account.findOne({'username':'admin'}, function (req,account) {
+  //si on ne trouve pas de username admin
+  if (account == null){
+    //on en créé un
+      console.log('pas admin , on en fait un');
+      app.db.models.Account.create({'username':'admin','password':'admin'});
+  }else {
+    //il y en a déjà, donc on les supprime, et on en refait un
+    console.log('un admin, on le delete, et on en refait un ');
+    collection.remove({'username':'admin'});
+    app.db.models.Account.create({'username':'admin','password':'admin'});
+  }
+});
+
+
+
 
 
 // catch 404 and forward to error handler

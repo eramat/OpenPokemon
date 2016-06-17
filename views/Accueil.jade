@@ -39,9 +39,8 @@ block content
                     input.form-control(id='username', type='text', name="username", placeholder='Entrer un Pseudo')
                 .form-group
                     input.form-control(id='password', type='password', name="password", placeholder='Mot de passe')
-                if(err == 405 || err==406)
-                    h6 erreur
-
+                if(err == 405)
+                    h6 erreur: vous n'etes pas administrateur.
                 button.btn.btn-default(type='submit', value='submit' class="myButton") Connexion admin
 
 

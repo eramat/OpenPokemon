@@ -3,85 +3,126 @@ var router = express.Router();
 var core = require('../core');
 var fs = require('fs');
 var passport = require('passport');
-var Account = require('../models/account');
-/*
+
  /* GET home page. */
-/*
- router.get('/', function(req, res, next) {
 
- var pikachu_card = new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY/42.json', 'utf8'));
- var pikachu = new core.Pokemon(pikachu_card);
-
- console.log(pikachu.to_object());
-
- res.render('index', { card: pikachu.to_object() });
- });*/
+// la racine renvoie à l'accueil
 router.get('/', function (req, res, next) {
   res.render('Accueil', {user : req.user});
 });
 
+// Page Enregistrement
 router.get('/register', function (req, res) {
   res.render('register', {});
 });
 
+//Renvoie de l'enregistrement
 router.post('/register', function (req, res) {
 
+  //Creer une variable Account
+  var CreationAccount = {
+    username: req.param('username'),
+    password: req.param('password')
+  };
 
-  Account.register(new Account({username: req.body.username}), req.body.password, function (err, account) {
 
-    if (err) {
-      return res.render("register", {info: "Désolé le pseudo est deja utilisé"});
+  // On regarde si l'utilisateur est déjà dans la BDD, donc On compte
+  req.app.db.models.Account.count({'username': req.param('username')}, function (err, username){
+    //si il y en a déjà un, on renvoie une erreur 401
+    if (username > 0) {
+      res.render('register',{err: 401});
+    }else {
+      if (req.param('username').length < 1) {
+        res.render('register', {err: 400});
+      }else if (req.param('password').length < 1) {
+        // Si on ne saisit pas de mot de passe, erreur 402 !
+        res.render('register', {err: 402});
+      } else {
+        // on créé dans la BDD un account
+        req.app.db.models.Account.create(CreationAccount, function (err, Account) {
+          console.log('COMPTE BIEN CREE');
+          res.redirect('/Accueil');
+        });
+      }
     }
-    passport.authenticate('local')(req, res, function () {
-        res.redirect('/');
-    });
   });
 });
 
-
+//Accueil
 router.get('/Accueil', function (req, res) {
   res.render('Accueil', {});
 });
 
-router.post('/Accueil', passport.authenticate('local'), function (req, res) {
-  res.redirect('/Gestion');
-  
-
-});
-
-router.get('/Gestion', function (req, res, next) {
-  res.render('Gestion', {
-    user : req.user
+//si authentifié, on peut aller en page de gestion
+router.post('/Accueil', function (req, res) {
+  // On regarde si il y a un username
+  req.app.db.models.Account.count({'username':req.param('username')}, function(err, username) {
+    //Si il n'y a pas d'username dans la BDD, alors on renvoie l'erreur 403
+    if (username <= 0) {
+      res.render('Accueil', {err: 403});
+    }else{
+      // Si il y a un compte, on regarde si le mot de passe correspond au paramètrepassé
+      req.app.db.models.Account.findOne({'username': req.param('username')}, function (err, account) {
+        if (account.password != req.param('password')) {
+          // si mot de passe incorrect on renvoie l'erreur 404
+          res.render('Accueil', {err: 404});
+        }else{
+          req.session.username = account.username;
+          res.redirect('/Gestion');
+        }
+      });
+    }
   });
-
 });
 
+//utilisateur est l'utilisateur connecté
+router.get('/Gestion', function (req, res, next) {
+  //affichage pseudo dans la console
+  console.log(req.session.username);
+  //si le pseudo est undefined : l'utilisateur est pas connecté !
+  // On le renvoie à l'accueil
+  if (req.session.username == undefined) {
+    res.redirect('/Accueil');
+  }else{
+    res.render('Gestion', {username: req.session.username});
+  }
+});
+
+// déconnexion : renvoie à l'accueil
 router.get('/logout', function (req, res) {
-  req.logout();
+  //destruction de la session
+  req.session.destroy();
   res.redirect('/');
 });
 
 
+// Page combat
 router.get('/Combat', function (req, res) {
-  res.render('Combat', {});
+  if (req.session.username == undefined) {
+    res.redirect('/Accueil');
+  }else{
+    res.render('Combat', {});
+  }
 });
 
-router.post('/admin', function (req, res) {
-    mongoose.connect('mongodb://localhost/OpenPokemon');
-    db.Account.find();
-
-  res.render('admin', {});
+//Page d'administrateur
+router.get('/Admin', function (req,res) {
+  res.render('Admin', {});
 });
 
 
-router.post('/Accueil', passport.authenticate('local'), function (req, res) {
-  res.redirect('/admin');
-
+router.post('/Admin', function (req, res) {
+  res.render('Admin', {});
 });
 
+
+//Page de création de deck
 router.get('/CreationDeck',function (req,res){
-
-  res.render('CreationDeck', {});
+  if (req.session.username == undefined) {
+    res.redirect('/Accueil');
+  }else{
+    res.render('CreationDeck', {});
+  }
 });
 
 

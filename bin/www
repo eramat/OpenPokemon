@@ -11,58 +11,6 @@ var core = require('../core');
 var fs = require('fs');
 var path = require('path');
 
-
-
-var pokemon_cards=[];
-var energy_cards = [];
-
-var filesXY= fs.readdirSync('../data/XY/XY');
-var filesXYOriginesAntique= fs.readdirSync('../data/XY/XY - Origines Antiques');
-var filesXYImpactdesDestins= fs.readdirSync('../data/XY/XY - Impact des Destins');
-var filesXYGenerations= fs.readdirSync('../data/XY/Generations');
-var filesXYPoingFurieux= fs.readdirSync('../data/XY/Poings Furieux');
-filesXYGenerations.forEach(function(file) {
-  if(path.extname(file) ==='.json') {
-    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/Generations/'+ file,'utf8')));
-  }
-});
-filesXYPoingFurieux.forEach(function(file) {
-  if(path.extname(file) ==='.json') {
-    pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/Poings Furieux/'+ file,'utf8')));
-  }
-});
-
-filesXY.forEach(function(file) {
-    if(path.extname(file) ==='.json') {
-        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY/'+ file,'utf8')));
-    }
-});
-
-filesXYImpactdesDestins.forEach(function(file) {
-    if(path.extname(file) ==='.json') {
-        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY - Impact des Destins/'+ file,'utf8')));
-    }
-});
-
-filesXYOriginesAntique.forEach(function(file) {
-    if(path.extname(file) ==='.json') {
-        pokemon_cards.push(new core.Builder().createFromJSON(fs.readFileSync('../data/XY/XY - Origines Antiques/'+ file,'utf8')));
-    }
-});
-
-
-var deck1 = new core.Deck(pokemon_cards, energy_cards, []);
-var deck2 = new core.Deck(pokemon_cards, energy_cards, []);
-var player1 = new core.Player(deck1);
-player1.selectInitialHand();
-var i=0;
-for(i ; i < player1.hand().length;i++) {
-  console.log(player1.hand()[i]);
-}
-var player2 = new core.Player(deck2);
-player2.selectInitialHand();
-var board = new core.Board([player1, player2]);
-
           /**
            * Get port from environment and store in Express.
            */
@@ -84,9 +32,6 @@ var board = new core.Board([player1, player2]);
 
 
           io.on('connection', function (socket) {
-
-            console.log('je suis ');
-
             socket.on('message', function (message) {
               console.log(message);
               socket.message = message;

@@ -6,13 +6,28 @@ block content
     div#form
         h1 Inscription Pokémon TCG
             br
-            form(role='get', action="/register",method="post", style='max-width:100%;')
+            form(role='get', action="/register",method="post", style='max-width:100%;', id='register')
                 .form-group
-                    input.form-control(id='pseudo' type='text', name="username", placeholder='Entrer un Pseudo')
+                    if(!err)
+                        input.form-control(id='username' type='text', name="username", placeholder='Entrer un Pseudo')
+                    if (err == 400)
+                        input.form-control(id='username' type='text', name="username", placeholder='Entrer votre Pseudo')
+                        h6 Erreur : Veuillez entrer un pseudo
+                    //si le username est déjà pris (err = '401' ), on redemande le username
+                    if(err == 401)
+                        input.form-control(id='username' type='text', name="username", placeholder='Retapez votre Pseudo')
+                        h6 Erreur : le pseudo est déjà pris
                 .form-group
-                    input.form-control(type='password', name="password", placeholder='Entrer un mot de passe')
+                    //Erreur si on ne saisi pas de mot de passe : 402
+                    if(err != 402)
+                        input.form-control(type='password', name="password", placeholder='Entrer un mot de passe')
+                    if(err == 402)
+                        input.form-control(id='username' type='text', name="username", placeholder='Entrer un Pseudo')
+                        .form-group
+                            input.form-control(type='password', name="password", placeholder='Entrer un mot de passe')
+                            h6 Erreur : Veuillez entrer un mot de passe
                 .form-group
-                button.btn.btn-default(type='submit' onclick="javascript:errorPseudoExistant()") Inscription
+                button.btn.btn-default(type='submit') Inscription
             a(href='/')
                 button.btn.btn-primary(type="button") Retour
 

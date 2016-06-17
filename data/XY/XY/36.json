@@ -28,10 +28,10 @@
 	}
     },
     "resistance": {
-	"type": "",
+	"type": null,
 	"value": {
 	    "operator": "-",
-	    "value": ""
+	    "value": null
 	}
     },
     "retreat_cost": 2,

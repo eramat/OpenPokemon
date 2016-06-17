@@ -5,19 +5,18 @@
     "life_point": 60,
     "abilities": [],
     "attacks": [
-		{
-			"energies": [
-				"PLANT"
-			],
-			"title": "Fouet Lianes",
-			"text": "",
-			"action": "",
-			"value": {
-				"operator": "-",
-				"value": 10,
-				"supplement": ""
-			}
-		},
+	{
+	    "energies": [
+		"PLANT"
+	    ],
+	    "title": "Fouet Lianes",
+	    "text": "",
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 10,
+		"supplement": null
+	    },
 	    {
 		"energies": [
 		    "PLANT",
@@ -29,7 +28,7 @@
 		"value": {
 		    "operator": "-",
 		    "value": 20,
-		    "supplement": ""
+		    "supplement": null
 		}
 	    }
 	],
@@ -41,10 +40,10 @@
 	}
     },
     "resistance": {
-	"type": "",
+	"type": null,
 	"value": {
 	    "operator": "-",
-	    "value": ""
+	    "value": null
 	}
     },
     "retreat_cost": 1,

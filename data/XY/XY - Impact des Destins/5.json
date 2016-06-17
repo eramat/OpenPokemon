@@ -15,7 +15,7 @@
       "value": {
         "operator": "-",
         "value": 10,
-        "supplement": ""
+        "supplement": null
       }
     }
   ],
@@ -27,12 +27,11 @@
     }
   },
   "resistance": {
-    "type": "",
+    "type": null,
     "value": {
       "operator": "-",
-      "value": ""
-    }
-  },
+      "value": null
+    },
     "retreat_cost": 1,
     "expansion": {
       "name": "XY - Impact des Destins",
@@ -40,4 +39,5 @@
     },
     "card_number": 5,
     "rarity": "Commune"
+  }
 }

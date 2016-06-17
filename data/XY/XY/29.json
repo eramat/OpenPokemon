@@ -10,12 +10,12 @@
 		"PSYCHIC"
 	    ],
 	    "title": "Trempette",
-	    "text": "",
-	    "action": "",
+	    "text": null,
+	    "action": null,
 	    "value": {
 		"operator": "-",
 		"value": 10,
-		"supplement": ""
+		"supplement": null
 	    }
 	}
     ],
@@ -27,10 +27,10 @@
 	}
     },
     "resistance": {
-	"type": "",
+	"type": null,
 	"value": {
 	    "operator": "-",
-	    "value": ""
+	    "value": null
 	}
     },
     "retreat_cost": 1,

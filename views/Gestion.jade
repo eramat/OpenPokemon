@@ -7,36 +7,35 @@ block scripts
     script(type="text/javascript" src="/js/joueurconnecte.js")
 
 block content
-        div#connect
-            if (user)
-                h1 Bienvenue #{user.username}
-                a(href="/logout") Se déconnecter
+    div#connect
 
-        #DescriptionPage Bienvenue sur la page de gestion du jeu. Ici, vous pourrez créer ou modifier votre deck, lancer un combat , ou encore accéder aux règles.
-            <br />Une liste des joueurs connectés est également accessible à droite de votre écran.
-        div#Gestion
+            h1 Bienvenue #{username}
+            a(href="/logout") Se déconnecter
 
-            div#GestionGauche
-                div#blocGestion
-                    Paragraphe Modifiez votre Deck :&nbsp;&nbsp;
-                    br
-                    br
-                    a(href="/CreationDeck" class="myButton") Cliquez ici
+    #DescriptionPage Bienvenue sur la page de gestion du jeu.
+        <br />Ici, vous pourrez créer ou modifier votre deck, lancer un combat , ou encore accéder aux règles.
+    div#Gestion
+        div#GestionGauche
+            img(src='images/site/chen.png')
 
-                div#blocGestion
-                    Paragraphe Lancer un combat aléatoire :&nbsp;&nbsp;
-                    br
-                    br
-                    a(href="/Combat" class="myButton") Go !
+        div#blocGestion
+            Paragraphe Modifiez votre Deck :&nbsp;&nbsp;
+            br
+            br
+            a(href="/CreationDeck" class="myButton") Cliquez ici
 
-
-                div#blocGestion
-                    Paragraphe Accedez au règles du jeu : &nbsp;&nbsp;
-                    br
-                    br
-                    a(href="images/site/Regle_Simplifiee.pdf") Cliquez ici
+        div#blocGestion
+            Paragraphe Lancer un combat aléatoire :&nbsp;&nbsp;
+            br
+            br
+            a(href="/Combat" class="myButton") Go !
 
 
+        div#blocGestion
+            Paragraphe Accedez au règles du jeu : &nbsp;&nbsp;
+            br
+            br
+            a(href="images/site/Regle_Simplifiee.pdf") Cliquez ici
 
-            div#GestionDroite
-                h1 Liste des joueurs en ligne :
+        div#GestionDroite
+            img(src='images/site/joelle.png')

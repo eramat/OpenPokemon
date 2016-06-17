@@ -5,11 +5,11 @@
 
 var socket = io();
 
-
+/*
 $(document).ready(function() {
     $('#co').click(function () {
         var message = $('#pseudo').val();
         socket.emit('message', message);
     });
 });
-    
+    */

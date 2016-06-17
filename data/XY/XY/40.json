@@ -8,15 +8,15 @@
     "attacks": [
       {
         "energies": [
-          "COLORLESS"
+          "COLORLESS",
         ],
         "title": "Charge",
-        "text": "",
-        "action": "",
+        "text": null,
+        "action": null,
         "value": {
           "operator": "-",
           "value": 10,
-          "supplement": ""
+          "supplement": null
         }
       },
       {
@@ -25,12 +25,12 @@
 		"COLORLESS"
 	    ],
 	    "title": "Vent Féérique",
-	    "text": "",
-	    "action": "",
+	    "text": null,
+	    "action": null,
 	    "value": {
         "operator": "-",
         "value": 20,
-        "supplement": ""
+        "supplement": null
       }
     }
     ],

@@ -11,13 +11,13 @@
 		"WATER"
 	    ],
 	    "title": "Grosse Vague",
-	    "text": "",
-	    "action": "",
+	    "text": null,
+	    "action": null,
 	    "value": {
 		"operator": "-",
 		"value": 10,
-		"supplement": ""
-	    },
+		"supplement": null
+	    }
 	    "energies": [
 		"WATER",
 		"COLORLESS"
@@ -40,10 +40,10 @@
 	}
     },
     "resistance": {
-	"type": "",
+	"type": null,
 	"value": {
 	    "operator": "-",
-	    "value": ""
+	    "value": null
 	}
     },
     "retreat_cost": 1,

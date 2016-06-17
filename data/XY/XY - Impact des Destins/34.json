@@ -15,7 +15,7 @@
 	    "value": {
 		"operator": "-",
 		"value": 0,
-		"supplement": ""
+		"supplement": null
 	    }
 	},
 	{
@@ -25,12 +25,12 @@
 		"COLORLESS"
 	    ],
 	    "title": "Vent Glacial",
-	    "text": "",
-	    "action": "",
+	    "text": null,
+	    "action": null,
 	    "value": {
 		"operator": "-",
 		"value": 40,
-		"supplment": ""
+		"supplment": null
 	    }
 	}
     ],
@@ -42,10 +42,10 @@
 	}
     },
     "resistance": {
-	"type": "",
+	"type": null,
 	"value": {
 	    "operator": "-",
-	    "value": ""
+	    "value": null
 	}
     },
     "retreat_cost": 1,

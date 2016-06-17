@@ -5,19 +5,18 @@
 "life_point": 60,
 "abilities": [],
 "attacks": [
-    {
-        "energies": [
-            "METAL"
-        ],
-        "title": "Collision",
-        "text": null,
-        "action": null,
-        "value": {
-            "operator": "-",
-            "value": 10,
-            "supplement": null
-        }
-    },
+{
+"energies": [
+    "METAL"
+],
+"title": "Collision",
+"text": null,
+"action": null,
+"value": {
+"operator" : "-",
+"value" : 10,
+"supplement" : null
+}
     {
 "energies": [
     "METAL",
@@ -25,12 +24,12 @@
     "COLORLESS"
 ],
 "title": "Attaque Tournante",
-"text": "",
-"action": "",
+"text": null,
+"action": null,
 "value": {
 "operator" : "-",
 "value" : 30,
-"supplement" : ""
+"supplement" : null
 }
 }
 ],
@@ -45,7 +44,7 @@
 "type": "PSYCHIC",
 "value": {
 "operator": "-",
-"value": ""
+"value": null
 }
 },
 "retreat_cost": 2,

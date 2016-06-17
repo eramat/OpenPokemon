@@ -7,16 +7,12 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+
+/* Nos routes : */
 var routes = require('./routes/index');
-var users = require('./routes/users');
 
 
 var app = express();
-/*
-var accueil = require('./routes/accueil');
-app.get('/',routes.index);
-app.get('/accueil',accueil.homePage);*/
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,20 +29,21 @@ app.use(require('express-session')({
   resave: false,
   saveUninitialized: false
 }));
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
 // passport config
-var Account = require('./models/account');
-passport.use(new LocalStrategy(Account.authenticate()));
-passport.serializeUser(Account.serializeUser());
-passport.deserializeUser(Account.deserializeUser());
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(express.static(path.join(__dirname, 'public')));
 
-// mongoose
+// BDD mongoose
 mongoose.connect('mongodb://localhost/OpenPokemon');
+var ConfigBDD = require('./BDD/BDD.js');
+app.db = mongoose.createConnection(ConfigBDD.url);
+require('./bdd')(app, mongoose);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

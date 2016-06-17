@@ -1,37 +1,41 @@
 {
-  "name": "Rapion",
-  "type": "PSYCHIC",
+  "name": "Démétéros",
+  "type": "FIGHTING",
   "stage": "BASE",
-  "life_point": 70,
+  "life_point": 120,
   "abilities": [],
   "attacks": [
     {
       "energies": [
-        "COLORLESS"
+        "FIGHTING"
       ],
-      "title": "Dard-Venin",
-      "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Empoisonné.",
-      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defenser().addState(core.State.PARALYSED); }",
-      "value": {}
+      "title": "Cri de Puissance",
+      "text": "Attachez une carte Energie de base de votre pile de défausse à l'un de vos Pokémon de Banc",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": ""
+      }
     },
     {
       "energies": [
-        "PSYCHIC",
-        "COLORLESS",
+        "FIGHTING",
+        "FIGHTING",
         "COLORLESS"
       ],
-      "title": "Transpercement",
+      "title": "Lasso Céleste",
       "text": "",
       "action": "",
       "value": {
         "operator": "-",
-        "value": 30,
+        "value": 90,
         "supplement": ""
       }
     }
   ],
   "weakness": {
-    "type": "PSYCHIC",
+    "type": "WATER",
     "value": {
       "operator": "x",
       "value": 2
@@ -44,11 +48,11 @@
       "value": ""
     }
   },
-  "retreat_cost": 2,
+  "retreat_cost": 1,
   "expansion": {
     "name": "Poings Furieux",
     "card_number": 111
   },
-  "card_number": 38,
-  "rarity": "Commune"
+  "card_number": 58,
+  "rarity": "Rare"
 }

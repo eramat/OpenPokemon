@@ -1,15 +1,15 @@
 {
-    "name": "Lépidonille",
+    "name": "Feuillajou",
     "type": "PLANT",
     "stage": "BASE",
-    "life_point": 40,
+    "life_point": 60,
     "abilities": [],
     "attacks": [
 	{
 	    "energies": [
-		"COLORLESS"
+		"PLANT"
 	    ],
-	    "title": "Piqûre",
+	    "title": "Fouet Lianes",
 	    "text": "",
 	    "action": null,
 	    "value": {
@@ -17,8 +17,22 @@
 		"value": 10,
 		"supplement": null
 	    }
-	}
-    ],
+	},
+	    {
+		"energies": [
+		    "PLANT",
+		    "COLORLESS"
+		],
+		"title": "Vampigraine",
+		"text": "Soignez 10 dégâts à ce Pokémon.",
+		"action": "if (board.attacker().life_point < 60) { board.attacker().applyHeal(10); }",
+		"value": {
+		    "operator": "-",
+		    "value": 20,
+		    "supplement": null
+		}
+	    }
+	],
     "weakness": {
 	"type": "FIRE",
 	"value": {
@@ -38,6 +52,6 @@
 	"name": "XY",
 	"card_number": 146
     },
-    "card_number": 15,
+    "card_number": 10,
     "rarity": "Commune"
 }

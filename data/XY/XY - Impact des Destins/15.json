@@ -1,26 +1,26 @@
 {
-  "name": "Spoink",
-  "type": "PSYCHIC",
+  "name": "Otaria",
+  "type": "WATER",
   "stage": "BASE",
-  "life_point": 60,
+  "life_point": 80,
   "abilities": [],
   "attacks": [
     {
       "energies": [
-        "PSYCHIC"
+        "WATER"
       ],
-      "title": "Saut Propulsé",
-      "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
-      "action": "board.attacker().",
+      "title": "Verglas",
+      "text": null,
+      "action": null,
       "value": {
         "operator": "-",
-        "value": 30,
+        "value": 10,
         "supplement": null
       }
     }
   ],
   "weakness": {
-    "type": "PSYCHIC",
+    "type": "METAL",
     "value": {
       "operator": "x",
       "value": 2
@@ -31,13 +31,13 @@
     "value": {
       "operator": "-",
       "value": null
-    },
-    "retreat_cost": 1,
+    }
+  },
+    "retreat_cost": 2,
     "expansion": {
       "name": "XY - Impact des Destins",
       "card_number": 124
     },
-    "card_number": 30,
+    "card_number": 15,
     "rarity": "Commune"
-  }
 }

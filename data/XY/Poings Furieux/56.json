@@ -1,45 +1,50 @@
 {
-  "name": "Dedenne",
-  "type": "LIGHTNING",
+  "name": "Kungfouine",
+  "type": "FIGHTING",
   "stage": "BASE",
-  "life_point": 70,
+  "life_point": 60,
   "abilities": [],
   "attacks": [
     {
       "energies": [
-        "COLORLESS"
+        "FIGHTING"
       ],
-      "title": "Ten-Danse",
-      "text": "Cherchez jusqu'à 2 Pokémon de base dans votre deck et placez-les sur votre Banc. Mélangez ensuite votre deck.",
-      "action": "",
-      "value": {}
-    },
-    {
-      "energies": [
-        "COLORLESS"
-      ],
-      "title": "Energie Dérivée",
-      "text": "Cette attaque inflige 20 dégâts multipliés par le nombre d'Energie attachées au Pokémon Actif de votre adversaire.",
+      "title": "Flop",
+      "text": "",
       "action": "",
       "value": {
         "operator": "-",
-        "value": 20,
-        "supplement": "*"
+        "value": 10,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Coup Rapide",
+      "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien ",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": ""
       }
     }
   ],
   "weakness": {
-    "type": "FIGHTING",
+    "type": "PSYCHIC",
     "value": {
       "operator": "x",
       "value": 2
     }
   },
   "resistance": {
-    "type": "METAL",
+    "type": "",
     "value": {
-      "operator": "-",
-      "value": 20
+      "operator": "",
+      "value": ""
     }
   },
   "retreat_cost": 1,
@@ -47,6 +52,6 @@
     "name": "Poings Furieux",
     "card_number": 111
   },
-  "card_number": 34,
+  "card_number": 56,
   "rarity": "Commune"
 }

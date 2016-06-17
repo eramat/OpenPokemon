@@ -1,0 +1,57 @@
+{
+  "name": "Scrutella",
+  "type": "PSYCHIC",
+  "stage": "BASE",
+  "life_point": 50,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Gifle",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "PSYCHIC",
+        "COLORLESS"
+      ],
+      "title": "Choc Mental",
+      "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defenser().addState(core.State.PARALYSED); }",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 39,
+  "rarity": "Commune"
+}

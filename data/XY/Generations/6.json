@@ -1,0 +1,39 @@
+{
+  "name": "Paras",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PLANT"
+      ],
+      "title": "Pâté",
+      "text": "Soignez 10 dégâts à ce Pokémon",
+      "action": "board.attacker().applyHeal(10)",
+      "value": {
+      "operator": "-",
+      "value": 10
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIRE",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+    "resistance": {
+      "type": "",
+      "value": {}
+    },
+    "retreat_cost": 1,
+    "expansion": {
+      "name": "Generations",
+      "card_number": 83
+    },
+    "card_number": 6,
+    "rarity": "Commune"
+  }

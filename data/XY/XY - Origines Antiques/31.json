@@ -1,15 +1,15 @@
 {
-"name": "Tarsal",
-"type": "FAIRY",
+"name": "Balbuto",
+"type": "PSYCHIC",
 "stage": "BASE",
 "life_point": 60,
 "abilities": [],
 "attacks": [
 {
 "energies": [
-    "COLORLESS"
+    "PSYCHIC"
 ],
-"title": "Murmure",
+"title": "Fournaise",
 "text": null,
 "action": null,
 "value": {
@@ -17,10 +17,11 @@
 "value" : 10,
 "supplement" : null
 }
-    {
-"energies": [
-    "FAIRY",
-    "COLORLESS"
+},
+{
+    "energies": [
+	"PSYCHIC",
+	"COLORLESS"
 ],
 "title": "Attaque Tournante",
 "text": null,
@@ -33,17 +34,17 @@
 }
 ],
 "weakness": {
-"type": "METAL",
+"type": "PSYCHIC",
 "value": {
 "operator": "x",
 "value": 2
 }
 },
 "resistance": {
-"type": "DARKNESS",
+"type": null,
 "value": {
 "operator": "-",
-"value": 20
+"value": null
 }
 },
 "retreat_cost": 1,
@@ -51,6 +52,6 @@
 "name": "XY - Origines Antiques",
 "card_number": 98
 },
-"card_number": 52,
+"card_number": 31,
 "rarity": "Commune"
 }

@@ -1,41 +1,41 @@
 {
-  "name": "Flingouste",
-  "type": "WATER",
+  "name": "Makuhita",
+  "type": "FIGHTING",
   "stage": "BASE",
-  "life_point": 60,
+  "life_point": 80,
   "abilities": [],
   "attacks": [
     {
       "energies": [
-        "WATER"
+        "FIGHTING"
       ],
-      "title": "Ecume",
-      "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+      "title": "Koud'Poing",
+      "text": "",
       "action": "",
       "value": {
-        "operator": "",
-        "value": "",
+        "operator": "-",
+        "value": 10,
         "supplement": ""
       }
     },
     {
       "energies": [
-        "WATER",
+        "FIGHTING",
         "COLORLESS",
         "COLORLESS"
       ],
-      "title": "Pince-Masse",
+      "title": "Force",
       "text": "",
       "action": "",
       "value": {
         "operator": "-",
-        "value": 30,
+        "value": 40,
         "supplement": ""
       }
     }
   ],
   "weakness": {
-    "type": "PLANT",
+    "type": "PSYCHIC",
     "value": {
       "operator": "x",
       "value": 2
@@ -48,11 +48,11 @@
       "value": ""
     }
   },
-  "retreat_cost": 1,
+  "retreat_cost": 3,
   "expansion": {
     "name": "Poings Furieux",
     "card_number": 111
   },
-  "card_number": 23,
+  "card_number": 51,
   "rarity": "Commune"
 }

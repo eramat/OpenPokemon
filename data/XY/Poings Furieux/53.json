@@ -1,50 +1,46 @@
 {
-  "name": "Posipi",
-  "type": "LIGHTNING",
+  "name": "Kraknoix",
+  "type": "FIGHTING",
   "stage": "BASE",
-  "life_point": 70,
+  "life_point": 60,
   "abilities": [],
   "attacks": [
     {
       "energies": [
-        "COLORLESS"
+        "FIGHTING"
       ],
-      "title": "Main Positive",
-      "text": "Défaussez une carte Energie de base de votre main. Dans ce cas, piochez 2 cartes",
+      "title": "Dévore-Montagne",
+      "text": "Défaussez la carte du dessus du deck de votre adversaire.",
       "action": "",
-      "value": {
-        "operator": "",
-        "value": "",
-        "supplement": ""
-      }
+      "value": {}
     },
     {
       "energies": [
-        "LIGHTNING",
+        "COLORLESS",
         "COLORLESS"
       ],
-      "title": "Electro-Queue",
-      "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+      "title": "Coud'Boue",
+      "text": "",
       "action": "",
       "value": {
         "operator": "-",
-        "value": 30,
+        "value": 10,
         "supplement": ""
       }
     }
   ],
   "weakness": {
-    "type": "FIGHTING",
+    "type": "PLANT",
     "value": {
       "operator": "x",
       "value": 2
     }
   },
   "resistance": {
-    "type": "METAL",
+    "type": "",
     "value": {
-      "operator": "-",
-      "value": 20
+      "operator": "",
+      "value": ""
     }
   },
   "retreat_cost": 1,
@@ -52,6 +48,6 @@
     "name": "Poings Furieux",
     "card_number": 111
   },
-  "card_number": 31,
+  "card_number": 53,
   "rarity": "Commune"
 }

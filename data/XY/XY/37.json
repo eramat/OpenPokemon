@@ -1,59 +1,56 @@
 {
-    "name": "Mascaïman",
-    "type": "DARKNESS",
+    "name": "Flotajou",
+    "type": "WATER",
     "stage": "BASE",
-    "life_point": 70,
+    "life_point": 60,
     "abilities": [],
     "attacks": [
-      {
-        "energies": [
-          "COLORLESS",
-          "COLORLESS"
-        ],
-        "title": "Collision",
-        "text": null,
-        "action": null,
-        "value": {
-          "operator": "-",
-          "value": 20,
-          "supplement": null
-        }
-      },
-      {
-      "energies": [
-		"DARKNESS",
-		"DARKNESS",
+	{
+	
+		"energies": [
+		"WATER"
+	    ],
+	    "title": "Grosse Vague",
+	    "text": null,
+	    "action": null,
+	    "value": {
+		"operator": "-",
+		"value": 10,
+		"supplement": null
+	    },
+	    "energies": [
+		"WATER",
 		"COLORLESS"
 	    ],
-	    "title": "Croc Obscur",
-	    "text": null,
-      "action": null,
-      "value": {
+	    "title": "Eclaboussure",
+	    "text": "Lancez une pièce. Si c'est face, cette attaque inflige 20 dégâts supplémentaires.",
+        "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().applyDamage(20); }",
+        "value": {
         "operator": "-",
-        "value": 50,
-        "supplement": null
-      }
-    }
+        "value": 10,
+        "supplement": "+"
+	    }
+	}
     ],
     "weakness": {
-	"type": "FIGHTING",
+	"type": "PLANT",
 	"value": {
 	    "operator": "x",
 	    "value": 2
 	}
     },
     "resistance": {
-	"type": "PSYCHIC",
+	"type": null,
 	"value": {
 	    "operator": "-",
-	    "value": 20
+	    "value": null
 	}
     },
-    "retreat_cost": 3,
+    "retreat_cost": 1,
     "expansion": {
 	"name": "XY",
 	"card_number": 146
     },
-    "card_number": 69,
+    "card_number": 37,
     "rarity": "Commune"
 }

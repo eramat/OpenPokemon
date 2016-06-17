@@ -1,44 +1,53 @@
 {
-    "name": "Keunotor",
-    "type": "COLORLESS",
-    "stage": "BASE",
-    "life_point": 60,
-    "abilities": [],
-    "attacks": [
-	{
-		"energies": [
-		"COLORLESS",
-		"COLORLESS"
-	    ],
-	    "title": "Croc de Mort",
-	    "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
-      "action": "if (board.flipCoin() === core.Coin.TAILS) { null; }",
-	    "value": {
+  "name": "Pikachu",
+  "type": "LIGHTNING",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Frotte-Frimousse",
+      "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().addState(core.State.PARALYSED); }",
+      "value": {}
+    },
+    {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Vive-Attaque",
+      "text": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires.",
+      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defender().applyDamage(10); }",
+      "value": {
         "operator": "-",
-        "value": 40,
-        "supplement": null
+        "value": 20,
+        "supplement": "+"
       }
     }
-    ],
-    "weakness": {
-	"type": "FIGHTING",
-	"value": {
-	    "operator": "x",
-	    "value": 2
-	}
-    },
-    "resistance": {
-	"type": null,
-	"value": {
-	    "operator": "-",
-	    "value": null
-	}
-    },
-    "retreat_cost": 3,
-    "expansion": {
-	"name": "XY",
-	"card_number": 146
-    },
-    "card_number": 106,
-    "rarity": "Commune"
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "METAL",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "XY",
+    "card_number": 146
+  },
+  "card_number": 42,
+  "rarity": "Commune"
 }

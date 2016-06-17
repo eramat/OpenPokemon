@@ -1,45 +1,53 @@
 {
-  "name": "Excelangue",
-  "type": "COLORLESS",
+  "name": "Mélofée",
+  "type": "FAIRY",
   "stage": "BASE",
-  "life_point": 90,
+  "life_point": 60,
   "abilities": [],
   "attacks": [
-       {
+    {
       "energies": [
-        "COLORLESS",
-        "COLORLESS",
         "COLORLESS"
       ],
-      "title": "Coup Rapide",
-      "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+      "title": "Rayon Lune",
+      "text": "Soignez 30 dégâts à ce Pokémon.",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "FAIRY",
+        "COLORLESS"
+      ],
+      "title": "Ecras'Face",
+      "text": "",
       "action": "",
       "value": {
         "operator": "-",
-        "value": 50,
+        "value": 20,
         "supplement": ""
       }
     }
   ],
   "weakness": {
-    "type": "FIGHTING",
+    "type": "METAL",
     "value": {
       "operator": "x",
       "value": 2
     }
   },
   "resistance": {
-    "type": "",
+    "type": "DARKNESS",
     "value": {
-      "operator": "",
-      "value": ""
+      "operator": "-",
+      "value": 20
     }
   },
-  "retreat_cost": 3,
+  "retreat_cost": 1,
   "expansion": {
     "name": "Poings Furieux",
     "card_number": 111
   },
-  "card_number": 78,
+  "card_number": 69,
   "rarity": "Commune"
 }

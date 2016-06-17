@@ -1,41 +1,37 @@
 {
-  "name": "Ptitard",
-  "type": "WATER",
+  "name": "Kapoera",
+  "type": "FIGHTING",
   "stage": "BASE",
-  "life_point": 60,
+  "life_point": 90,
   "abilities": [],
   "attacks": [
     {
       "energies": [
-        "WATER"
+        "COLORLESS"
       ],
-      "title": "Pluie Eclaboussante",
-      "text": "",
+      "title": "Pioche Rapide",
+      "text": "Piochez une carte",
       "action": "",
-      "value": {
-        "operator": "-",
-        "value": 20,
-        "supplement": ""
-      }
+      "value": {}
     },
     {
       "energies": [
-        "COLORLESS",
+        "FIGHTING",
         "COLORLESS",
         "COLORLESS"
       ],
-      "title": "Courant Tourbillonnant",
-      "text": "Le Pokémon Actif de votre adversaire est maintenant Confus. Ce dernier ne peut pas battre en retraite pendant le prochain tour de votre adversaire.",
+      "title": "Helicoptero",
+      "text": "Echangez ce Pokémon avec l'un de vos Pokémon de Banc",
       "action": "",
       "value": {
         "operator": "-",
-        "value": 20,
+        "value": 40,
         "supplement": ""
       }
     }
   ],
   "weakness": {
-    "type": "PLANT",
+    "type": "PSYCHIC",
     "value": {
       "operator": "x",
       "value": 2
@@ -53,6 +49,6 @@
     "name": "Poings Furieux",
     "card_number": 111
   },
-  "card_number": 15,
-  "rarity": "Commune"
+  "card_number": 49,
+  "rarity": "Peu commune"
 }

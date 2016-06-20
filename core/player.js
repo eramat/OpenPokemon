@@ -9,13 +9,22 @@ module.exports = ( function (self) {
   self.Player = function (_deck) {
     var deck; // deck
     var active_pokemon; // pokémon actif
-    var bench; // banc
+    var bench=[]; // banc
     var price_cards; // cartes Récompense
     var discard_pile; // pile de défausse
     var hand; // main
 
+    this.deckLengh=function () {
+      return deck.deckLengh();
+    };
+
     this.hand = function () {
-      return hand;
+      var main=[];
+      var i=0;
+      for(i;i<hand.length;i++){
+        main.push(hand[i].to_object());
+      }
+      return main;
     };
 
     //Annule et remets les cartes de la main non valide dans la deck
@@ -58,8 +67,6 @@ module.exports = ( function (self) {
     };
 
 
-
-
     //Mets les cartes récompenses
 
     this.PutPriceCards = function () {
@@ -73,9 +80,6 @@ module.exports = ( function (self) {
     this.cardToDiscardPile = function(){
       discard_pile.push(card);
     };
-
-
-
 
 
     //Prend la première carte récompense
@@ -98,18 +102,6 @@ module.exports = ( function (self) {
         hand.push(deck.takeFirstCard());
       }
     };
-
-
-    //NEW
-    //Piocher une carte
-
-    this.pickACard = function(){
-      hand.push(deck.takeFirstCard());
-    }
-
-
-
-
     //Prend une carte de la main
 
     this.takeCardInHand = function (indexHand) {
@@ -122,53 +114,35 @@ module.exports = ( function (self) {
         return null;
       }
     };
-
-    //Mettre la carte de la main à l'actif
-    this.putPokemonCardHandToActive = function (indexHand){
-      var card=takeCardInHand(indexHand);
-      if(card.card_type() === core.CardType.POKEMON){
-        var taille = active_pokemon.length;
-        if(taille === 0){
-          active_pokemon.push(card);
-        }
+    //ajouter au banc
+    this.addBench=function(id){
+      bench.push(hand[id]);
+    };
+    //retourner le banc
+    this.bench=function(){
+      var tab=[];
+      var i=0;
+      for (i;i<bench.length;i++){
+        tab.push(bench[i].to_object());
+      }
+      return tab;
+    };
+//passer du banc a l'active
+    this.putBenchToActive=function(id) {
+      if(active_pokemon==null && !bench.empty){
+        active_pokemon=bench[id].to_object();
+        bench.splice(id,1);
       }
     };
-
-    //Mettre une carte pokemon de la main sur le banc
-
-    this.putPokemonCardHandToBench = function (indexHand){
-      var card=takeCardInHand(indexHand);
-      if(card.card_type() === core.CardType.POKEMON){
-        var taille = bench.length;
-        if(taille<5){
-          bench.push(card);
-        }
-      }
+//retourne le pokemon actif
+    this.activePokemon=function(){
+      return active_pokemon;
     };
+    //NEW
+    //Piocher une carte
 
-
-
-
-
-    //Prend une carte du banc
-
-    this.takeCardInBench = function (indexBench){
-      if (indexBench < bench.length) {
-        var card = bench[indexBench];
-        bench.splice(index, 1);
-        return card;
-      } else {
-        return null;
-      }
-    };
-
-    //Mettre la carte du banc à l'actif
-
-    this.putCardBenchToActive = function (indexBench) {
-      var taille = active_pokemon.length;
-      if(taille===0){
-        active_pokemon.push(takeCardInBench(indexBench));
-      }
+    this.pickACard = function(){
+      hand.push(deck.takeFirstCard());
     };
 
 
@@ -195,13 +169,8 @@ module.exports = ( function (self) {
           }
         }
       }
-        //Check s'il reste une place sur le banc
 
     };
-
-
-
-
 
     var init = function (_deck) {
       deck = _deck;

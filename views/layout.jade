@@ -6,11 +6,13 @@ html
     link(rel='stylesheet', href='/stylesheets/popupS.min.css')
     link(rel='stylesheet', href='/stylesheets/combat.css')
     link(rel='stylesheet', href='/stylesheets/register.css')
-    script(src="/js/popupS.min.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="js/combat.js")
+    script(src="js/popupS.min.js")
 
 
   body
-      div#haut(z-index=0, position="absolute",left="0px",top="0px")
-          img(src="images/site/Fondcombat.jpg")
+
     block content
+    block scripts
 

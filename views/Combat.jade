@@ -1,57 +1,48 @@
-//
-   Created by boulanger on 13/06/2016.
 extends layout
-block scripts
-    script(src="https://cdn.socket.io/socket.io-1.4.5.js")
-    script(type="text/javascript" src="/js/combat.js")
-block content
-    div#top
-        div#ennemy
-            div#benchCards
-                div#benchCards(style='max-width:20%;margin-left:0%;height: 100%;')
-                    img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/3.png",class="action" )
-                div#benchCards(style='max-width:20%;margin-left:20%;height: 100%;')
-                    img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/6.png",class="action" )
-                div#benchCards(style='max-width:20%;margin-left:40%;height: 100%;')
-                    img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/10.png",class="action" )
-                div#benchCards(style='max-width:20%;margin-left:60%;height: 100%;')
-                    img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/12.png",class="action" )
-                div#benchCards(style='max-width:20%;margin-left:80%;height: 100%;')
-                    img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/15.png",class="action" )
-            div#activCards
-                img(style='width:100%;height:100%;transform:rotate(180deg);',src="images/cards/pokemon/XY/XY/42.png", class="action")
-        div#player
-            div.cards
-                div.activCards(style='visibility:hidden;')
-                    img(src="", class="action" id="player-active")
-                div.benchCards
-                    ul
-                div.handCards
-                    ul
-            div#recompense
-                h1(style='font-size:15px;text-align:center;') Recompense
-                img(style='width:100%;height:105%;transform: rotate(90deg);',src="images/site/dos.jpg")
-            div#deck
-                h1(style='font-size:15px;text-align:center;') Deck 60
-                img(style='width:100%;height:100%;',src="images/site/dos.jpg")
-            div#defausse
-                h1(style='font-size:15px; text-align:center;') Defausse
-                img(style='width:100%;height:100%;',src="images/site/dos.jpg")
-        div#zoom
-            img(src="#", class="action")
-            ul#menu
-                li
-                    a(href="#") Attaque Imprudente
-                li
-                    a(href="#") Annuler
 
-        div#cote
-            button.btn.btn-default(style='margin-top:900px;margin-left:25px;',type=button value="Abandonner" onClick="popup()" class="myButton") Abandonner
+block content
+    div#adversaire(z-index=1)
+        div#cartebanc
+            div#cartebanc(style='max-width:20%;margin-left:0px;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/26.png")
+            div#cartebanc(style='max-width:20%;margin-left:20%;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/37.png")
+            div#cartebanc(style='max-width:20%;margin-left:40%;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/12.png")
+            div#cartebanc(style='max-width:20%;margin-left:60%;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/16.png")
+            div#cartebanc(style='max-width:20%;margin-left:80%;')
+                img(style='width:100%;height:100%;transform: rotate(180deg);',src="images/cards/pokemon/XY/XY/9.png")
+        div#carteactif
+            img(style='width:100%;height:100%;transform: rotate(180deg)',src="images/cards/pokemon/XY/XY/25.png")
+
+
+
+
+
+
+    div#joueur
+        div#cartebanc(style='margin-top:270px;')
+            div#cartebanc(style='max-width:20%;margin-left:0px;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/42.png")
+            div#cartebanc(style='max-width:20%;margin-left:20%;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/11.png")
+            div#cartebanc(style='max-width:20%;margin-left:40%;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/38.png")
+            div#cartebanc(style='max-width:20%;margin-left:60%;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/33.png")
+            div#cartebanc(style='max-width:20%;margin-left:80%;')
+                img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/41.png")
+        div#carteactif(style='top:20px;')
+            img(style='width:100%;height:100%;',src="images/cards/pokemon/XY/XY/31.png")
+        div#main
+            img(style='width:100%;height:105%;position:relative;',src="images/site/dos.jpg")
+            button.btn.btn-default(style='position:absolute;left:50px; right:0px;top:160px;',type=button value="Main" onClick="main()" class="myButton") Main
         script.
-            function popup() {
+            function main() {
                 popupS.confirm({
-                    content: 'Voulez-vous vraiment abandonner ?',
-                    labelOk: 'Oui',
+                    content: 'Voici votre main ',
+                    labelOk: 'oui',
                     labelCancel: 'Non',
                     onSubmit: function () {
                         window.location.href = "/Gestion"
@@ -62,21 +53,59 @@ block content
 
                 });
             }
-        td
-            button.btn.btn-default(style='position:absolute;left:20px; right:0px;top:160px;',type=button value="Terminer" onClick="main()" class="myButton") Terminer tour
-                script.
-                    function main() {
-                        popupS.confirm({
-                            content: 'Terminer votre tour ',
-                            labelOk: 'oui',
-                            labelCancel: 'non',
-                            onSubmit: function () {
-                                window.location.href = "/Gestion"
-                            },
-                            onClose: function () {
-                                console.log(':(');
-                            }
-
-                        });
-                    }
             td
+        div#recompense
+            img(style='width:100%;height:105%;transform: rotate(90deg);',src="images/site/dos.jpg")
+        div#deck
+            img(style='width:100%;height:100%;',src="images/site/dos.jpg")
+        div#defausse
+            img(style='width:100%;height:100%;',src="images/site/dos.jpg")
+
+
+
+    div#cote
+        button.btn.btn-default(style='margin-top:900px;margin-left:25px;',type=button value="Abandonner" onClick="popup()" class="myButton") Abandonner
+    script.
+        function popup() {
+            popupS.confirm({
+                content: 'Voulez-vous vraiment abandonner ?',
+                labelOk: 'Oui',
+                labelCancel: 'Non',
+                onSubmit: function () {
+                    window.location.href = "/Gestion"
+                },
+                onClose: function () {
+                    console.log(':(');
+                }
+
+            });
+        }
+    td
+        button.btn.btn-default(style='position:absolute;left:20px; right:0px;top:160px;',type=button value="Terminer" onClick="main()" class="myButton") Terminer tour
+            script.
+                function main() {
+                    popupS.confirm({
+                        content: 'Voici votre main ',
+                        labelOk: 'oui',
+                        labelCancel: '',
+                        onSubmit: function () {
+                            window.location.href = "/Gestion"
+                        },
+                        onClose: function () {
+                            console.log(':(');
+                        }
+
+                    });
+                }
+                td
+
+
+
+
+
+
+
+
+
+
+

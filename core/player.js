@@ -9,22 +9,13 @@ module.exports = ( function (self) {
   self.Player = function (_deck) {
     var deck; // deck
     var active_pokemon; // pokémon actif
-    var bench=[]; // banc
+    var bench; // banc
     var price_cards; // cartes Récompense
     var discard_pile; // pile de défausse
     var hand; // main
 
-    this.deckLengh=function () {
-      return deck.deckLengh();
-    };
-    
     this.hand = function () {
-      var main=[];
-      var i=0;
-      for(i;i<hand.length;i++){
-        main.push(hand[i].to_object());
-      }
-      return main;
+      return hand;
     };
 
     //Annule et remets les cartes de la main non valide dans la deck
@@ -114,7 +105,7 @@ module.exports = ( function (self) {
 
     this.pickACard = function(){
       hand.push(deck.takeFirstCard());
-    };
+    }
 
 
 
@@ -154,6 +145,9 @@ module.exports = ( function (self) {
         }
       }
     };
+
+
+
 
 
     //Prend une carte du banc
@@ -201,39 +195,21 @@ module.exports = ( function (self) {
           }
         }
       }
+        //Check s'il reste une place sur le banc
 
     };
-    this.addBench=function(id){
-      bench.push(hand[id]);
+
+
+
+
+
+    var init = function (_deck) {
+      deck = _deck;
+      deck.mix();
     };
-    
-    this.bench=function(){
-      var tab=[];
-      var i=0;
-      for (i;i<bench.length;i++){
-        tab.push(bench[i].to_object());
-      }
-      return tab;
-    };
-    
-    this.benchToActive=function(id) {
-      if(active_pokemon==null && !bench.empty){
-        active_pokemon=bench[id].to_object();
-        bench.splice(id,1);
-      }
-    };
-    
-    this.activePokemon=function(){
-      return active_pokemon;
-    };
-    
-      var init = function (_deck) {
-        deck = _deck;
-        deck.mix();
-      };
-  
-      init(_deck);
-    };
+
+    init(_deck);
+  };
 
   return self;
 }(OpenPokemon || {}));

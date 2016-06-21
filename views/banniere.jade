@@ -3,14 +3,16 @@
 doctype html
 html
     head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
-        link(rel='stylesheet', href='/stylesheets/CreationDeck.css')
-        link(rel='stylesheet', href='/stylesheets/register.css')
+        block title
+            title OpenPokemon - Le Jeu!
 
-        script(src='/js/CreationDeck.js')
-        script(src='/js/register.js')
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+        block stylesheet
+            link(rel='stylesheet', href='/stylesheets/style.css')
+            link(rel='stylesheet', href='/stylesheets/CreationDeck.css')
+            link(rel='stylesheet', href='/stylesheets/register.css')
+            link(rel='stylesheet', href='/stylesheets/admin.css')
+
+
         div#banniere
             img(src="images/site/banniere.png")
         div#sitelogo
@@ -18,3 +20,7 @@ html
     body
         block content
         block scripts
+            script(src='/js/CreationDeck.js')
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+            script(src='/js/admin?.js')
+            script(src="https://cdn.socket.io/socket.io-1.4.5.js")

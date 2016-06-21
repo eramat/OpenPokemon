@@ -104,16 +104,21 @@ router.get('/Combat', function (req, res) {
   }
 });
 
+
 //Page d'administrateur
 router.get('/Admin', function (req,res) {
-  res.render('Admin', {});
+  if (req.session.username != 'admin') {
+    res.redirect('/Accueil');
+  }else {
+    res.render('Admin', {});
+  }
 });
 
 
 router.post('/Admin', function (req, res) {
   // Si il y a un compte, on regarde si le mot de passe correspond au paramètrepassé
   req.app.db.models.Account.findOne({'username':'admin'}, function (err, account) {
-    if (account.password != req.param('password')) {
+    if (account.password != req.param('password')) {22222222222222
       // si mot de passe incorrect on renvoie l'erreur 404
       res.render('Accueil', {err: 405});
     } else {
@@ -123,8 +128,57 @@ router.post('/Admin', function (req, res) {
   });
 });
 
+//L'admin peut créer des utilisateurs
+router.post('/CreationAdmin',function(req,res){
+
+  //Creer une variable Account
+  var CreationAccount = {
+    username: req.param('username'),
+    password: req.param('password')
+  };
+
+  // On regarde si l'utilisateur est déjà dans la BDD, donc On compte
+  req.app.db.models.Account.count({'username': req.param('username')}, function (err, username){
+    //si il y en a déjà un, on renvoie une erreur 401
+    if (username > 0) {
+      res.render('admin',{err: 401});
+    }else {
+      if (req.param('username').length < 1) {
+        res.render('admin', {err: 400});
+      }else if (req.param('password').length < 1) {
+        // Si on ne saisit pas de mot de passe, erreur 402 !
+        res.render('admin', {err: 402});
+      } else {
+        // on créé dans la BDD un account
+        req.app.db.models.Account.create(CreationAccount, function (err, Account) {
+          console.log('COMPTE BIEN CREE');
+          res.render('admin',{ok: 1});
+        });
+      }
+    }
+  });
+});
 
 
+router.post('/DeleteUser',function(req,res) {
+  req.app.db.models.Account.count({'username': req.param('username')}, function (err, username) {
+    //si il y a pas de username, on renvoie une erreur
+    if (username == 0) {
+      res.render('admin', {ok: -1});
+    } else {
+      //On ne peut pas supprimer l'admin
+      if (req.param('username') == 'admin') {
+        res.render('admin', {ok: -2});
+      } else {
+        // on supprime utilisateur de la BDD
+        req.app.db.collection('accounts').remove({'username': req.param('username')}, function (err, username) {
+          console.log('COMPTE SUPPRIME');
+          res.render('admin', {ok: 2});
+        });
+      }
+    }
+  });
+});
 
 //Page de création de deck
 router.get('/CreationDeck',function (req,res){
@@ -133,6 +187,8 @@ router.get('/CreationDeck',function (req,res){
   }else{
     res.render('CreationDeck', {});
   }
+  
+  var expansionGeneration = fs.readdirSync('../data/')
 });
 
 

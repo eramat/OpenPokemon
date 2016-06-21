@@ -2,8 +2,7 @@
    Created by Lucas on 12/06/2016.
 
 extends banniere
-
-
+script(src='/js/CreationDeck.js')
 
 block content
     div#TitreCreation
@@ -31,8 +30,8 @@ block content
                 div.contenu_onglets
                     div.contenu_onglet#contenu_onglet_Tous
                         - for (var i=1 ; i<96 ; i++){
-                            div.uneCarte
-                                img(id='carte_Tous_pokemon/XY/XY/' onclick="javascript:change_apercu("+i+",'pokemon/XY/XY/','Tous')" src="images/cards/pokemon/XY/XY/" + i + ".png")
+                                div.uneCarte
+                                    img(id='carte_Tous_pokemon/XY/XY/' onclick="javascript:change_apercu("+i+",'pokemon/XY/XY/','Tous')" src='images/cards/pokemon/XY/XY/' + i + '.png')
                         - }
                         - for (var i=50 ; i<59 ; i++){
                             div.uneCarte
@@ -43,10 +42,9 @@ block content
                                 img(id='carte_Tous_trainer/' onclick="javascript:change_apercu("+i+",'trainer/','Tous')" src="images/cards/trainer/" + i + ".png")
                         - }
                     div.contenu_onglet#contenu_onglet_Pokemons
-                        - for (var i=1 ; i<96 ; i++){
-                            div.uneCarte
-                                img(id='carte_pokemon_pokemon/XY/XY/' onclick="javascript:change_apercu("+i+",'pokemon/XY/XY/','pokemon')" src="images/cards/pokemon/XY/XY/" + i + ".png")
-                        - }
+                        each card in cards
+                            div.uneCarte(expansion='#{card.expansion.name}')
+                                img(id='carte_pokemon_pokemon/XY/XY/' onclick="javascript:change_apercu("+i+",'pokemon/XY/XY/','pokemon')" src="images/cards/pokemon/XY/"+expansion+card.card_number+".png")
 
                     div.contenu_onglet#contenu_onglet_Energies
                         - for (var i=50 ; i<59 ; i++){

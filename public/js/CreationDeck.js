@@ -18,3 +18,4 @@ function change_apercu(num,name,onglet) {
     var image = document.getElementById('carte_'+onglet+name);
     apercu.src="images/cards/"+name+num+".png";
 }
+

@@ -1,0 +1,66 @@
+#Description{
+    margin-top: 50px;
+    margin-bottom:50px;
+    margin-left:10%;
+    width : 80%;
+    height: 80%;
+    border: groove;
+    font-size: 20px;
+    font-family: "Calibri Light";
+    text-align: center;
+    font-style: italic;
+}
+
+#BoutonAdmin{
+    height:100%;
+    width:100%;
+    margin-bottom: 50px;
+}
+
+#SeDeconnecter{
+
+    width:25%;
+    float:left;
+    height:100%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#AllerGestion{
+    width:25%;
+    margin-right: 20px;
+    float:right;
+    text-align: right;
+    height:100%;
+}
+
+.TitreBlocAdmin{
+    margin-top: 30px;
+    margin-bottom:60px;
+    width : 50%;
+    height: 80%;
+    border: double;
+    font-size: 20px;
+    float:left;
+    text-align: center;
+}
+
+
+#AdminGauche{
+    width : 23%;
+    height: 400px;
+    float:left;
+}
+
+#AdminDroite{
+    width : 23%;
+    height: 100%;
+    float:left;
+    float:bottom;
+}
+
+#Admin{
+    height:100%;
+    width:100%;
+    text-align: center;
+}

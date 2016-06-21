@@ -3,6 +3,69 @@
 
 extends banniere
 
+
 block content
 
-    h1 On est dans la page admin
+    if(ok == -1)
+        h1 erreur : Cet utilisateur n'existe pas
+
+    if(ok == -2)
+        h1 erreur : On ne peut pas supprimer l'administrateur !
+
+    if(ok == 1)
+        h1 Compte bien créé.
+
+    if(ok == 2)
+        h1 Compte bien supprimé.
+
+    div#BoutonsAdmin
+        div#SeDeconnecter
+            a(href="/logout" class='myButton') Se déconnecter et repartir à l'accueil
+        div#AllerGestion
+            a(href="/Gestion" class='myButton') Aller à la page Gestion
+
+    div#Description
+        span Bienvenue sur la page d'administration. Ici , vous pouvez supprimer des utilisateurs, ou encore créer de nouveaux comptes.    Il n'y a que l'administrateur qui peut voir cette page.
+
+
+    div#Admin
+
+        div#AdminGauche
+            h1 inserer image
+
+
+        div.TitreBlocAdmin
+            span Supprimer un utilisateur (Tapez un utilisateur à supprimer) :
+            form(action='/DeleteUser',method='post')
+                input(type='text',name="username",id="username")
+                button.btn.btn-default(type='submit') Supprimer
+
+
+        div.TitreBlocAdmin
+            span Ajouter un utilisateur ( Tapez un nouveau compte utilisateur à créer):
+            form(role='get', action="/CreationAdmin",method="post", style='max-width:100%;', id='register')
+                .form-group
+                    if(!err)
+                        input.form-control(id='username' type='text', name="username", placeholder='Entrer un Pseudo')
+                    if (err == 400)
+                        input.form-control(id='username' type='text', name="username", placeholder='Entrer votre Pseudo')
+                        h6 Erreur : Veuillez entrer un pseudo
+                    //si le username est déjà pris (err = '401' ), on redemande le username
+                    if(err == 401)
+                        input.form-control(id='username' type='text', name="username", placeholder='Retapez votre Pseudo')
+                        h6 Erreur : le pseudo est déjà pris
+                .form-group
+                    //Erreur si on ne saisi pas de mot de passe : 402
+                    if(err != 402)
+                        input.form-control(type='password', name="password", placeholder='Entrer un mot de passe')
+                    if(err == 402)
+                        input.form-control(id='username' type='text', name="username", placeholder='Entrer un Pseudo')
+                        .form-group
+                            input.form-control(type='password', name="password", placeholder='Entrer un mot de passe')
+                            h6 Erreur : Veuillez entrer un mot de passe
+                .form-group
+                button.btn.btn-default(type='submit') Créer compte
+
+
+        div#AdminDroite
+            h1 inserer image

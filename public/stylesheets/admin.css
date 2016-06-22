@@ -52,15 +52,33 @@
     float:left;
 }
 
+#AdminGauche img{
+    width:auto;
+    height:100%;
+}
+
 #AdminDroite{
+    margin-top: -100px ;
     width : 23%;
-    height: 100%;
+    height: 400px;
     float:left;
-    float:bottom;
+}
+
+#AdminDroite img{
+    width:300px;
+    height:auto;
 }
 
 #Admin{
     height:100%;
     width:100%;
     text-align: center;
+}
+
+#Admin h1{
+    font-weight: lighter;
+    font-size:22px;
+    font-family: "Calibri Light";
+    color : cornflowerblue;
+
 }

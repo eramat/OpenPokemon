@@ -6,17 +6,6 @@ extends banniere
 
 block content
 
-    if(ok == -1)
-        h1 erreur : Cet utilisateur n'existe pas
-
-    if(ok == -2)
-        h1 erreur : On ne peut pas supprimer l'administrateur !
-
-    if(ok == 1)
-        h1 Compte bien créé.
-
-    if(ok == 2)
-        h1 Compte bien supprimé.
 
     div#BoutonsAdmin
         div#SeDeconnecter
@@ -31,7 +20,7 @@ block content
     div#Admin
 
         div#AdminGauche
-            h1 inserer image
+            img(src='images/site/Kaiminus.png')
 
 
         div.TitreBlocAdmin
@@ -40,9 +29,18 @@ block content
                 input(type='text',name="username",id="username")
                 button.btn.btn-default(type='submit') Supprimer
 
+            if(ok == -1)
+                h1 erreur : Cet utilisateur n'existe pas
+
+            if(ok == -2)
+                h1 erreur : On ne peut pas supprimer l'administrateur !
+
+            if(ok == 2)
+                h1 Compte bien supprimé.
+
 
         div.TitreBlocAdmin
-            span Ajouter un utilisateur ( Tapez un nouveau compte utilisateur à créer):
+            span Ajouter un utilisateur (Tapez un nouveau compte utilisateur à créer) :
             form(role='get', action="/CreationAdmin",method="post", style='max-width:100%;', id='register')
                 .form-group
                     if(!err)
@@ -66,6 +64,8 @@ block content
                 .form-group
                 button.btn.btn-default(type='submit') Créer compte
 
+            if(ok == 1)
+                h1 Compte bien créé.
 
         div#AdminDroite
-            h1 inserer image
+            img(src='images/site/Sasha.png')

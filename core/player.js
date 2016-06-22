@@ -127,7 +127,7 @@ module.exports = ( function (self) {
       }
       return tab;
     };
-//passer du banc a l'active
+    //passer du banc a l'active
     this.putBenchToActive=function(id) {
       if(active_pokemon==null && !bench.empty){
         active_pokemon=bench[id].to_object();
@@ -138,38 +138,12 @@ module.exports = ( function (self) {
     this.activePokemon=function(){
       return active_pokemon;
     };
+    
     //NEW
     //Piocher une carte
 
     this.pickACard = function(){
       hand.push(deck.takeFirstCard());
-    };
-
-
-    //NEW
-    this.Retreat = function(pokemon){
-      //Check si energie demandée = valide
-      if(pokemon.energy()>=pokemon.retreat_cost()){
-        //Check taille du banc
-        if(bench.length > 0){
-          //on stock la carte active, on la remplace par celle du banc et on ajoute l'ancienne active au banc
-          var card = active_pokemon;
-          active_pokemon.splice(0,1);
-          //on prend une carte du banc ( supprime la carte du banc dans la fonction )
-          putCardBenchToActive(index);
-          bench.push(card);
-          //on défausse les energies de l'ancienne carte active, on cree un compteur
-          var i=0;
-          var energyCard;
-          while(i<pokemon.retreat_cost()){
-            //On stocke la carte energy et on la défausse
-            energyCard=pokemon.energy[0];
-            pokemon.energy.splice(0,1);
-            discard_pile.push(energyCard);
-          }
-        }
-      }
-
     };
 
     var init = function (_deck) {

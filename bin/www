@@ -31,7 +31,6 @@ var io = require('socket.io').listen(server);
  */
 var pokemon_cards=[];
 var energy_cards=[];
-
 var filesXY=fs.readdirSync('../data/XY/XY');
 var filesXYOriginesAntique=fs.readdirSync('../data/XY/XY - Origines Antiques');
 var filesXYImpactdesDestins=fs.readdirSync('../data/XY/XY - Impact des Destins');
@@ -68,13 +67,9 @@ filesXYPoingFurieux.forEach(function(file){
     }
 
 });
-var deck1= new core.Deck(pokemon_cards,energy_cards,[]);
-var player1= new core.Player(deck1);
-player1.selectInitialHand();
-
-
-
-
+var deck= new core.Deck(pokemon_cards,energy_cards,[]);
+var player= new core.Player(deck);
+player.selectInitialHand();
 
 io.sockets.on('connection', function (socket) {
     socket.on('message', function (message) {
@@ -82,24 +77,23 @@ io.sockets.on('connection', function (socket) {
         socket.message = message;
         socket.broadcast.emit('message', message);
     });
-    socket.emit("bench",player1.bench());
-    socket.emit("hand",player1.hand());
-    if (player1.activePokemon() != null) {
-        socket.emit("pokemonActive", player1.activePokemon());
-    }
+    socket.emit("bench",player.bench());
+    socket.emit("hand",player.hand());
+    socket.emit("ennemyhand",player.hand().length);
     socket.on("toBench",function(id) {
-        if(player1.bench().length < 5) {
-            player1.addBench(id);
-            player1.takeCardInHand(id);
-            socket.emit("bench", player1.bench());
-            socket.emit("hand", player1.hand());
+        if(player.bench().length < 5) {
+            player.addBench(id);
+            player.takeCardInHand(id);
+            socket.emit("bench", player.bench());
+            socket.emit("hand", player.hand());
         }
 
     });
     socket.on("toActive",function(id) {
-        player1.putBenchToActive(id);
-        socket.emit("bench", player1.bench());
-        socket.emit("pokemonActive",player1.activePokemon());
+        player.putBenchToActive(id);
+        socket.emit("bench", player.bench());
+        socket.emit("pokemonActive",player.activePokemon());
+        socket.emit("life_point",player.activePokemon().life_point);
     });
 });
 

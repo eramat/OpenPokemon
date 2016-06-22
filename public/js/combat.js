@@ -2,11 +2,14 @@
  * Created by boulanger on 15/06/2016.
  */
 var socket = io();
-var board = $('#player');
-var Playerhand = board.children('div.cards').children('div.handCards').children('ul');
-var Playerbench = board.children('div.cards').children('div.benchCards').children('ul');
+var Playerboard = $('#player');
+var Playerhand = Playerboard.children('div.cards').children('div.handCards').children('ul');
+var Playerbench = Playerboard.children('div.cards').children('div.benchCards').children('ul');
+var PlayerlP= Playerboard.children('div.cards').children('div.activCards').children('div.life_point');
+var Ennemyboard= $('#ennemy');
+var Ennemyhand = Ennemyboard.children('div.cards').children('div.handCards').children('ul');
 var benchPlayer;
-var main;
+var Hand;
 var pokemonActive;
 
 $(document).on('click','.action',function(event){
@@ -18,10 +21,10 @@ $(document).on('click','.action',function(event){
 
     $('#menu').html('');
     if ($(this).hasClass("hand")) {
-        $('#menu').append('<li><a idPokemon="'+id+'" id="toBench" href="#">Banc</a></li>');
+        $('#menu').append('<li><a idPokemon="'+id+'" id="HandtoBench" href="#">Banc</a></li>');
 
     }else if ($(this).hasClass("bench")){
-        $('#menu').append('<li><a idPokemon="'+id+'" id="toActive" href="#">Passer actif</a></li>');
+        $('#menu').append('<li><a idPokemon="'+id+'" id="BenchtoActive" href="#">Passer actif</a></li>');
 
     }else if ($(this).attr("id") == 'player-active' ) {
         $.each(pokemonActive.attacks, function(i, attack) {
@@ -37,8 +40,16 @@ socket.on('hand',function(hand) {
     $.each(hand, function(i, card){
         Playerhand.append('<li><img src="images/cards/pokemon/XY/'+card.expansion.name+'/'+card.card_number+'.png" class="action hand" id="'+i+'"/></li>');
     });
-    main=hand;
+    Hand=hand;
 });
+socket.on('ennemyhand',function(ennemhand) {
+    Ennemyhand.html('');
+    for(var i=0;i <ennemhand;i++){
+        console.log(ennemhand);
+        Ennemyhand.append('<li><img src="images/site/dos.jpg"/></li>');
+    }
+});
+
 socket.on('bench',function(bench) {
     Playerbench.html('');
     $.each(bench, function(i, card){
@@ -51,15 +62,21 @@ socket.on('pokemonActive',function(pokemonactif) {
     $('#player-active').attr('src','images/cards/pokemon/XY/'+pokemonactif.expansion.name+'/'+pokemonactif.card_number+'.png');
     $('#player-active').css('visibility','visible');
 });
-
-$(document).on('click','#toActive',function() {
-    socket.emit("toActive",$(this).attr('idPokemon'));
+socket.on('life_point',function(life_point){
+    PlayerlP.html('');
+    if (life_point!=0){
+        PlayerlP.append('<li>'+life_point+'</li>');
+        PlayerlP.css('visibility','visible'); }
+    else {
+        PlayerlP.css('visibility','hidden');
+    }
 });
-
-$(document).on('click','#toBench',function() {
+$(document).on('click','#HandtoBench',function() {
     socket.emit("toBench",$(this).attr('idPokemon'));
 });
-
+$(document).on('click','#BenchtoActive',function() {
+    socket.emit("toActive",$(this).attr('idPokemon'));
+});
 $(document).on('click','body',function() {
     $('#zoom').hide();
 });

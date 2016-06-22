@@ -79,7 +79,7 @@ html, body {
 
 #ennemy {
     position:relative;
-    top: -50px;
+    top: -40px;
     height:50%;
 }
 
@@ -121,10 +121,10 @@ html, body {
     left:0px;
     top:0px;
     right:0px;
-}
+}/*
 #benchCards {
     width: 50%;
-    height: 30%;
+    height: 50%;
     margin:auto;
     display : block;
     position:absolute;;
@@ -142,4 +142,22 @@ html, body {
     left:0px;
     top:250px;
     right:0px;
+}*/
+.life_point{
+    color: #FF0000;
+    text-align:center;
+    display:inline-block;
+    position:absolute;
+    font-size: 20px;
+
+
+}
+
+#ennemy .benchCards ul {
+    width: 475px;
+    height: 125px;
+}
+
+#ennemy .handCards li img{
+    height:100px;
 }

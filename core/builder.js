@@ -13,7 +13,7 @@ module.exports = ( function (self) {
         new core.Value(data.weakness.value.operator, data.weakness.value.value, data.weakness.value.supplement)) : null;
       var resistance = data.resistance ? new core.Resistance(core.EnergyType[data.resistance.type],
         new core.Value(data.resistance.value.operator, data.resistance.value.value, data.resistance.value.supplement)) : null;
-      var expansion = new core.Expansion(data.expansion.name, data.expansion.card_number);
+     var expansion = new core.Expansion(data.expansion.name, data.expansion.card_number);
       var attacks = [];
 
       data.attacks.forEach(function (attack) {

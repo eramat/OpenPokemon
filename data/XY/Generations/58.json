@@ -1,0 +1,46 @@
+{
+  "name": "Ronfex",
+  "type": "COLORLESS",
+  "stage": "BASE",
+  "life_point": 130,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Pression Torpide",
+      "text": "Soignez 20 dégâts à ce Pokémon. Ce Pokémon est maintenant Endormi.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 120,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 4,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 58,
+  "rarity": "Commune"
+}

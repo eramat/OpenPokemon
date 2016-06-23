@@ -1,10 +1,12 @@
 body {
-    padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color : #EFEFEF;
 }
+
 
 a {
     color: #00B7FF;
+    font-size: 20px;
 }
 
 #cardContent {
@@ -17,6 +19,205 @@ a {
     width: 245px;
     height: 342px;
 }
+
+#banniere img {
+
+    width: 100%;
+    height: auto;
+    border:double;
+}
+
+#sitelogo {
+    text-align: center;
+    width: 100%;
+    margin-top: -125px;
+
+}
+
+#form {
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 50px;
+    width : 80%;
+    height: 80%;
+    border: double;
+    font-size: 20px;
+    text-align: center;
+}
+
+#blocGestion {
+    width : 50%;
+    height: 80%;
+    border: double;
+    float:left;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+#GestionGauche {
+    width : 23%;
+    height: 400px;
+    float:left;
+}
+
+
+#GestionDroite {
+    width : 23%;
+    height: 100%;
+    margin-top: -15%;
+    float:left;
+    float:bottom;
+}
+
+#DescriptionPage{
+    margin-top: 30px;
+    margin-bottom:50px;
+    width : 100%;
+    height: 80%;
+    border: double;
+    font-size: 20px;
+    font-family: "Calibri Light";
+    text-align: center;
+    font-style: italic;
+}
+
+#Gestion{
+    height:100%;
+    width:100%;
+    text-align: center;
+}
+
+.form h1{
+    font-size: 50px;
+    text-area:center;
+}
+
+#form h2{
+    font-size : 20px;
+    font-weight : lighter;
+    text-align:justify;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+#form.Paragraphe{
+    margin-right:20px;
+    font-size:20px;
+    font-size : 20px;
+    font-weight : lighter;
+    text-align:justify;
+}
+
+#connect h1 {
+    text-align: right;
+    font-size : 20px;
+    font-style: italic;
+
+
+}
+
+#connect {
+    text-align: right;
+}
+
+#haut img {
+    width: 100%;
+    height: 950px;
+
+}
+
+#adversaire {
+    width: 100%;
+    height: 475px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+}
+
+#joueur {
+    width: 100%;
+    height: 475px;
+    position:absolute;
+    left:0px;
+    top:475px;
+    right:0px;
+}
+
+#cartebanc img {
+
+    width : 50%;
+    height : 100px;
+
+}
+#cartebanc {
+    width: 50%;
+    height: 200px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+    margin:auto;
+
+
+}
+#carteactif {
+    width :10%;
+    height : 200px;
+    position:absolute;
+    left:0px;
+    top:250px;
+    right:0px;
+    margin:auto;
+
+
+}
+#main {
+    width: 10%;
+    height: 200px;
+    position:absolute;
+    left:0px;
+    top:265px;
+    margin-left: 250px;
+
+
+}
+
+#recompense {
+    width: 10%;
+    height: 200px;
+    position:absolute;
+    left:0px;
+    top:53px;
+    margin-left: 250px;
+
+
+}
+#deck {
+    width: 10%;
+    height: 200px;
+    position:absolute;
+    left:0px;
+    top:60px;
+    margin-left : 1400px;
+
+
+}
+
+#defausse {
+    width: 10%;
+    height: 200px;
+    position:absolute;
+    left:0px;
+    top:60px;
+    margin-left : 1650px;
+
+
+}
+
 
 #cardDetail {
     display: inline-block;
@@ -92,6 +293,8 @@ a {
 #properties > div {
     display: inline-block;
 }
+
+
 
 .icoLightning {
     background-image: url("/images/icons/energy-types.png");
@@ -177,3 +380,28 @@ a {
 #illustratorName {
     color: #266ad2;
 }
+
+.myButton {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+    background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+    background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+    background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+    background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+    background-color:#7892c2;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #4e6096;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+}
+
+

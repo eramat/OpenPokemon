@@ -1,0 +1,39 @@
+{
+  "name": "Nosferapti",
+  "type": "PSYCHIC",
+  "stage": "BASE",
+  "life_point": 50,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Plongeon Contrôlé",
+      "text": "Cette attaque infige 10 dégâts à l'un des Pokémon de votre adversaire. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc)",
+      "action": "",
+      "value": {}
+    }
+  ],
+  "weakness": {
+    "type": "LIGHTNING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 30,
+  "rarity": "Commune"
+}

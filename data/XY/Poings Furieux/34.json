@@ -1,0 +1,52 @@
+{
+  "name": "Dedenne",
+  "type": "LIGHTNING",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Ten-Danse",
+      "text": "Cherchez jusqu'à 2 Pokémon de base dans votre deck et placez-les sur votre Banc. Mélangez ensuite votre deck.",
+      "action": "",
+      "value": {}
+    },
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Energie Dérivée",
+      "text": "Cette attaque inflige 20 dégâts multipliés par le nombre d'Energie attachées au Pokémon Actif de votre adversaire.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": "*"
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "METAL",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 34,
+  "rarity": "Commune"
+}

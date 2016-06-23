@@ -1,0 +1,230 @@
+/* En tête de la page */
+
+#TitreCreation {
+    height:100%;
+    width:100%;
+}
+
+#TitreCreationGauche{
+    width:25%;
+    float:left;
+    height:100%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#TitreCreationDroite{
+    width:25%;
+    margin-right: 20px;
+    float:right;
+    text-align: right;
+    height:100%;
+}
+
+#TitreCreation h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Liste de toutes les cartes */
+
+#ListeCarteGauche{
+    width:15%;
+    float:left;
+    height:100%;
+    text-align: center;
+    border-right: groove;
+}
+
+#ListeCarteDroite{
+    width:83%;
+    float: right;
+    height:100%;
+    text-align: right;
+}
+
+#ListeCarteApercu{
+    width:38%;
+    float: right;
+    height:100%;
+    border-left:groove;
+    text-align: center;
+}
+
+#ListeCarteCenter{
+    width:60%;
+    overflow:auto;
+    float: left;
+    height:100%;
+    text-align: left;
+}
+
+#ListePokemon{
+    width:60%;
+    overflow:auto;
+    float: left;
+    height:100%;
+    text-align: left;
+}
+
+#ListeEnergie{
+    width:60%;
+    overflow:auto;
+    float: left;
+    height:100%;
+    text-align: left;
+}
+
+#ListeDresseurs{
+    width:60%;
+    overflow:auto;
+    float: left;
+    height:100%;
+    text-align: left;
+}
+
+#ListeCarte{
+    height:500px;
+    width:auto;
+    border:groove;
+}
+
+#ListeCarte h3{
+    text-align: center;
+}
+
+#ListeCarteGauche h3{
+    margin-bottom:60%;
+}
+
+#ListeCarteApercu img {
+    width: auto;
+    height: 80%;
+    border:double;
+    margin:auto;
+}
+
+.uneCarte{
+    width: 160px;
+    height: 200px;
+    float: left;
+    text-align: left;
+    margin-bottom:10px;
+}
+
+.uneCarte img {
+    width: auto;
+    height: 100%;
+    margin:1px;
+    margin-left:5px;
+    border: groove;
+}
+
+/* Onglets */
+
+.onglet{
+    display:inline-block;
+    margin-left:3px;
+    margin-right:3px;
+    padding:3px;
+    border:1px solid black;
+    cursor:pointer;
+}
+.onglet_0{
+    background: #e3e1e4;
+    border-bottom:1px solid black;
+}
+.onglet_1{
+    background:#dddddd;
+    border-bottom:0px solid black;
+    padding-bottom:4px;
+}
+.contenu_onglet{
+    margin-top:-1px;
+    padding:5px;
+    display:none;
+}
+
+#contenu_onglet_Tous{
+    display: block;
+}
+
+ul{
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left:-10px
+}
+h1{
+    margin:0px;
+    padding:0px;
+}
+
+/* Ton Deck : */
+
+#titreDeck{
+    height:50px;
+    margin-bottom:3%;
+}
+
+#titreDeck1{
+    height:100%;
+    width:24%;
+    float:left;
+    margin-left:4%;
+    margin-top:1.2%;
+}
+
+#titreDeck2{
+    height:100%;
+    width:17%;
+    float:left;
+    margin-top:0.8%;
+}
+
+#titreDeck3{
+    height:100%;
+    width:17%;
+    float:left;
+    margin-top:1.5%;
+    margin-right:10px;
+}
+
+#titreDeck4{
+    height:100%;
+    width:17%;
+    float:left;
+    margin-top:1.5%;
+}
+
+#titreDeck5{
+    height:100%;
+    width:15%;
+    float:left;
+    margin-top:0.8%;
+    margin-left:50px;
+}
+
+#tonDeck {
+    height: 500px;
+    width: auto;
+    border: groove;
+}
+
+#tonDeck1{
+    width:15%;
+    float:left;
+    height:100%;
+    text-align: center;
+    border-right: groove;
+}
+
+#tonDeck2{
+    height:100%;
+    width:68%;
+    float:left;
+    margin-top:0.8%;
+}
+
+#tonDeck1 h3{
+    margin-bottom:50%;
+}

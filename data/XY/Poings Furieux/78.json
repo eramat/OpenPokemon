@@ -1,0 +1,45 @@
+{
+  "name": "Excelangue",
+  "type": "COLORLESS",
+  "stage": "BASE",
+  "life_point": 90,
+  "abilities": [],
+  "attacks": [
+       {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Coup Rapide",
+      "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 50,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 3,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 78,
+  "rarity": "Commune"
+}

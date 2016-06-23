@@ -1,0 +1,58 @@
+{
+  "name": "Scarabrute",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 100,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PLANT"
+      ],
+      "title": "Spulève Corne",
+      "text": "Cette attaque inflige 20 dégâts à l'un de vos Pokémon de Banc. (N'appliquez ni la Faiblesse ni la Résistance aux Pokémon de Banc)",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "PLANT",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Suplex Imposant",
+      "text": "Cette attaque inflige 20 dégâts supplémentaires pour chaque énergie du Coût de Retraite du Pokémon Actif de votre adversaire.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 40,
+        "supplement": "+"
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIRE",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 9,
+  "rarity": "Rare"
+}

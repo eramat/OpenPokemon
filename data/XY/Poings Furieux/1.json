@@ -1,0 +1,57 @@
+{
+  "name": "Chétiflor",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 50,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PLANT"
+      ],
+      "title": "Fouet Lianes",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "PLANT",
+        "COLORLESS"
+      ],
+      "title": "Sabotage",
+      "text": "Défaussez au hasard une carte de la main de votre adversaire.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 0,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIRE",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 1,
+  "rarity": "Commune"
+}

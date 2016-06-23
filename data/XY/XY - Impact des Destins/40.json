@@ -1,0 +1,43 @@
+{
+  "name": "Embrylex",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Attaque Imprudente",
+      "text": "Ce Pokémon s'inflige 10 dégâts.",
+      "action": "board.attacker().life_point -= 10;",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": null
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PLANT",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": null,
+    "value": {
+      "operator": "-",
+      "value": null
+    }
+  },
+    "retreat_cost": 1,
+    "expansion": {
+      "name": "XY - Impact des Destins",
+      "card_number": 124
+    },
+    "card_number": 40,
+    "rarity": "Commune"
+}

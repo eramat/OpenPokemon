@@ -1,0 +1,57 @@
+{
+  "name": "Racaillou",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIGHTING"
+      ],
+      "title": "Roulade",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "",
+        "value": 10,
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Fléau",
+      "text": "Cette attaque infliqe 10 dégâts multipliés par le nombre de marqueurs de dégâts placés sur ce Pokémon",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": "*"
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PLANT",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 43,
+  "rarity": "Commune"
+}

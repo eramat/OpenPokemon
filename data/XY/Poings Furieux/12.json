@@ -1,0 +1,44 @@
+{
+  "name": "Poussifeu",
+  "type": "FIRE",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "FIRE",
+        "COLORLESS"
+      ],
+      "title": "Vive-Attaque",
+      "text": "Lancez une pièce. Si c'est face, cette attaque inflige 30 dégâts supplémentaires.",
+      "action": "if (board.flipCoin() === core.Coin.HEADS) { board.defenser().applyDamage(30); }",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": "+"
+      }
+    }
+  ],
+  "weakness": {
+    "type": "WATER",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 12,
+  "rarity": "Commune"
+}

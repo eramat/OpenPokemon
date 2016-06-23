@@ -1,0 +1,45 @@
+{
+  "name": "Lippoutou",
+  "type": "PSYCHIC",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PSYCHIC",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Câlin",
+      "text": "Le Pokémon Défenseur ne peut pas battre en retraite pendant le prochain tour de votre adversaire",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 36,
+  "rarity": "Rare"
+}

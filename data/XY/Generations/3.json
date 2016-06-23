@@ -1,0 +1,40 @@
+{
+  "name": "Chenipan",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 40,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PLANT"
+      ],
+      "title": "Piqûre",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10
+      }
+    }
+      ],
+  "weakness": {
+    "type": "FIRE",
+    "value": {
+      "operator": "x",
+      "value": 2
+      }
+    },
+  "resistance": {
+    "type": "",
+    "value": {}
+  },
+    "retreat_cost": 1,
+    "expansion": {
+      "name": "Generations",
+      "card_number": 83
+    },
+    "card_number": 3,
+    "rarity": "Commune"
+
+}

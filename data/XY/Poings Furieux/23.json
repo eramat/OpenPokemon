@@ -1,0 +1,58 @@
+{
+  "name": "Flingouste",
+  "type": "WATER",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "WATER"
+      ],
+      "title": "Ecume",
+      "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre adversaire est maintenant Paralysé.",
+      "action": "",
+      "value": {
+        "operator": "",
+        "value": "",
+        "supplement": ""
+      }
+    },
+    {
+      "energies": [
+        "WATER",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Pince-Masse",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 30,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PLANT",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 23,
+  "rarity": "Commune"
+}

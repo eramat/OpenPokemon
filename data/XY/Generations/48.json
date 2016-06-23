@@ -1,0 +1,59 @@
+{
+  "name": "Tygnon",
+  "type": "FIGHTING",
+  "stage": "BASE",
+  "life_point": 90,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Pisto-Poing",
+      "text": "Lancez 2 pièces. Cette attaque inflige 20 dégâts supplémentaires pour chaque côté face.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 20,
+        "supplement": "+"
+      }
+    },
+    {
+      "energies": [
+        "FIGHTING",
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Passage Eclair",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 60,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "PSYCHIC",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 48,
+  "rarity": "Commune"
+}

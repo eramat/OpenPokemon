@@ -1,7 +1,19 @@
 doctype html
 html
   head
-    title= title
+    block title
+      title OpenPokemon - Le Jeu!
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/popupS.min.css')
+    link(rel='stylesheet', href='/stylesheets/combat.css')
+    link(rel='stylesheet', href='/stylesheets/register.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="js/combat.js")
+    script(src="js/popupS.min.js")
+
+
   body
+
     block content
+    block scripts
+

@@ -1,0 +1,26 @@
+//
+   Created by boulanger on 08/06/2016.
+doctype html
+html
+    head
+        block title
+            title OpenPokemon - Le Jeu!
+
+        block stylesheet
+            link(rel='stylesheet', href='/stylesheets/style.css')
+            link(rel='stylesheet', href='/stylesheets/CreationDeck.css')
+            link(rel='stylesheet', href='/stylesheets/register.css')
+            link(rel='stylesheet', href='/stylesheets/admin.css')
+
+
+        div#banniere
+            img(src="images/site/banniere.png")
+        div#sitelogo
+            img(src="images/site/logo.png")
+    body
+        block content
+        block scripts
+            script(src='/js/CreationDeck.js')
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+            script(src='/js/admin?.js')
+            script(src="https://cdn.socket.io/socket.io-1.4.5.js")

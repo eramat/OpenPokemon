@@ -1,0 +1,53 @@
+{
+  "name": "Doduo",
+  "type": "COLORLESS",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "COLORLESS"
+      ],
+      "title": "Entaille Double",
+      "text": "Lancez 2 pièces. Cette attaque inflige 10 dégâts multipliés par le nombre de côtés face.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": "*"
+      }
+    },
+    {
+      "energies": [
+        "COLORLESS",
+        "COLORLESS"
+      ],
+      "title": "Livraison Doduo",
+      "text": "Piochez 2 cartes",
+      "action": "",
+      "value": {}
+    }
+  ],
+  "weakness": {
+    "type": "LIGHTNING",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 55,
+  "rarity": "Commune"
+}

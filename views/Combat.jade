@@ -1,0 +1,57 @@
+//
+   Created by boulanger on 13/06/2016.
+extends layout
+block scripts
+    script(src="https://cdn.socket.io/socket.io-1.4.5.js")
+    script(type="text/javascript" src="/js/combat.js")
+block content
+    div#top
+        div#ennemy
+            div.cards
+                div.handCards
+                    ul
+                div.benchCards
+                    ul
+                div.activCards
+                    img(src="images/cards/pokemon/XY/XY/42.png", class="action" id="")
+                    div.life_point
+        div#player
+            div.cards
+                div.activCards(style='visibility:hidden')
+                    img(src="", class="action" id="player-active")
+                    div.life_point
+                div.benchCards
+                    ul
+                div.handCards
+                    ul
+            div#recompense
+                h1(style='font-size:15px;text-align:center;') Recompense 6
+                img(style='width:100%;height:105%;transform: rotate(90deg);',src="images/site/dos.jpg")
+            div#deck
+                h1(style='font-size:15px;text-align:center;') Deck 47
+                img(style='width:100%;height:100%;',src="images/site/dos.jpg")
+            div#defausse
+                h1(style='font-size:15px; text-align:center;') Defausse
+                img(style='width:100%;height:100%;',src="images/site/dos.jpg")
+        div#zoom
+            img(src="#", class="action")
+            ul#menu
+        div#cote
+            button.btn.btn-default(style='margin-top:900px;margin-left:25px;',type=button value="Abandonner" onClick="popup()" class="myButton") Abandonner
+        script.
+            function popup() {
+                popupS.confirm({
+                    content: 'Voulez-vous vraiment abandonner ?',
+                    labelOk: 'Oui',
+                    labelCancel: 'Non',
+                    onSubmit: function () {
+                        window.location.href = "/Gestion"
+                    },
+                    onClose: function () {
+                        console.log(':(');
+                    }
+
+                });
+            }
+        td
+

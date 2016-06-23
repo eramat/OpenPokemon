@@ -7,6 +7,7 @@ module.exports = ( function (self) {
     var card;
     var life_point;
     var states;
+    var energy;
 
     this.attacks = function () {
       return card.attacks();
@@ -20,9 +21,35 @@ module.exports = ( function (self) {
       return life_point;
     };
 
+    this.energy = function(){
+      return energy;
+    }
+
     this.name = function () {
       return card.name();
     };
+
+    //NEW
+    this.retreat_cost=function(){
+      return card.retreat_cost();
+    }
+
+
+    this.addEnergyActive= function (index,player) {
+      if (player.hand()[index].card_type() === core.CardType.ENERGY) {
+        if (player.checkActiveCard()) {
+          energy.push(player.takeCardInHand(index));
+        }
+      }
+    };
+
+    this.addEnergyBench= function (indexEnergy,indexBench,player) {
+      if (player.hand()[indexEnergy].card_type() === core.CardType.ENERGY) {
+        energy.push(player.takeCardInHand(indexBench));
+      }
+    };
+
+
 
     this.to_object = function () {
       return card.to_object();
@@ -32,6 +59,7 @@ module.exports = ( function (self) {
       card = _card;
       life_point = card.life_point();
       states = [];
+      energy = [];
     };
 
     init(_card);

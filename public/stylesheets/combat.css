@@ -1,0 +1,163 @@
+html, body {
+    height:100%;
+}
+
+#top {
+    height:100%;
+    background: url('../images/site/Fond.jpeg') no-repeat 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+#top img.action {
+    cursor: zoom-in;
+}
+.handCards ul,
+.benchCards ul {
+    padding:0;
+    margin:0 auto;
+    text-align:center;
+}
+.benchCards ul {
+    margin-top:5px;
+    margin-bottom:5px;
+    border: 2px solid;
+    border-radius: 2px;
+    width: 275px;
+    height: 78px;
+}
+.handCards ul li,
+.benchCards ul li{
+    display:inline-block;
+    position: relative;
+    margin: 0 2px;
+    margin-top: 4px;
+}
+.activCards {
+    text-align: center;
+    display: block;
+}
+.activCards img{
+    height: 250px;
+}
+
+#zoom {
+    position:absolute;
+    top:100px;
+    right:40px;
+    display:none;
+}
+#zoom img {
+    height:350px;
+}
+#zoom #menu {
+    vertical-align: top;
+    margin-top : 140%;
+}
+#zoom #menu li a{
+    text-decoration: none;
+    display: block;
+    color:#0014F3;
+}
+#player {
+    margin-top: -30px;
+    position:relative;
+    bottom:0px;
+    height:50%;
+}
+
+#player .handCards li img{
+    height:200px;
+}
+#player .benchCards ul {
+    width: 475px;
+    height: 150px;
+}
+#player .benchCards li img {
+    height: 125px;
+}
+
+#ennemy {
+    position:relative;
+    top: -40px;
+    height:50%;
+}
+
+#recompense {
+    width: 7%;
+    height: 150px;
+    position:absolute;
+    left:0px;
+    top:53px;
+    margin-left: 250px;
+
+
+}
+#deck {
+    width: 7%;
+    height: 150px;
+    position:absolute;
+    left:0px;
+    top:60px;
+    margin-left : 1400px;
+
+
+}
+
+#defausse {
+    width: 7%;
+    height: 150px;
+    position:absolute;
+    left:0px;
+    top:60px;
+    margin-left : 1650px;
+
+
+}
+#cote{
+    width :10%;
+    height: 100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+}/*
+#benchCards {
+    width: 50%;
+    height: 50%;
+    margin:auto;
+    display : block;
+    position:absolute;;
+    left:0px;
+    top:20px;
+    right:0px;
+}
+
+#activCards {
+    width: 8%;
+    height: 43%;
+    margin:auto;
+    display : block;
+    position:absolute;;
+    left:0px;
+    top:250px;
+    right:0px;
+}*/
+.life_point{
+    color: #FF0000;
+    text-align:center;
+    display:inline-block;
+    position:absolute;
+    font-size: 20px;
+
+
+}
+
+#ennemy .benchCards ul {
+    width: 475px;
+    height: 125px;
+}
+
+#ennemy .handCards li img{
+    height:100px;
+}

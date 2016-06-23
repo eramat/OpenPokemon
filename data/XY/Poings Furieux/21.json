@@ -1,0 +1,58 @@
+{
+  "name": "Polarhume",
+  "type": "WATER",
+  "stage": "BASE",
+  "life_point": 70,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "WATER"
+      ],
+      "title": "Combo-Griffe",
+      "text": "Lancez 3 pièces. Cette attaque infige 10 dégâts multipliés par le nombre de côtés face.",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 10,
+        "supplement": "*"
+      }
+    },
+    {
+      "energies": [
+        "WATER",
+        "WATER",
+        "COLORLESS"
+      ],
+      "title": "Souffle Glacé",
+      "text": "",
+      "action": "",
+      "value": {
+        "operator": "-",
+        "value": 40,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "METAL",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 2,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 21,
+  "rarity": "Commune"
+}

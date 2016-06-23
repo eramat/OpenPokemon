@@ -1,0 +1,43 @@
+{
+  "name": "Escargaume",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 60,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PLANT"
+      ],
+      "title": "Saut",
+      "text": "Lancez une pièce. Si c'est face, cette attaque inflige 10 dégâts supplémentaires",
+      "action": "",
+      "value": {
+        "operator": "+",
+        "value": 10,
+        "supplement": ""
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIRE",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "",
+    "value": {
+      "operator": "",
+      "value": ""
+    }
+  },
+  "retreat_cost": 3,
+  "expansion": {
+    "name": "Poings Furieux",
+    "card_number": 111
+  },
+  "card_number": 8,
+  "rarity": "Commune"
+}

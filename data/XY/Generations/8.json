@@ -1,0 +1,51 @@
+{
+  "name": "Saquedeneu",
+  "type": "PLANT",
+  "stage": "BASE",
+  "life_point": 80,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PLANT","COLORLESS"
+      ],
+      "title": "Vol-Vie",
+      "text": "Soignez 20 dégâts à ce Pokémon.",
+      "action": "board.attacker().applyHeal(20)",
+      "value": {
+      "operator": "-",
+      "value": 20
+      }
+    },
+    {
+      "energies": [
+        "PLANT","PLANT","COLORLESS"
+      ],
+      "title": "Fouet Lianes",
+      "text": "",
+      "action": "",
+      "value": {
+      "operator": "-",
+      "value": 30
+      }
+    }
+  ],
+  "weakness": {
+    "type": "FIRE",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+    "resistance": {
+      "type": "",
+      "value": {}
+    },
+    "retreat_cost": 2,
+    "expansion": {
+      "name": "Generations",
+      "card_number": 83
+    },
+    "card_number": 8,
+    "rarity": "Commune"
+}

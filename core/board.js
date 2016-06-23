@@ -39,10 +39,16 @@ module.exports = ( function (self) {
 
     this.turn = function () {
       players[attacker_index].attacks()[0].action().run(this);
-      changeAttackerDefenser();
+      changeAttackerDefender();
     };
 
-    var changeAttackerDefenser = function () {
+    this.winner = function(){
+      if(player.price_card.length===0){
+
+      }
+    };
+
+    var changeAttackerDefender = function () {
       var index = attacker_index;
 
       attacker_index = defender_index;

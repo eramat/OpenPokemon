@@ -1,0 +1,44 @@
+{
+    "name": "Keunotor",
+    "type": "COLORLESS",
+    "stage": "BASE",
+    "life_point": 60,
+    "abilities": [],
+    "attacks": [
+	{
+		"energies": [
+		"COLORLESS",
+		"COLORLESS"
+	    ],
+	    "title": "Croc de Mort",
+	    "text": "Lancez une pièce. Si c'est pile, cette attaque ne fait rien.",
+      "action": "if (board.flipCoin() === core.Coin.TAILS) { null; }",
+	    "value": {
+        "operator": "-",
+        "value": 40,
+        "supplement": null
+      }
+    }
+    ],
+    "weakness": {
+	"type": "FIGHTING",
+	"value": {
+	    "operator": "x",
+	    "value": 2
+	}
+    },
+    "resistance": {
+	"type": null,
+	"value": {
+	    "operator": "-",
+	    "value": null
+	}
+    },
+    "retreat_cost": 3,
+    "expansion": {
+	"name": "XY",
+	"card_number": 146
+    },
+    "card_number": 106,
+    "rarity": "Commune"
+}

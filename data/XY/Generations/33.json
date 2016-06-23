@@ -1,0 +1,39 @@
+{
+  "name": "Fantominus",
+  "type": "PSYCHIC",
+  "stage": "BASE",
+  "life_point": 50,
+  "abilities": [],
+  "attacks": [
+    {
+      "energies": [
+        "PSYCHIC"
+      ],
+      "title": "Poison Dodo",
+      "text": "Lancez une pièce. Si c'est face, le Pokémon Actif de votre Adversaire est maintenant Endormi et Empoisonné",
+      "action": "",
+      "value": {}
+    }
+  ],
+  "weakness": {
+    "type": "DARKNESS",
+    "value": {
+      "operator": "x",
+      "value": 2
+    }
+  },
+  "resistance": {
+    "type": "FIGHTING",
+    "value": {
+      "operator": "-",
+      "value": 20
+    }
+  },
+  "retreat_cost": 1,
+  "expansion": {
+    "name": "Generations",
+    "card_number": 83
+  },
+  "card_number": 33,
+  "rarity": "Commune"
+}

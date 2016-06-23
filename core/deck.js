@@ -40,6 +40,9 @@ module.exports = ( function (self) {
       return trainer_cards;
     };
 
+
+
+
     this.mix = function () {
       var list = [];
 
@@ -67,6 +70,9 @@ module.exports = ( function (self) {
         list.splice(index, 1);
       });
     };
+
+
+
 
     this.valid = function () {
       return pokemon_cards.length + energy_cards.length + trainer_cards.length === 60;

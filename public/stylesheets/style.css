@@ -33,7 +33,7 @@ a {
 }
 
 #cardDetail > * {
-    width: 100%;
+    width: 80%;
     padding-left: 15px;
 }
 
@@ -41,7 +41,7 @@ a {
     height: 70px;
     line-height: 70px;
     background-color: #f2f2f2;
-    color: black;
+    color: red;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 40px;
